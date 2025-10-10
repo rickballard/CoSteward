@@ -64,16 +64,13 @@
 - [Sanitation Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/sanitation.md)
 - [Docs/Runbook Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/docs.md)
 - [Product (CoAgent) Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/product.md)
-<!-- ops-dashboard:end -->
+<!-- ops-dashboard:end -->rnrn## 🔄 Refresh dashboard now
 
-## 🔄 Refresh dashboard now
-
-- **Web:** open the CoCache workflow and click **Run workflow**  
+- **Web:** open the CoCache workflow and click **Run workflow**
   https://github.com/rickballard/CoCache/actions/workflows/ops-heartbeat-smoke.yml
 
 - **CLI:**
-```powershell
+`powershell
 gh workflow run ops-heartbeat-smoke.yml -R rickballard/CoCache
-# (after the main workflow registers)
-# gh workflow run ops-heartbeat.yml -R rickballard/CoCache
-
+# (once the main workflow registers)
+# gh workflow run ops-heartbeat.yml -R rickballard/CoCachern
