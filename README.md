@@ -24,3 +24,6 @@ _(Content map will grow as repo fills out.)_
 
 > **Initiatives Dashboard:** CSV (auto-refreshed) → [https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv](https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv)
 
+
+[![Initiatives Dashboard](https://img.shields.io/badge/Initiatives-CSV-blue)](https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv)
+
