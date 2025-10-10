@@ -72,16 +72,9 @@
   https://github.com/rickballard/CoCache/actions/workflows/ops-heartbeat-smoke.yml
 
 - **CLI:**
-`powershell
+```powershell
 gh workflow run ops-heartbeat-smoke.yml -R rickballard/CoCache
 # (once the main workflow registers)
-# gh workflow run ops-heartbeat.yml -R rickballard/CoCachernrnrn## 🔄 Refresh dashboard now
+# gh workflow run ops-heartbeat.yml -R rickballard/CoCache
+```
 
-- **Web:** open the CoCache workflow and click **Run workflow**
-  https://github.com/rickballard/CoCache/actions/workflows/ops-heartbeat-smoke.yml
-
-- **CLI:**
-`powershell
-gh workflow run ops-heartbeat-smoke.yml -R rickballard/CoCache
-# (once the main workflow registers)
-# gh workflow run ops-heartbeat.yml -R rickballard/CoCachern
