@@ -21,3 +21,6 @@ _(Content map will grow as repo fills out.)_
 - Seed-kit: see CoCache → ops/kits/Build-CoSuiteSeedKit.ps1.
 
 </details>
+
+> **Initiatives Dashboard:** CSV (auto-refreshed) → [https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv](https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv)
+
