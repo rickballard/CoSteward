@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='240' height='20' role='img' aria-label='Sanitation: 16 repos / 63 files'>
+  <rect width='240' height='20' fill='#555'/>
+  <rect x='100' y='0' width='140' height='20' fill='#007ec6'/>
+  <text x='10'  y='14' fill='#fff' font-family='Verdana' font-size='11'>Sanitation</text>
+  <text x='110' y='14' fill='#fff' font-family='Verdana' font-size='11'>16 repos / 63 files</text>
+</svg>

@@ -28,6 +28,8 @@
 ## 📊 Ops Dashboard (auto-refreshed)
 
 ![Ingest](https://raw.githubusercontent.com/rickballard/CoCache/main/STATUS/ingest_badge.svg)
+![Sanitation](STATUS/badges/sanitation_badge.svg)
+![Hitchhikers](STATUS/badges/hitchhiker_badge.svg)
 ![Backlog ETA](STATUS/badges/eta_badge.svg)
 ![Throughput 7-day](STATUS/badges/throughput_badge.svg)
 ![Last Ops Tick](STATUS/badges/last_tick_badge.svg)
@@ -38,8 +40,9 @@
 <!-- auto: begin ingest row -->
 <!--#include STATUS/table_ingest_row.md-->
 <!-- auto: end ingest row -->
-| Repo Sanitation | `<calc>` | `<calc>/day` | `<calc>` | `<calc>` |
-| Hitchhiker Docs | `<calc>` | `<calc>/day` | `<calc>` | `<calc>` |
+<!-- auto: begin ops rows -->
+<!--#include STATUS/table_ops_rows.md-->
+<!-- auto: end ops rows -->
 
 **Backlog types** → canonical definitions in **GIBindex**:
 - [Ingest Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/ingest.md)
@@ -47,4 +50,5 @@
 - [Docs/Runbook Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/docs.md)
 - [Product (CoAgent) Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/product.md)
 <!-- ops-dashboard:end -->
+
 
