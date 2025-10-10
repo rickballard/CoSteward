@@ -87,4 +87,13 @@ gh workflow run "ops-heartbeat" -R rickballard/CoCachernrn## 🔄 Refresh dashbo
 ```powershell
 gh workflow run ops-heartbeat.yml -R rickballard/CoCache
 # or (after it shows by display name)
+gh workflow run "ops-heartbeat" -R rickballard/CoCachernrnrn## 🔄 Refresh dashboard now
+
+- **Web:** open the CoCache workflow and click **Run workflow**  
+  https://github.com/rickballard/CoCache/actions/workflows/ops-heartbeat.yml
+
+- **CLI:**
+```powershell
+gh workflow run ops-heartbeat.yml -R rickballard/CoCache
+# or (after it shows up by display name)
 gh workflow run "ops-heartbeat" -R rickballard/CoCachern
