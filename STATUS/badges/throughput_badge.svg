@@ -1,6 +1,6 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='220' height='20' role='img' aria-label='Throughput (7d): 0/day'>
-  <rect width='220' height='20' fill='#555'/>
-  <rect x='90' y='0' width='130' height='20' fill='#007ec6'/>
-  <text x='10' y='14' fill='#fff' font-family='Verdana' font-size='11'>Throughput (7d)</text>
-  <text x='100' y='14' fill='#fff' font-family='Verdana' font-size='11'>0/day</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="164" height="20" role="img" aria-label="Throughput (7d): 0/day">
+  <rect width="113" height="20" fill="#555"/>
+  <rect x="113" width="51" height="20" fill="#007ec6"/>
+  <text x="10" y="14" fill="#fff" font-family="Verdana" font-size="11">Throughput (7d)</text>
+  <text x="123" y="14" fill="#fff" font-family="Verdana" font-size="11">0/day</text>
 </svg>
