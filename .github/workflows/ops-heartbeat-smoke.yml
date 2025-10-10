@@ -1,4 +1,4 @@
-name: zz-smoke-simple
+name: ops-heartbeat-smoke
 on:
   workflow_dispatch:
 jobs:
