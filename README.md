@@ -24,6 +24,18 @@
 <!-- auto: end ingest row -->
 
 
+<!-- daily-notices:start -->
+## 🗓️ Today
+
+<!-- includes generated below; edit files in STATUS/notices/ -->
+
+<!-- pinned -->
+<!--#include STATUS/notices/pinned.md-->
+
+<!-- today -->
+<!--#include STATUS/notices/2025-10-10.md-->
+<!-- daily-notices:end -->
+
 <!-- ops-dashboard:start -->
 ## 📊 Ops Dashboard (auto-refreshed)
 
@@ -53,6 +65,7 @@
 - [Docs/Runbook Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/docs.md)
 - [Product (CoAgent) Backlog](https://github.com/rickballard/GIBindex/blob/main/docs/backlog/product.md)
 <!-- ops-dashboard:end -->
+
 
 
 
