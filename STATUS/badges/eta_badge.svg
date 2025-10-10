@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="258" height="20" role="img" aria-label="ETA (base/CoAgent): 263191d / 263191d">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="20" role="img" aria-label="ETA (base/CoAgent): 0d / 0d">
   <rect width="132" height="20" fill="#555"/>
-  <rect x="132" width="126" height="20" fill="#007ec6"/>
+  <rect x="132" width="64" height="20" fill="#007ec6"/>
   <text x="10" y="14" fill="#fff" font-family="Verdana" font-size="11">ETA (base/CoAgent)</text>
-  <text x="142" y="14" fill="#fff" font-family="Verdana" font-size="11">263191d / 263191d</text>
+  <text x="142" y="14" fill="#fff" font-family="Verdana" font-size="11">0d / 0d</text>
 </svg>
