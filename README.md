@@ -47,6 +47,8 @@
 
 ![Hitchhikers](STATUS/badges/hitchhiker_badge.svg)
 ![Backlog ETA](STATUS/badges/eta_badge.svg)
+<br/>
+
 ![Throughput 7-day](STATUS/badges/throughput_badge.svg)
 <br/>
 
@@ -83,5 +85,4 @@ gh workflow run ops-heartbeat-smoke.yml -R rickballard/CoCache
 # (once the main workflow registers)
 # gh workflow run ops-heartbeat.yml -R rickballard/CoCache
 ```
-
 
