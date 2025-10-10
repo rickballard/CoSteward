@@ -1,1 +1,1 @@
-| Ingest (CoCache map) | 0 | 0/day | 0d | 0d |
+| Ingest (CoCache map) | 28425 | 0/day | 28425d | 28425d |
