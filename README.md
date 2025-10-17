@@ -1,8 +1,8 @@
-# RickDo
+# CoSteward
 
 
 
-[![Open issues](https://img.shields.io/github/issues/rickballard/RickDo)](../../issues) [![PRs](https://img.shields.io/github/issues-pr/rickballard/RickDo)](../../pulls) [![License](https://img.shields.io/github/license/rickballard/RickDo)](./LICENSE)
+[![Open issues](https://img.shields.io/github/issues/rickballard/CoSteward)](../../issues) [![PRs](https://img.shields.io/github/issues-pr/rickballard/CoSteward)](../../pulls) [![License](https://img.shields.io/github/license/rickballard/CoSteward)](./LICENSE)
 
 Human-friendly overview + Megascroll
 
@@ -26,4 +26,5 @@ _(Content map will grow as repo fills out.)_
 
 
 [![Initiatives Dashboard](https://img.shields.io/badge/Initiatives-CSV-blue)](https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv)
+
 
