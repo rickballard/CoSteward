@@ -27,4 +27,7 @@ _(Content map will grow as repo fills out.)_
 
 [![Initiatives Dashboard](https://img.shields.io/badge/Initiatives-CSV-blue)](https://raw.githubusercontent.com/rickballard/CoCache/main/docs/dashboards/initiatives_scan.csv)
 
+## Status & Dashboards
 
+- **Control Room:** https://github.com/rickballard/CoCache/blob/main/docs/CONSOLE.md  
+- **Giant Metrics Index:** https://github.com/rickballard/CoCache/blob/main/docs/METRICS_INDEX.md
