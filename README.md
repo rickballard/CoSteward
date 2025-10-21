@@ -31,3 +31,9 @@ _(Content map will grow as repo fills out.)_
 
 - **Control Room:** https://github.com/rickballard/CoCache/blob/main/docs/CONSOLE.md  
 - **Giant Metrics Index:** https://github.com/rickballard/CoCache/blob/main/docs/METRICS_INDEX.md
+
+<!-- BEGIN: STATUS -->
+### Operational Status
+CoDrift Index: n/a% (n/a)
+<!-- END: STATUS -->
+
