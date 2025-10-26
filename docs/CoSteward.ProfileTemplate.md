@@ -72,3 +72,22 @@ CoSync++ = multi-agent alignment trigger
 - Archive old profiles to: docs/profile-archive/YYYY-MM-CoSteward.Profile.md
 - Only merge to main — Rick ignores branches
 
+
+---
+
+### 🧬 SESSION.CONTINUITY FOOTER (auto-evolution logic)
+
+> This session profile is designed for **ongoing co-evolution and auto-evolution** across all CoSuite assets.  
+> All sessions using this profile:
+>
+> - **Propagate BPOE**: Ensure Best Practice Operating Environment (BPOE) assumptions are inherited or bootstrapped in each session, even across forks or AdviceBombs.  
+> - **Trigger Upgrades**: If better BPOE fragments, triggers, or process templates are discovered in AdviceBombs, CoWraps, or CoAudit threads, append them to `docs/BPOE_Fragments.md` and optionally generate `CoSteward.ProfileTemplate_vNext.md`.
+> - **Staged Upgrades**: Store all previous versions in `docs/profile-archive/` and validate upstream impacts before merging any `vNext` version into `main`.
+> - **Session-Aware Indexing**: Tie outputs and AdviceBombs into session metadata anchors (`manifest.json`, `CoNeura`, `GIBindex`, etc.) for time-stamped re-ingestion.
+> - **CoSync++ Nodes**: Any AdviceBomb containing a `.CoSync.ok` marker auto-promotes that session’s BPOE layer for reuse and alignment.
+
+🔁 *All AdviceBombs and CoWraps should now contain a footer stating:*  
+> “This bundle is session-aligned under CoSteward Profile v1.1. Auto-evolve on detection.”
+
+📌 *Repo Standard:* Canonical profile lives in [`docs/CoSteward.ProfileTemplate.md`](./CoSteward.ProfileTemplate.md), mirrored in CoCache at  
+[`advice/inbox/assets/CoSteward.ProfileTemplate.md`](https://github.com/rickballard/CoCache/blob/main/advice/inbox/assets/CoSteward.ProfileTemplate.md)
