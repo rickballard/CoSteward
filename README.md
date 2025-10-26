@@ -62,3 +62,11 @@ CoDrift Index: n/a% (n/a)
 })();
 </script>
 
+---
+
+## 🧠 CoSteward Profile Template (for ChatGPT)
+
+> Manually updated monthly and pasted into ChatGPT’s settings to guide new sessions.  
+> **Always remember to clear all ChatGPT scheduled tasks after pasting.**
+
+🔗 [View the live profile template](./docs/CoSteward.ProfileTemplate.md)
