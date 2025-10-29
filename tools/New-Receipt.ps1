@@ -47,3 +47,11 @@ if(-not [string]::IsNullOrWhiteSpace($PromptText)){
 Write-Host ($ansiStart + $violet + $ansiEnd)
 try{ Set-Clipboard -Value $violet }catch{}
 
+
+$ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
+if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
+  Write-Host ($ansiStart + $PromptText + $ansiEnd)
+}
+Write-Host ($ansiStart + $violet + $ansiEnd)
+try{ Set-Clipboard -Value $violet }catch{}
+
