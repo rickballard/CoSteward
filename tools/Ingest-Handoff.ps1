@@ -1,8 +1,8 @@
 param(
   [Parameter(Mandatory)] [string]$Repo,
-  [Parameter(Mandatory)] [string]$Source,          # e.g., "CoSync note", "PR", "Chat paste", "URL"
-  [string]$Url = "",                               # handoff link if any
-  [string]$Topic = "",                             # short label
+  [Parameter(Mandatory)] [string]$Source,
+  [string]$Url = "",
+  [string]$Topic = "",
   [int[]] $PR = @(),
   [string]$Note = ""
 )
@@ -27,7 +27,12 @@ if(-not $mdHeader){
   $mdHeader = "# Handoffs Index"+[Environment]::NewLine+[Environment]::NewLine+"Newest first."+[Environment]::NewLine+[Environment]::NewLine+"## Entries"+[Environment]::NewLine
   Set-Content -Path $md -Value $mdHeader -Encoding utf8NoBOM
 }
-$mdLine = "- **{0}** · `{1}@{2}` · **{3}** — {4}{5}{6}{7} ; s:{8}" -f   $utc,$Repo,$sha,$Source, (if($Topic){$Topic}else{""}),   (if($Url){ " · " + $Url } else { "" }),   (if($prs){ " · PRs: " + $prs } else { "" }),   (if($Note){ " · " + $Note } else { "" }), $VIOLET_SCHEMA
+# precompute MD suffixes (avoid inline-if in -f)
+$mdTopic = if([string]::IsNullOrWhiteSpace($Topic)) { "" } else { $Topic }
+$mdUrl   = if([string]::IsNullOrWhiteSpace($Url))   { "" } else { " · " + $Url }
+$mdPrs   = if([string]::IsNullOrWhiteSpace($prs))   { "" } else { " · PRs: " + $prs }
+$mdNote  = if([string]::IsNullOrWhiteSpace($Note))  { "" } else { " · " + $Note }
+$mdLine = "- **{0}** · `{1}@{2}` · **{3}** — {4}{5}{6}{7} ; s:{8}" -f $utc,$Repo,$sha,$Source,$mdTopic,$mdUrl,$mdPrs,$mdNote,$VIOLET_SCHEMA
 $existing = Get-Content $md -Raw -EA SilentlyContinue
 $at = $existing.IndexOf("## Entries")
 if($at -ge 0){
@@ -38,12 +43,11 @@ if($at -ge 0){
 } else {
   Add-Content -Path $md -Value $mdLine -Encoding utf8NoBOM
 }
-$vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; " + $prs }
-$noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
-$urlSuffix   = if([string]::IsNullOrWhiteSpace($Url)){ "" } else { " ; " + $Url }
-$topicSuffix = if([string]::IsNullOrWhiteSpace($Topic)){ "" } else { " ; " + $Topic }
-$violet = "[violet] {0} {1}@{2} {3} — handoff{4}{5}{6}{7} ; s:{8}" -f $utc.Substring(0,10), $Repo, $sha, $branch, $topicSuffix, $urlSuffix, $vioPrSuffix, $noteSuffix, $VIOLET_SCHEMA
-Write-Host ("`e[95m"+$violet+"`e[0m")
-try{ Set-Clipboard -Value $violet }catch{}
-$scanner = Join-Path $root "tools\Scan-CoAdvice.ps1"
-if(Test-Path $scanner){ try{ & $scanner | Out-Null }catch{} }
+# precompute violet suffixes
+$vioPr  = if([string]::IsNullOrWhiteSpace($prs))  { "" } else { " ; " + $prs }
+$vioUrl = if([string]::IsNullOrWhiteSpace($Url))  { "" } else { " ; " + $Url }
+$vioTop = if([string]::IsNullOrWhiteSpace($Topic)){ "" } else { " ; " + $Topic }
+$vioNot = if([string]::IsNullOrWhiteSpace($Note)) { "" } else { " ; " + $Note }
+$vio = "[violet] {0} {1}@{2} {3} — handoff{4}{5}{6}{7} ; s:{8}" -f $utc.Substring(0,10), $Repo, $sha, $branch, $vioTop, $vioUrl, $vioPr, $vioNot, $VIOLET_SCHEMA
+Write-Host ("`e[95m"+$vio+"`e[0m")
+try{ Set-Clipboard -Value $vio }catch{}
