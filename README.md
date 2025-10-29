@@ -1,4 +1,4 @@
-# (reset) intentionally blank; customize later
+# (reset) intentionally blank; customize later  [Operations Manual](docs/ops/MANUAL/INDEX.md) · [Vision](docs/intent/VISION.md) · [Mission](docs/intent/MISSION.md)
 function cosync {
   param([Parameter(Position=0)][string]$Mode="auto", [string]$ZipPath)
   try {
@@ -49,5 +49,6 @@ function cosync {
 
 - Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
 - BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
+
 
 
