@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "intervalMinutes": 480,
+  "runIfOnBattery": false,
+  "notes": "Repo-first switch for Auto-CoSync. Edit here to change cadence."
+}
