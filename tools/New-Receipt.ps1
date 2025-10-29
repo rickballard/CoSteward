@@ -39,5 +39,8 @@ if($idx -ge 0){
 }
 
 $violet = "[violet] {0} {1}@{2} {3} — {4}{5}{6}" -f $utc.Substring(0,10), $Repo, $sha, $branch, $Action, $vioPrSuffix, $noteSuffix
-Write-Host $violet
+# Console: magenta (ANSI 95); Clipboard: plain
+$ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
+Write-Host ($ansiStart + $violet + $ansiEnd)
 try{ Set-Clipboard -Value $violet }catch{}
+
