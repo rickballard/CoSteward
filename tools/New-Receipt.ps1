@@ -40,7 +40,10 @@ if($idx -ge 0){
 }
 $vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; " + $prs }
 $noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
-$violet = "[violet] {0} {1}@{2} {3} — {4}{5}{6} ; s:{7}" -f $utc.Substring(0,10), $Repo, $sha, $branch, $Action, $vioPrSuffix, $noteSuffix, $VIOLET_SCHEMA
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
+if(-not [string]::IsNullOrWhiteSpace($PromptText)){
+  Write-Host ($ansiStart + $PromptText + $ansiEnd)
+}
 Write-Host ($ansiStart + $violet + $ansiEnd)
 try{ Set-Clipboard -Value $violet }catch{}
+
