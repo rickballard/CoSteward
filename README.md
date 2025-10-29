@@ -1,4 +1,4 @@
-# CoSteward
+# CoSteward  [Megascroll Hub](docs/hp/MEGASCROLLS.md)
 
 
 
@@ -70,3 +70,4 @@ CoDrift Index: n/a% (n/a)
 > **Always remember to clear all ChatGPT scheduled tasks after pasting.**
 
 🔗 [View the live profile template](./docs/CoSteward.ProfileTemplate.md)
+
