@@ -25,13 +25,7 @@ if(-not (Test-Path $csvPath)){ "utc,repo,branch,sha,area,action,prs,note,schema"
 Add-Content -Path $csvPath -Value $csvLine -Encoding utf8NoBOM
 $mdPrSuffix = if([string]::IsNullOrWhiteSpace($prLinks)){ "" } else { " · PRs: " + $prLinks }
 $line = "- **{0}** · `{1}@{2}` · **{3}** — {4}{5} ; s:{6}" -f $utc,$Repo,$sha,$Area,$Action,$mdPrSuffix,$VIOLET_SCHEMA
-$existing = Get-Content $mdPath -Raw -EA SilentlyContinue
-$idx = $existing.IndexOf("## Entries")
-if($idx -ge 0){
-  $afterHeader = $existing.IndexOf([Environment]::NewLine,$idx)
-  $before = $existing.Substring(0,$afterHeader)
-  $after  = $existing.Substring($afterHeader)
-  Set-Content -Path $mdPath -Value ($before + [Environment]::NewLine + [Environment]::NewLine + $line + $after) -Encoding utf8NoBOM
+Add-ReceiptMarkdownLine -MdPath $mdPath -Line $line
 } else {
   if(-not $existing){
     Set-Content -Path $mdPath -Value ("# Violet Receipts (Hybrid)"+[Environment]::NewLine+[Environment]::NewLine+"## Entries"+[Environment]::NewLine) -Encoding utf8NoBOM
@@ -41,7 +35,7 @@ if($idx -ge 0){
 $vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; " + $prs }
 $noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-if(-not [string]::IsNullOrWhiteSpace($PromptText)){
+if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
   Write-Host ($ansiStart + $PromptText + $ansiEnd)
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
@@ -54,4 +48,42 @@ if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhit
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
 try{ Set-Clipboard -Value $violet }catch{}
+
+
+# --- begin: safe RECEIPTS.md write helper ---
+function Add-ReceiptMarkdownLine {
+  param(
+    [Parameter(Mandatory)] [string]$MdPath,
+    [Parameter(Mandatory)] [string]$Line
+  )
+  $exists = Test-Path $MdPath
+  $content = if($exists){ Get-Content $MdPath -Raw -EA SilentlyContinue } else { "" }
+
+  if([string]::IsNullOrWhiteSpace($content)){
+    $content = "# Violet Receipts (Hybrid)`n`n## Entries`n"
+  }elseif($content -notmatch '(?m)^\#\#\s+Entries\s*$'){
+    # Ensure we have the section anchor
+    $content = $content.TrimEnd()+"`n`n## Entries`n"
+  }
+
+  # Insert the line immediately after the '## Entries' header line
+  $lines = $content -split "`r?`n"
+  $idx = ($lines | ForEach-Object {$_}) | Select-String -SimpleMatch '## Entries' | Select-Object -First 1
+  if($null -eq $idx){
+    # Fallback: append header + line
+    $lines += '## Entries'
+    $lines += $Line
+  }else{
+    $insertAt = $idx.LineNumber
+    # Make sure there's an empty spacer line after header (for readability)
+    if($insertAt -lt $lines.Count -and $lines[$insertAt] -ne ''){
+      $lines = $lines[0..$insertAt] + @('') + $lines[($insertAt+1)..($lines.Count-1)]
+      $insertAt += 1
+    }
+    $lines = $lines[0..$insertAt] + @($Line) + $lines[($insertAt+1)..($lines.Count-1)]
+  }
+
+  Set-Content -Path $MdPath -Value ($lines -join [Environment]::NewLine) -Encoding utf8NoBOM
+}
+# --- end: safe RECEIPTS.md write helper ---
 
