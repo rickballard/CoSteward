@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "intervalMinutes": 120,
+  "runIfOnBattery": false,
+  "notes": "Set enabled=true to opt in. Repo is source of truth."
+}
