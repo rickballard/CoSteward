@@ -37,4 +37,17 @@ function cosync {
 - Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
 - BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
 
+> - Auto-CoSync (opt-in): set `docs/ops/COSYNC_POLICY.json` → `"enabled": true` and enable the local task `CoSteward-AutoCoSync`.
+
+## Active Ops
+
+- Live CoSync Feed → [docs/ops/LIVE.md](docs/ops/LIVE.md)
+- Current Session Plan → [docs/intent/advice/plan/LATEST.md](docs/intent/advice/plan/LATEST.md)
+- CoBus Status → [docs/ops/COBUS_STATUS.md](docs/ops/COBUS_STATUS.md)
+
+## Crown Jewels
+
+- Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
+- BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
+
 
