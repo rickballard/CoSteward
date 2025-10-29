@@ -54,3 +54,5 @@ function cosync {
 
 
 > Quick setup? See **[Profiles Catalog](docs/bpoe/Profiles.Catalog.md)** and **[Violet Receipts](docs/ops/RECEIPTS.md)**.
+
+> VIOLET quick refs: **[Receipts](docs/ops/RECEIPTS.md)** · **[Handoffs](docs/ops/HANDOFFS.md)** · **[Companion](docs/bpoe/VIOLET.Companion.md)**.

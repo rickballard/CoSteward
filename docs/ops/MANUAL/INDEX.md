@@ -16,3 +16,5 @@
 > See also: **CoSync Policy** (docs/ops/COSYNC_POLICY.json), **Live CoSync Feed** (../LIVE.md).
 
 - [Profiles Catalog](../../bpoe/Profiles.Catalog.md)
+
+- [VIOLET Companion](../../bpoe/VIOLET.Companion.md)
