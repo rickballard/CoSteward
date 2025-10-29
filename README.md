@@ -52,3 +52,5 @@ function cosync {
 
 
 
+
+> Quick setup? See **[Profiles Catalog](docs/bpoe/Profiles.Catalog.md)** and **[Violet Receipts](docs/ops/RECEIPTS.md)**.
