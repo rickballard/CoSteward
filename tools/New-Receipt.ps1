@@ -37,20 +37,24 @@ if([string]::IsNullOrWhiteSpace($existing)){
 }
 $vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; " + $prs }
 $noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
+# --- VIOLET EMIT (console + clipboard) ---
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
+if ($PSBoundParameters.ContainsKey("PromptText") -and -not [string]::IsNullOrWhiteSpace($PromptText)) {
   Write-Host ($ansiStart + $PromptText + $ansiEnd)
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
-try{ Set-Clipboard -Value $violet }catch{}
+try { Set-Clipboard -Value $violet } catch {}
+# --- /VIOLET EMIT ---
 
 
+# --- VIOLET EMIT (console + clipboard) ---
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
+if ($PSBoundParameters.ContainsKey("PromptText") -and -not [string]::IsNullOrWhiteSpace($PromptText)) {
   Write-Host ($ansiStart + $PromptText + $ansiEnd)
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
-try{ Set-Clipboard -Value $violet }catch{}
+try { Set-Clipboard -Value $violet } catch {}
+# --- /VIOLET EMIT ---
 
 
 # --- begin: safe RECEIPTS.md write helper ---
@@ -101,20 +105,24 @@ Add-Content -Path $mdPath -Value $line -Encoding utf8NoBOM
 }
 $vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; " + $prs }
 $noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
+# --- VIOLET EMIT (console + clipboard) ---
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
+if ($PSBoundParameters.ContainsKey("PromptText") -and -not [string]::IsNullOrWhiteSpace($PromptText)) {
   Write-Host ($ansiStart + $PromptText + $ansiEnd)
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
-try{ Set-Clipboard -Value $violet }catch{}
+try { Set-Clipboard -Value $violet } catch {}
+# --- /VIOLET EMIT ---
 
 
+# --- VIOLET EMIT (console + clipboard) ---
 $ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-if($PSBoundParameters.ContainsKey('PromptText') -and -not [string]::IsNullOrWhiteSpace($PromptText)){
+if ($PSBoundParameters.ContainsKey("PromptText") -and -not [string]::IsNullOrWhiteSpace($PromptText)) {
   Write-Host ($ansiStart + $PromptText + $ansiEnd)
 }
 Write-Host ($ansiStart + $violet + $ansiEnd)
-try{ Set-Clipboard -Value $violet }catch{}
+try { Set-Clipboard -Value $violet } catch {}
+# --- /VIOLET EMIT ---
 
 
 # --- begin: safe RECEIPTS.md write helper ---
@@ -153,5 +161,6 @@ function Add-ReceiptMarkdownLine {
   Set-Content -Path $MdPath -Value ($lines -join [Environment]::NewLine) -Encoding utf8NoBOM
 }
 # --- end: safe RECEIPTS.md write helper ---
+
 
 
