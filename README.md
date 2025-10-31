@@ -61,3 +61,7 @@ function cosync {
 
 > **GIBindex — Terms:** see [docs/intent/gibindex/TERMS.md](docs/intent/gibindex/TERMS.md)
 
+GIBindex — Sets
+
+> **GIBindex — Sets:** see [TERMS.md#set](docs/intent/gibindex/TERMS.md#set)
+
