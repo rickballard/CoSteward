@@ -1,46 +1,69 @@
+[CmdletBinding()]
 param(
-  [string]$Repo     = "CoSteward",
-  [string]$Area     = "ops",
-  [string]$Action   = "",
-  [int[]] $PR       = @(),
-  [string]$Note     = ""
+  [Parameter(Mandatory)][string]$Repo,
+  [Parameter(Mandatory)][string]$Area,
+  [Parameter(Mandatory)][string]$Action,
+  [int[]]$PR = @(),
+  [string]$Note = ''
 )
-$ErrorActionPreference="Stop"
-$here = Split-Path -Parent $PSCommandPath
-$root = (Resolve-Path (Join-Path $here "..")).Path  # tools/.. -> repo root
-$docsOps = Join-Path $root "docs\ops"
-$status  = Join-Path $root "STATUS"
-$mdPath  = Join-Path $docsOps "RECEIPTS.md"
-$csvPath = Join-Path $status  "receipts.csv"
-foreach($p in @($docsOps,$status)){ if(-not (Test-Path $p)){ New-Item -ItemType Directory -Force $p | Out-Null } }
-$utc = [DateTimeOffset]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")
-$branch = (& git -C $root branch --show-current).Trim(); if([string]::IsNullOrWhiteSpace($branch)){ $branch = "detached" }
-$sha = (& git -C $root rev-parse --short HEAD).Trim()
-$prs = if($PR){ ($PR | ForEach-Object { "#$_" }) -join "," } else { "" }
-$csvLine = "{0},{1},{2},{3},{4},{5},{6},{7}" -f $utc,$Repo,$branch,$sha,$Area,($Action -replace ",",";"),($prs -replace ",",";"),($Note -replace ",",";")
-if(-not (Test-Path $csvPath)){ "utc,repo,branch,sha,area,action,prs,note" | Add-Content -Encoding utf8NoBOM $csvPath }
-Add-Content -Path $csvPath -Value $csvLine -Encoding utf8NoBOM
 
-# precompute suffixes to avoid inline-if in -f
-$mdPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " · PRs: " + $prs }
-$vioPrSuffix = if([string]::IsNullOrWhiteSpace($prs)){ "" } else { " ; "   + $prs }
-$noteSuffix  = if([string]::IsNullOrWhiteSpace($Note)){ "" } else { " ; " + $Note }
+$ErrorActionPreference = "Stop"
 
-$line = "- **{0}** · `{1}@{2}` · **{3}** — {4}{5}" -f $utc,$Repo,$sha,$Area,$Action,$mdPrSuffix
-$existing = Get-Content $mdPath -Raw -EA SilentlyContinue
-$idx = $existing.IndexOf("## Entries")
-if($idx -ge 0){
-  $afterHeader = $existing.IndexOf([Environment]::NewLine,$idx)
-  $before = $existing.Substring(0,$afterHeader)
-  $after  = $existing.Substring($afterHeader)
-  Set-Content -Path $mdPath -Value ($before + [Environment]::NewLine + [Environment]::NewLine + $line + $after) -Encoding utf8NoBOM
-} else {
-  Add-Content -Path $mdPath -Value $line -Encoding utf8NoBOM
+# Resolve repo root (call via -File from tools/)
+$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+
+$mdPath  = Join-Path $root 'RECEIPTS.md'
+$csvPath = Join-Path $root 'receipts.csv'
+
+# 1) Ensure logs exist
+if(-not (Test-Path $mdPath)){
+  $hdr = @"
+# Violet Receipts
+
+<!-- vio:append -->
+
+| date (UTC) | repo | area | action | pr | sha | note |
+|---|---|---|---|---|---|---|
+
+"@
+  Set-Content -Encoding utf8NoBOM $mdPath -Value $hdr
+}
+if(-not (Test-Path $csvPath)){
+  'date_utc,repo,area,action,pr,sha,note' | Set-Content -Encoding utf8NoBOM $csvPath
 }
 
-$violet = "[violet] {0} {1}@{2} {3} — {4}{5}{6}" -f $utc.Substring(0,10), $Repo, $sha, $branch, $Action, $vioPrSuffix, $noteSuffix
-# Console: magenta (ANSI 95); Clipboard: plain
-$ansiStart = "`e[95m"; $ansiEnd = "`e[0m"
-Write-Host ($ansiStart + $violet + $ansiEnd)
-try{ Set-Clipboard -Value $violet }catch{}
+# 2) Read existing and choose a safe insertion point
+$existing  = Get-Content -Raw -EA SilentlyContinue $mdPath
+if([string]::IsNullOrWhiteSpace($existing)){ $existing = '' }
 
+$marker     = '<!-- vio:append -->'
+$idxMarker  = $existing.IndexOf($marker, [StringComparison]::OrdinalIgnoreCase)
+$idxHeader  = $existing.IndexOf('| date (UTC) | repo |', [StringComparison]::OrdinalIgnoreCase)
+
+# Default: after marker if present else EOF
+$insertAt = if($idxMarker -ge 0){ $idxMarker + $marker.Length } else { $existing.Length }
+
+# If the marker happens to be above the header, don't insert there; append to EOF instead.
+if($idxHeader -ge 0 -and $insertAt -lt $idxHeader){ $insertAt = $existing.Length }
+
+# 3) Compose values
+$sha    = (& git -C $root rev-parse --short HEAD) 2>$null
+if([string]::IsNullOrWhiteSpace($sha)){ $sha = 'n/a' }
+$utc    = (Get-Date -AsUTC).ToString('yyyy-MM-ddTHH:mm:ssZ')
+$prs    = $PR | Where-Object { $_ -gt 0 }
+$prText = if($prs){ ($prs | ForEach-Object { "#$_" }) -join ',' } else { '-' }
+
+# 4) Splice markdown row safely
+$mdRow  = "| $utc | $Repo | $Area | $Action | $prText | $sha | $Note |"
+$before = $existing.Substring(0, $insertAt)
+$after  = $existing.Substring($insertAt)
+$newMd  = $before + "`r`n" + $mdRow + "`r`n" + $after
+Set-Content -Encoding utf8NoBOM -Path $mdPath -Value $newMd
+
+# 5) CSV append (quote fields with commas/quotes)
+function _q([string]$s){ if($s -match '[,"]'){ '"' + ($s -replace '"','""') + '"' } else { $s } }
+$csvLine = ($utc, $Repo, $Area, $Action, $prText, $sha, $Note | ForEach-Object { _q $_ }) -join ','
+Add-Content -Encoding utf8NoBOM -Path $csvPath -Value $csvLine
+
+# 6) Friendly console line (not PS syntax)
+Write-Host "[violet] $($utc.Substring(0,10)) $Repo@$sha $Area — $Action ; $Note ; s:v1"
