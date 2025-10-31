@@ -65,3 +65,6 @@ GIBindex — Sets
 
 > **GIBindex — Sets:** see [TERMS.md#set](docs/intent/gibindex/TERMS.md#set)
 
+
+> **BPOE — Sets:** see [docs/ops/BPOE_SETS.md](docs/ops/BPOE_SETS.md)
+
