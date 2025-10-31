@@ -65,3 +65,6 @@ GIBindex — Sets
 
 > **GIBindex — Sets:** see [TERMS.md#set](docs/intent/gibindex/TERMS.md#set)
 
+
+> Re-emit helper: **scripts/reemit.ps1** (calls tools/ReEmit-SetVioletIfHeadChanged.ps1).
+
