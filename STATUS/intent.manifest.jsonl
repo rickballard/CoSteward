@@ -1,0 +1,36 @@
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoIntent.ps1](tools/Scan-CoIntent.ps1#L4) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":12,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoIntent.ps1](tools/Scan-CoIntent.ps1#L48) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":14,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"FIXME","text":"/NEXT/IDEA in docs + code","path":"docs/ops/MEGACHECKLIST.md","line":15,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoIntent.ps1](tools/Scan-CoIntent.ps1#L49) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":16,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"FIXME","text":"|NEXT|IDEA)\\b[:\\-\\s]*(.*)'","path":"docs/ops/MEGACHECKLIST.md","line":17,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoIntent.ps1](tools/Scan-CoIntent.ps1#L58) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":18,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoIntent.ps1](tools/Scan-CoIntent.ps1#L99) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":20,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/Scan-CoRepo.ps1](tools/Scan-CoRepo.ps1#L4) · 2025-10-30T19:43:38Z","path":"docs/ops/MEGACHECKLIST.md","line":22,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"** — [tools/New-CoSyncHandshake.ps1](tools/New-CoSyncHandshake.ps1#L6) · 2025-10-30T19:12:51Z","path":"docs/ops/MEGACHECKLIST.md","line":24,"updated_utc":"2025-10-30T19:43:41Z","category":"inline"}
+
+{"kind":"todo","tag":"NEXT","text":"violet line and paste it back into AI chat:\"","path":"tools/New-CoSyncHandshake.ps1","line":6,"updated_utc":"2025-10-30T19:12:51Z","category":"inline"}
+
+{"kind":"todo","tag":"NEXT","text":"violet line and paste it back into AI chat:\"","path":"tools/Scan-CoIntent.ps1","line":4,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"/FIXME/NEXT/IDEA in docs + code","path":"tools/Scan-CoIntent.ps1","line":48,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"|FIXME|NEXT|IDEA)\\b[:\\-\\s]*(.*)'","path":"tools/Scan-CoIntent.ps1","line":49,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"'; tag=$matches[1].ToUpper(); text=$matches[2].Trim(); path=$rel; line=$i+1","path":"tools/Scan-CoIntent.ps1","line":58,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"todo","tag":"TODO","text":"'){ '⚑' } else { '§' }","path":"tools/Scan-CoIntent.ps1","line":99,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"todo","tag":"NEXT","text":"violet line and paste it back into AI chat:\"","path":"tools/Scan-CoRepo.ps1","line":4,"updated_utc":"2025-10-30T19:43:38Z","category":"inline"}
+
+{"kind":"heading","level":1,"text":"Mission (stub)","path":"docs/intent/MISSION.md","line":1,"updated_utc":"2025-10-29T04:33:04Z","category":"advice/intent"}
+
+{"kind":"heading","level":1,"text":"Vision (stub)","path":"docs/intent/VISION.md","line":1,"updated_utc":"2025-10-29T04:33:04Z","category":"advice/intent"}
+
