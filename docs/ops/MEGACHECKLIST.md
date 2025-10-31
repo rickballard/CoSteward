@@ -1,3 +1,5 @@
+_Policy: shows recent completions (last months) **and** all future intents; terse labels allowed for AI expansion._
+
 # Megachecklist (v1)
 
 Newest-first groups by rough category. Machine data: `STATUS/intent.manifest.jsonl`
@@ -44,4 +46,5 @@ Newest-first groups by rough category. Machine data: `STATUS/intent.manifest.jso
 
 
 _See also: [GIBindex — Terms](../intent/gibindex/TERMS.md)_
+
 
