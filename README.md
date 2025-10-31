@@ -58,3 +58,6 @@ function cosync {
 > VIOLET quick refs: **[Receipts](docs/ops/RECEIPTS.md)** · **[Handoffs](docs/ops/HANDOFFS.md)** · **[Companion](docs/bpoe/VIOLET.Companion.md)**.
 
 > Live status: **[Open Sessions →](docs/ops/SESSIONS.md#open-sessions)** · **[CoSync Handshakes →](docs/ops/COSYNC.md#entries)**
+
+> **GIBindex — Terms:** see [docs/intent/gibindex/TERMS.md](docs/intent/gibindex/TERMS.md)
+

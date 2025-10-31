@@ -42,3 +42,6 @@ Newest-first groups by rough category. Machine data: `STATUS/intent.manifest.jso
 - ⚑ **todo** — [tools/New-CoSyncHandshake.ps1](tools/New-CoSyncHandshake.ps1#L6) · 2025-10-30T19:12:51Z
   - violet line and paste it back into AI chat:"
 
+
+_See also: [GIBindex — Terms](../intent/gibindex/TERMS.md)_
+
