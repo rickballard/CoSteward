@@ -1,0 +1,7 @@
+name: example-docs-gated
+on: [pull_request]
+jobs: gated:
+  runs-on: ubuntu-latest
+  if: ${ github.event_name != 'pull_request' || !contains(join(github.event.pull_request.labels.*.name, ','), 'docs-only') }
+  steps:
+    - run: echo "This would run unless PR is labeled docs-only"
