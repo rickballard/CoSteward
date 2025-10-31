@@ -1,0 +1,29 @@
+name: set-violet-guard
+on:
+  pull_request:
+    paths:
+      - "docs/intent/sets/**/SET.md"
+jobs:
+  guard:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell 7
+        uses: PowerShell/PowerShell@v1
+        with:
+          pwsh-version: "7.x"
+      - name: Run guard for changed sets
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          Import-Module Microsoft.PowerShell.Management -EA SilentlyContinue | Out-Null
+          $changed = git diff --name-only origin/${{ github.base_ref }}... | Where-Object { $_ -like "docs/intent/sets/*/SET.md" }
+          if(-not $changed){ Write-Host "No SET.md changes"; exit 0 }
+          foreach($p in $changed){
+            $slug = Split-Path (Split-Path $p -Parent) -Leaf
+            Write-Host "Guarding slug: $slug"
+            pwsh -NoProfile -File tools/Guard-DoubleEmit.ps1 -Slug $slug
+            if($LASTEXITCODE -eq 2){
+              Write-Error "Duplicate violet detected today for $slug"
+            }
+          }

@@ -1,0 +1,23 @@
+name: set-retro-verify
+on:
+  pull_request:
+    paths: [ "docs/intent/sets/**/SET.md", "tools/Verify-Set.ps1", "STATUS/**" ]
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell 7
+        uses: PowerShell/PowerShell@v1
+        with: { pwsh-version: "7.x" }
+      - name: Verify changed sets
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $changed = git diff --name-only origin/${{ github.base_ref }}... | Where-Object { $_ -like "docs/intent/sets/*/SET.md" }
+          if(-not $changed){ Write-Host "No SET.md changes"; exit 0 }
+          foreach($p in $changed){
+            $slug = Split-Path (Split-Path $p -Parent) -Leaf
+            Write-Host "Retro-verify slug: $slug"
+            pwsh -NoProfile -File tools/Verify-Set.ps1 -Slug $slug -RecentShas 5 -Hours 24
+          }
