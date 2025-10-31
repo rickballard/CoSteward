@@ -1,0 +1,15 @@
+name: violet-rotate
+on:
+  schedule: [ { cron: "17 3 * * 0" } ]  # Sundays 03:17 UTC
+  workflow_dispatch:
+jobs:
+  rotate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell 7
+        uses: PowerShell/PowerShell@v1
+        with: { pwsh-version: "7.x" }
+      - name: Rotate violets.log
+        shell: pwsh
+        run: pwsh -NoProfile -File tools/Rotate-Violets.ps1 -MaxMB 5 -KeepDays 30

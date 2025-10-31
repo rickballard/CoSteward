@@ -1,0 +1,6 @@
+{"utc":"2025-10-30T19:13:00Z","bloat_pct":0,"assets_reread":20,"budget_mb":500,"sha":"f1908e0","working_set_mb":0.0,"helpers_indexed":22,"branch":"ops/cosync-handshake-20251030_191252Z"}
+
+{"helpers_indexed":22,"assets_reread":20,"budget_mb":500,"sha":"f1908e0","bloat_pct":0,"utc":"2025-10-30T19:13:09Z","working_set_mb":0.0,"branch":"ops/cosync-handshake-20251030_191252Z"}
+
+{"branch":"ops/intent-scan-v1-20251030_194341Z","assets_reread":22,"utc":"2025-10-31T00:55:00Z","bloat_pct":0,"budget_mb":500,"working_set_mb":0.0,"sha":"f1908e0","helpers_indexed":24}
+
