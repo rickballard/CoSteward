@@ -21,3 +21,12 @@ Open PRs (context):
   - https://github.com/rickballard/CoSteward/pull/28
 - #27: ops: Repo Index v1 (files manifest + md xref + helpers)
   - https://github.com/rickballard/CoSteward/pull/27
+
+| 2025-10-31T06:29:26Z | CoSteward | ops | merge receipt PR | #41 | e3ce78e | squash-merged receipts add |
+
+
+| 2025-10-31T06:29:33Z | CoSteward | ops | ignore STATUS CSV artifacts | #42 | e3ce78e | avoid local STATUS noise |
+
+
+| 2025-10-31T06:35:09Z | CoSteward | ops | ignore STATUS CSV artifacts | #42 | b63ea42 | avoid local STATUS noise (post-rebase) |
+
