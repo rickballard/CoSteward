@@ -5,28 +5,9 @@ Open PRs (context):
   - https://github.com/rickballard/CoSteward/pull/36
 - #35: ops: Verify-Set tool + CI retro-verify
   - https://github.com/rickballard/CoSteward/pull/35
-- #34: docs: BPOE ΓÇö Sets (emission + retrotesting)
-  - https://github.com/rickballard/CoSteward/pull/34
-- #33: ops: Set violet guard CI
-  - https://github.com/rickballard/CoSteward/pull/33
-- #32: ops: violet guard + CoTip (plan-A downloadables)
-  - https://github.com/rickballard/CoSteward/pull/32
-- #31: docs: Megachecklist policy hint
-  - https://github.com/rickballard/CoSteward/pull/31
-- #30: docs: GIBindex TERMS + pointers
-  - https://github.com/rickballard/CoSteward/pull/30
-- #29: ops: Regroup sweep ΓÇö receipts + indices refreshed
-  - https://github.com/rickballard/CoSteward/pull/29
-- #28: ops: Intent Harvester v1 + Repo Index fix
-  - https://github.com/rickballard/CoSteward/pull/28
-- #27: ops: Repo Index v1 (files manifest + md xref + helpers)
-  - https://github.com/rickballard/CoSteward/pull/27
 
 | 2025-10-31T06:29:26Z | CoSteward | ops | merge receipt PR | #41 | e3ce78e | squash-merged receipts add |
-
-
-| 2025-10-31T06:29:33Z | CoSteward | ops | ignore STATUS CSV artifacts | #42 | e3ce78e | avoid local STATUS noise |
-
-
 | 2025-10-31T06:35:09Z | CoSteward | ops | ignore STATUS CSV artifacts | #42 | b63ea42 | avoid local STATUS noise (post-rebase) |
-
+| 2025-10-31T06:29:33Z | CoSteward | ops | ignore STATUS CSV artifacts | #42 | e3ce78e | avoid local STATUS noise |
+| 2025-10-31T06:40:10Z | CoSteward | ops | receipt — ignore STATUS CSV artifacts | #44 | 80120b0 | logged merge of PR #44 |
+| 2025-10-31T06:40:11Z | CoSteward | ops | stop tracking STATUS/receipts.csv | #45 | 80120b0 | untracked file now ignored |
