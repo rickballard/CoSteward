@@ -68,3 +68,6 @@ GIBindex — Sets
 
 > Re-emit helper: **scripts/reemit.ps1** (calls tools/ReEmit-SetVioletIfHeadChanged.ps1).
 
+## CoCache Dashboards
+- CoSteward Aggregate: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_STEWARD.md
+- CoContrib Microtasks: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_CONTRIB.md
