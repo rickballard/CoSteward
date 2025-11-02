@@ -1,0 +1,38 @@
+name: receipts-guard
+on:
+  pull_request:
+    paths:
+      - "RECEIPTS.md"
+      - "receipts.csv"
+      - "tools/**"
+      - "tests/**"
+  push:
+    branches: [ main ]
+    paths:
+      - "RECEIPTS.md"
+      - "receipts.csv"
+      - "tools/**"
+      - "tests/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PowerShell
+        uses: PowerShell/PowerShell@v1
+        with:
+          pwsh-version: "7.4.x"
+      - name: Repair (idempotent)
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/Repair-Receipts.ps1
+          git status -s -- RECEIPTS.md receipts.csv
+          git diff --exit-code -- RECEIPTS.md receipts.csv
+      - name: Pester tests
+        shell: pwsh
+        run: |
+          Install-Module Pester -Scope CurrentUser -Force -SkipPublisherCheck
+          Invoke-Pester -CI -Path tests -EnableExit

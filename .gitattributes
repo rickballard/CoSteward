@@ -1,7 +1,5 @@
-ops/**/* linguist-generated=true
-.github/**/* linguist-generated=true
-docs/**/* linguist-documentation=true
-STATUS/receipts.csv merge=union
-STATUS/handoffs.csv merge=union
-*.md text eol=lf
-*.ps1 text eol=lf
+RECEIPTS.md          text eol=lf
+receipts.csv         text eol=lf
+tools/*.ps1          text eol=lf
+scripts/*.ps1        text eol=lf
+tests/*.ps1          text eol=lf
