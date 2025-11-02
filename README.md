@@ -1,3 +1,5 @@
+[![receipts-guard](https://github.com/rickballard/CoSteward/actions/workflows/receipts-guard.yml/badge.svg)](https://github.com/rickballard/CoSteward/actions/workflows/receipts-guard.yml)
+
 # (reset) intentionally blank; customize later  [Operations Manual](docs/ops/MANUAL/INDEX.md) · [Vision](docs/intent/VISION.md) · [Mission](docs/intent/MISSION.md)
 function cosync {
   param([Parameter(Position=0)][string]$Mode="auto", [string]$ZipPath)
@@ -71,3 +73,4 @@ GIBindex — Sets
 ## CoCache Dashboards
 - CoSteward Aggregate: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_STEWARD.md
 - CoContrib Microtasks: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_CONTRIB.md
+
