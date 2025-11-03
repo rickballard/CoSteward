@@ -1,0 +1,15 @@
+name: session-index
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "tools/Index-SessionPlans.ps1"
+  workflow_dispatch: {}
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run indexer
+        shell: pwsh
+        run: pwsh -NoProfile -File tools/Index-SessionPlans.ps1
