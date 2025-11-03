@@ -1,0 +1,5 @@
+# One per line: org/repo
+rickballard/CoSteward
+rickballard/CoCache
+rickballard/CoCivium
+rickballard/GIBindex
