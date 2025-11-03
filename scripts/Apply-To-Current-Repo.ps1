@@ -1,20 +1,25 @@
-param([switch]$Hub)  # -Hub when applying to GIBindex hub repo
+param(
+  [switch]$Hub,
+  [string]$SnippetsRoot = "$(Join-Path $PSScriptRoot '..\snippets')"
+)
 $ErrorActionPreference="Stop"
 $Repo = (Get-Location).Path
 $wfDir = Join-Path $Repo ".github/workflows"
 New-Item -ItemType Directory -Force $wfDir | Out-Null
 
 # Always install repo rails
-Copy-Item "$PSScriptRoot\..\snippets\guard-gib-org.yml"           (Join-Path $wfDir "guard-gib-org.yml")           -Force
-Copy-Item "$PSScriptRoot\..\snippets\gib-satellite.yml"           (Join-Path $wfDir "gib-satellite.yml")          -Force
-Copy-Item "$PSScriptRoot\..\snippets\violet-receipts-summary.yml" (Join-Path $wfDir "violet-receipts-summary.yml") -Force
+Copy-Item (Join-Path $SnippetsRoot 'guard-gib-org.yml')           (Join-Path $wfDir "guard-gib-org.yml")           -Force
+Copy-Item (Join-Path $SnippetsRoot 'gib-satellite.yml')           (Join-Path $wfDir "gib-satellite.yml")          -Force
+Copy-Item (Join-Path $SnippetsRoot 'violet-receipts-summary.yml') (Join-Path $wfDir "violet-receipts-summary.yml") -Force
 
 # Hub extras
 if($Hub){
-  Copy-Item "$PSScriptRoot\..\snippets\drift-catcher.yml"         (Join-Path $wfDir "drift-catcher.yml")          -Force
-  Copy-Item "$PSScriptRoot\..\snippets\gib-hub-annotate.yml"      (Join-Path $wfDir "gib-hub-annotate.yml")       -Force
+  Copy-Item (Join-Path $SnippetsRoot 'drift-catcher.yml')    (Join-Path $wfDir "drift-catcher.yml")     -Force
+  Copy-Item (Join-Path $SnippetsRoot 'gib-hub-annotate.yml') (Join-Path $wfDir "gib-hub-annotate.yml")  -Force
   New-Item -ItemType Directory -Force (Join-Path $Repo "ops") | Out-Null
-  Copy-Item "$PSScriptRoot\..\ops\flags.yml"                       (Join-Path $Repo "ops\flags.yml")               -Force
+  if(Test-Path (Join-Path $PSScriptRoot '..\ops\flags.yml')){
+    Copy-Item (Join-Path $PSScriptRoot '..\ops\flags.yml') (Join-Path $Repo 'ops\flags.yml') -Force
+  }
 }
 
 git -C $Repo fetch origin
