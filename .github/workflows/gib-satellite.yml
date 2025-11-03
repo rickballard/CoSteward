@@ -13,10 +13,9 @@ jobs:
           mkdir -p emit
           : > emit/registry.jsonl
           while read -r f; do
-            sha=$(git ls-files -s -- "$f" | awk "{print \$2}")
+            sha=$(git ls-files -s -- "$f" | awk "{print $2}")
             size=$(wc -c < "$f" 2>/dev/null || echo 0)
-            jq -nc --arg path "$f" --arg sha "$sha" --argjson size "$size" \
-              '{path:$path, sha:$sha, size:$size}' >> emit/registry.jsonl
+            jq -nc --arg path "$f" --arg sha "$sha" --argjson size "$size"               '{path:$path, sha:$sha, size:$size}' >> emit/registry.jsonl
           done < <(git ls-files)
       - uses: actions/upload-artifact@v4
         with: { name: gib-satellite, path: emit/registry.jsonl }
