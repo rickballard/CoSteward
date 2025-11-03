@@ -19,3 +19,11 @@ jobs:
             $hasTag = ($added | % Line) -match 'gib:Term' | Select-Object -First 1
             if(-not $hasTag){ Write-Error "New Co* token(s) introduced but no 'gib:Term' reference found." }
           }
+- name: Explain guard failure (PR comment)
+  if: ${{ failure() && github.event_name == 'pull_request' }}
+  shell: bash
+  env:
+    PR_NUMBER: ${{ github.event.pull_request.number }}
+  run: |
+    body=$'# ❌ PR blocked by org guard\n\n**Why**\n- Forbidden folders: `docs/insight/` / `insights/`\n- New `Co*` tokens require a `gib:Term` reference in the diff\n\n**Fix**\nPush a commit that removes forbidden paths and/or adds the `gib:Term` reference.'
+    gh pr comment "$PR_NUMBER" -b "$body" || true
