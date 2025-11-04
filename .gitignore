@@ -1,2 +1,5 @@
 
 /STATUS/*.csv
+# volatile local receipts
+advice/STATUS/violets.log
+advice/STATUS/*.log
