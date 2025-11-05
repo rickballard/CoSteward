@@ -1,3 +1,5 @@
+- **CoTips (Repo-first)** → [CoTips.md](./CoTips.md)
+
 # CoSuite Operations Manual
 
 > Source of truth: code + CI. This manual stitches the moving parts together for humans.
@@ -18,3 +20,4 @@
 - [Profiles Catalog](../../bpoe/Profiles.Catalog.md)
 
 - [VIOLET Companion](../../bpoe/VIOLET.Companion.md)
+
