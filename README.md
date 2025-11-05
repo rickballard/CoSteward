@@ -1,23 +1,15 @@
-[![receipts-guard](https://github.com/rickballard/CoSteward/actions/workflows/receipts-guard.yml/badge.svg)](https://github.com/rickballard/CoSteward/actions/workflows/receipts-guard.yml)
+# CoSteward — **Ops Manual · Vision · Dashboard**
 
-# (reset) intentionally blank; customize later  [Operations Manual](docs/ops/MANUAL/INDEX.md) · [Vision](docs/intent/VISION.md) · [Mission](docs/intent/MISSION.md)
-function cosync {
-  param([Parameter(Position=0)][string]$Mode="auto", [string]$ZipPath)
-  try {
-    $repo = git rev-parse --show-toplevel 2>$null
-    if (-not $repo) { $repo = Join-Path $HOME "CoPolitic" }
-    if (-not (Test-Path $repo)) { throw "Repo not found at $repo" }
-    $script = Join-Path $repo "scripts\CoSync.ps1"
-    if (-not (Test-Path $script)) { throw "Missing $script" }
-    $argsList = @("-File", $script, "-Mode", $Mode)
-    if ($ZipPath) { $argsList += @("-ZipPath", $ZipPath) }
-    pwsh @argsList
-  } catch { Write-Host "cosync error: $($_.Exception.Message)" -ForegroundColor Red }
-}
+**Quick links:**  
+- **Ops Manual:** `docs/ops/CoSteward.OpsManual.md`  
+- **Vision:** `docs/vision/CoSteward.Vision.md`  
+- **Profile Template (canonical):** `docs/CoSteward.ProfileTemplate.md`  
+- **CoSync Notes:** `docs/intent/advice/notes/` (latest first)  
+- **BPOE Index:** `docs/bpoe/`  
 
-. "C:\Users\Chris\Documents\PowerShell\Profile.BPOE.HereStrings.ps1"
+> Repo = source of truth. Always leave a trail. Use PS7. Workflows are PR-first with squash-merge.
 
-## Active Ops
+---## Active Ops
 
 - Live CoSync Feed → [docs/ops/LIVE.md](docs/ops/LIVE.md)
 - Current Session Plan → [docs/intent/advice/plan/LATEST.md](docs/intent/advice/plan/LATEST.md)
@@ -73,4 +65,5 @@ GIBindex — Sets
 ## CoCache Dashboards
 - CoSteward Aggregate: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_STEWARD.md
 - CoContrib Microtasks: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_CONTRIB.md
+
 
