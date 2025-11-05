@@ -1,0 +1,20 @@
+name: CoTips Verify
+on:
+  pull_request:
+    paths:
+      - "docs/ops/MANUAL/**"
+      - "tools/Verify-CoTips.ps1"
+  push:
+    branches: [ main ]
+    paths:
+      - "docs/ops/MANUAL/**"
+      - "tools/Verify-CoTips.ps1"
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run verifier
+        shell: pwsh
+        run: |
+          & ./tools/Verify-CoTips.ps1
