@@ -72,3 +72,56 @@ if( -ne ){ throw "SHA mismatch." }
 - [ ] Promotion via PR only
 - [ ] INBOX_LOG row (if applicable)
 - [ ] CoSync note with pointers
+---
+## CoTip: Robust Branch & gh Context {#cotips-branch-gh}
+**Why:** Avoids null/trim errors and "gh: not a git repo" when creating PRs.
+
+**Pattern**
+1. **Branch existence check** via ev-parse --verify --quiet.
+2. **Switch safely**: git switch <branch> or -c if missing.
+3. **gh context**: Push-Location into repo before gh pr list/create.
+
+~~~powershell
+# Exists?
+C:\Users\Chris\Documents\GitHub\CoSteward = "C:\Users\Chris\Documents\GitHub/CoSteward"
+docs/cotips-extras   = "docs/example"
+ = git -C C:\Users\Chris\Documents\GitHub\CoSteward rev-parse --verify --quiet docs/cotips-extras
+if(0 -eq 0){ git -C C:\Users\Chris\Documents\GitHub\CoSteward switch docs/cotips-extras } else { git -C C:\Users\Chris\Documents\GitHub\CoSteward switch -c docs/cotips-extras }
+
+# gh in repo context
+Push-Location C:\Users\Chris\Documents\GitHub\CoSteward
+try{
+  https://github.com/rickballard/CoSteward/pull/72 = gh -R rickballard/CoSteward pr list --head docs/cotips-extras --json url --jq '.[0].url'
+  if([string]::IsNullOrWhiteSpace(https://github.com/rickballard/CoSteward/pull/72)){
+    https://github.com/rickballard/CoSteward/pull/72 = gh -R rickballard/CoSteward pr create --head docs/cotips-extras --base main --title "demo" --body "demo"
+  }
+} finally { Pop-Location }
+~~~
+---
+## CoTip: Labels & Line-Endings (No Foot-guns) {#cotips-labels-eol}
+**Labels**
+- Pre-create labels you rely on (e.g., docs, ops, session) to prevent PR creation failures.
+- Pattern: query → create if missing (idempotent).
+
+**Line endings**
+- CRLF↔LF warnings are harmless; prefer repo policy via .gitattributes or core.autocrlf.
+
+~~~powershell
+# Ensure labels exist (idempotent)
+rickballard/CoSteward = "rickballard/CoSteward"
+ = @(
+  @{name='docs';    color='6f42c1'; desc='Documentation'},
+  @{name='ops';     color='0e8a16'; desc='Operational change'},
+  @{name='session'; color='0366d6'; desc='Session-related'}
+)
+foreach(System.Collections.Hashtable in ){
+  try{
+     = gh -R rickballard/CoSteward label list --json name --jq (".[] | select(.name==""session"") | .name")
+    if(-not ){ gh -R rickballard/CoSteward label create System.Collections.Hashtable.name --color 0366d6 --description Session-related | Out-Null }
+  } catch {}
+}
+
+# Optional EOL policy
+git -C C:\Users\Chris\Documents\GitHub\CoSteward config core.autocrlf true     # Windows-friendly
+# or add a .gitattributes entry:  *.md text eol=lf
+~~~
