@@ -7,7 +7,6 @@ function Invoke-InboxGuard {
     [string]$RepoRoot = (Split-Path -Parent $PSCommandPath | Split-Path -Parent)
   )
   $ErrorActionPreference='Stop'
-  # Prefer a repo-native guard script if present; fall back to CI-like scan if that exists in CoCache
   $guard = Join-Path $RepoRoot 'advice/inbox/.CoVerify.ps1'
   if(Test-Path $guard){
     & $guard
