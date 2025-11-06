@@ -91,3 +91,7 @@ CoSync++ = multi-agent alignment trigger
 
 📌 *Repo Standard:* Canonical profile lives in [`docs/CoSteward.ProfileTemplate.md`](./CoSteward.ProfileTemplate.md), mirrored in CoCache at  
 [`advice/inbox/assets/CoSteward.ProfileTemplate.md`](https://github.com/rickballard/CoCache/blob/main/advice/inbox/assets/CoSteward.ProfileTemplate.md)
+
+## Canon: CoBlock (formerly "DO Block")
+- Use the term **CoBlock** for BPOE-ready, paste-to-run operational blocks.
+- Sessions emitting "DO Block" will be treated as *drift signals* and should self-correct or be flagged by CI.
