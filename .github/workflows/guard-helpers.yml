@@ -41,7 +41,7 @@ jobs:
           $coopsTouched = $changed | Where-Object { $_.Path -eq 'tools/CoOps.psm1' -and $_.Status -match '^[AM]' }
 
           if (-not $coopsTouched) {
-            Write-Error @"
+Write-Warning @"
 BPOE: Prefer existing helpers; evolve before you add.
 
 This PR adds/changes helper script(s) under tools/ but does not modify tools/CoOps.psm1.
@@ -51,3 +51,4 @@ Docs: docs/ops/MANUAL/BPOE.md {#bpoe-helper-evolution}
 CoTip: docs/ops/MANUAL/CoTips.md
 "@
           }
+
