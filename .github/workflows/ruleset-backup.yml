@@ -1,0 +1,22 @@
+name: Ruleset Snapshot
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "docs/ops/policies/rulesets/**"
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot rulesets
+        shell: pwsh
+        run: |
+          ./tools/Backup-Rulesets.ps1 -RepoSlug "rickballard/CoSteward" -OutDir "docs/ops/policies/rulesets/_snapshots"
+      - name: Commit snapshot (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/ops/policies/rulesets/_snapshots || true
+          git diff --cached --quiet || git commit -m "chore(rulesets): snapshot"
+          git push
