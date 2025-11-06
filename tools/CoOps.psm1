@@ -65,3 +65,6 @@ Export-ModuleMember -Function Invoke-InboxGuard,Invoke-VerifyCoTips,Get-Rulesets
 # test wiring for guard self-check
 . ./tools/Test-Helper.ps1
 Export-ModuleMember -Function Invoke-TestHelper
+# test wiring for guard pass
+. ./tools/Temp-Guard-Demo.ps1
+Export-ModuleMember -Function Invoke-TempGuardDemo
