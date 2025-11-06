@@ -261,3 +261,14 @@ Hardens DO blocks so they work the same every time.
 
 **Result**  
 Fewer paste/escaping issues, repeatable results.
+---
+## CoTip: Prefer the helper module (CoOps) {#cotips-coops}
+
+**Why**  
+One import keeps sessions, DO blocks, and CI calling the same helpers so behavior stays consistent.
+
+**Do this**  
+Use Import-Module ./tools/CoOps.psm1 and call Invoke-* helpers (e.g., Invoke-InboxGuard, Invoke-VerifyCoTips) instead of invoking scripts directly.
+
+**Result**  
+Cleaner DO blocks, fewer drift points, easier CI reuse.
