@@ -261,3 +261,24 @@ Hardens DO blocks so they work the same every time.
 
 **Result**  
 Fewer paste/escaping issues, repeatable results.
+---
+## CoTip: Rulesets (Seed Mode) — one required check, no required reviews {#cotips-ruleset-seed}
+
+**Goal (seed mode)**  
+Protect \main\ with **one status check** (e.g., “CoTips Verify”) and **no required reviews** so you don’t block yourself.
+
+**Do this (Settings → Rules → New ruleset):**
+1. **Name**: \seed-mode (main)\
+2. **Target**: Branch
+3. **Include refs**: \efs/heads/main\
+4. **Rules**:
+   - **Required status checks** → add “CoTips Verify”, **Strict** = off  
+   - **Pull request** → Required approvals = 0, **Code owner review** = off
+5. **Bypass**: none
+6. **Enforcement**: Active
+
+**Flip later (team mode)**  
+Set approvals to 1–2 and turn **Require code owner reviews** = on.
+
+**Why**  
+Classic branch-protection API is disabled here; rulesets are the supported path. Seed mode lets you move fast now and tighten later.
