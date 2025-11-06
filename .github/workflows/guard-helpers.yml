@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   guard:
@@ -15,38 +16,103 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check for new/changed helper scripts not routed via CoOps
+      - name: Check routing via CoOps (no stray tools/*.ps1)
         shell: pwsh
         run: |
-          $ErrorActionPreference = 'Stop'
-          # Base and head for this PR
+          $ErrorActionPreference='Stop'
           $base = "${{ github.event.pull_request.base.sha }}"
           $head = "${{ github.event.pull_request.head.sha }}"
-
-          # Gather changed files
           $changed = git diff --name-status $base $head | ForEach-Object {
-            $parts = $_ -split "`t",2
-            [PSCustomObject]@{Status=$parts[0]; Path=$parts[1]}
+            $p = $_ -split "`t",2
+            [pscustomobject]@{ Status=$p[0]; Path=$p[1] }
           }
 
-          # Any .ps1 added/modified under tools/ (but not CoOps.psm1)
-          $helperChanges = $changed | Where-Object {
+          $helpers = $changed | Where-Object {
             $_.Path -match '^tools/.*\.ps1$' -and $_.Path -ne 'tools/CoOps.psm1' -and $_.Status -match '^[AM]'
           }
 
-          if (-not $helperChanges) { Write-Host "No helper script changes detected."; exit 0 }
+          if(-not $helpers){ echo "No helper script changes."; exit 0 }
 
-          # Require that CoOps.psm1 is touched in same PR (aggregation route)
           $coopsTouched = $changed | Where-Object { $_.Path -eq 'tools/CoOps.psm1' -and $_.Status -match '^[AM]' }
+          if(-not $coopsTouched){
+            $msg = @"
+**BPOE guard:** New/changed helpers must route via the aggregator.
 
-          if (-not $coopsTouched) {
-            Write-Error @"
-BPOE: Prefer existing helpers; evolve before you add.
+These files changed under `tools/`:
+$(($helpers | ForEach-Object { " - " + $_.Status + "`t" + $_.Path }) -join "`n")
 
-This PR adds/changes helper script(s) under tools/ but does not modify tools/CoOps.psm1.
-Please route helpers through the aggregation module (CoOps), or evolve existing ones in-place.
-
-Docs: docs/ops/MANUAL/BPOE.md {#bpoe-helper-evolution}
-CoTip: docs/ops/MANUAL/CoTips.md
+Please evolve/export via `tools/CoOps.psm1` in the same PR. See BPOE {#bpoe-helper-evolution}.
 "@
+            "$msg" | Out-File "$env:RUNNER_TEMP/guard_report.md" -Encoding utf8
+            Write-Error "Routing via CoOps required."
           }
+
+      - name: Check exports in CoOps (helpers must be exported or referenced)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference='Stop'
+          $base = "${{ github.event.pull_request.base.sha }}"
+          $head = "${{ github.event.pull_request.head.sha }}"
+          $changed = git diff --name-status $base $head | ForEach-Object {
+            $p = $_ -split "`t",2
+            [pscustomobject]@{ Status=$p[0]; Path=$p[1] }
+          }
+
+          $helpers = $changed | Where-Object {
+            $_.Path -match '^tools/.*\.ps1$' -and $_.Path -ne 'tools/CoOps.psm1' -and $_.Status -match '^[AM]'
+          }
+          if(-not $helpers){ exit 0 }
+
+          if(-not (Test-Path 'tools/CoOps.psm1')){ Write-Error "Missing tools/CoOps.psm1"; }
+
+          $coops = Get-Content -Raw -LiteralPath 'tools/CoOps.psm1'
+          $violations = @()
+          foreach($h in $helpers){
+            $name = [IO.Path]::GetFileNameWithoutExtension($h.Path)
+            # Heuristics: exported via Export-ModuleMember OR referenced/dot-sourced or function forwarded
+            $isExported = ($coops -match "(?im)Export-ModuleMember\s+.*\b$name\b") -or
+                          ($coops -match "(?im)\.\s*\.\/tools\/.*\b$name\b\.ps1") -or
+                          ($coops -match "(?im)function\s+$name\b") -or
+                          ($coops -match "(?im)\b$name\s*-")
+            if(-not $isExported){ $violations += $h.Path }
+          }
+
+          if($violations.Count){
+            $msg = @"
+**BPOE guard:** Helpers must be exported/referenced from `tools/CoOps.psm1`.
+
+Not exported/referenced:
+$(($violations | ForEach-Object { " - " + $_ }) -join "`n")
+
+Add an export (e.g., `Export-ModuleMember -Function <fn>`) or dot-source the file in `CoOps.psm1`. See BPOE {#bpoe-helper-evolution}.
+"@
+            "$msg" | Out-File "$env:RUNNER_TEMP/guard_report.md" -Append -Encoding utf8
+            Write-Error "Helper export check failed."
+          }
+
+      - name: Post sticky PR comment (report)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.existsSync(process.env.RUNNER_TEMP + '/guard_report.md')
+              ? fs.readFileSync(process.env.RUNNER_TEMP + '/guard_report.md','utf8')
+              : '**BPOE guard:** violation(s) detected.';
+            const {owner, repo} = context.repo;
+            const issue_number = context.payload.pull_request.number;
+
+            // Find existing bot comment
+            const { data: comments } = await github.rest.issues.listComments({owner, repo, issue_number, per_page: 100});
+            const marker = 'BPOE guard';
+            const mine = comments.find(c =>
+              c.user.type === 'Bot' &&
+              c.body && c.body.includes(marker)
+            );
+
+            const finalBody = `<!-- ${marker} sticky -->\n` + body;
+            if (mine) {
+              await github.rest.issues.updateComment({owner, repo, comment_id: mine.id, body: finalBody});
+            } else {
+              await github.rest.issues.createComment({owner, repo, issue_number, body: finalBody});
+            }
