@@ -25,7 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $ErrorActionPreference='Stop'
+          $ErrorActionPreference = 'Stop'
           if (Test-Path './tools/CoOps.psm1') {
             Import-Module ./tools/CoOps.psm1
             Backup-Rulesets -RepoSlug "rickballard/CoSteward" -OutDir "docs/ops/policies/rulesets/_snapshots"
