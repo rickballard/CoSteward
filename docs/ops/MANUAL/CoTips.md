@@ -272,3 +272,9 @@ Use Import-Module ./tools/CoOps.psm1 and call Invoke-* helpers (e.g., Invoke-Inb
 
 **Result**  
 Cleaner DO blocks, fewer drift points, easier CI reuse.
+
+---
+## CoTip: Use existing helpers; evolve before adding {#cotips-helper-evolution}
+
+Prefer 	ools/CoOps.psm1 and extend existing functions vs adding new scripts. See **BPOE: helper-evolution** ({#bpoe-helper-evolution}) for guardrails/checklist.
+
