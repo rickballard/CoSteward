@@ -62,3 +62,6 @@ function Backup-Rulesets {
 }
 
 Export-ModuleMember -Function Invoke-InboxGuard,Invoke-VerifyCoTips,Get-Rulesets,Upsert-Ruleset,Backup-Rulesets
+# test wiring for guard self-check
+. ./tools/Test-Helper.ps1
+Export-ModuleMember -Function Invoke-TestHelper
