@@ -1,0 +1,52 @@
+name: Guard: Helper Evolution
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for new/changed helper scripts not routed via CoOps
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          # Base and head for this PR
+          $base = "${{ github.event.pull_request.base.sha }}"
+          $head = "${{ github.event.pull_request.head.sha }}"
+
+          # Gather changed files
+          $changed = git diff --name-status $base $head | ForEach-Object {
+            $parts = $_ -split "`t",2
+            [PSCustomObject]@{Status=$parts[0]; Path=$parts[1]}
+          }
+
+          # Any .ps1 added/modified under tools/ (but not CoOps.psm1)
+          $helperChanges = $changed | Where-Object {
+            $_.Path -match '^tools/.*\.ps1$' -and $_.Path -ne 'tools/CoOps.psm1' -and $_.Status -match '^[AM]'
+          }
+
+          if (-not $helperChanges) { Write-Host "No helper script changes detected."; exit 0 }
+
+          # Require that CoOps.psm1 is touched in same PR (aggregation route)
+          $coopsTouched = $changed | Where-Object { $_.Path -eq 'tools/CoOps.psm1' -and $_.Status -match '^[AM]' }
+
+          if (-not $coopsTouched) {
+            Write-Error @"
+BPOE: Prefer existing helpers; evolve before you add.
+
+This PR adds/changes helper script(s) under tools/ but does not modify tools/CoOps.psm1.
+Please route helpers through the aggregation module (CoOps), or evolve existing ones in-place.
+
+Docs: docs/ops/MANUAL/BPOE.md {#bpoe-helper-evolution}
+CoTip: docs/ops/MANUAL/CoTips.md
+"@
+          }
