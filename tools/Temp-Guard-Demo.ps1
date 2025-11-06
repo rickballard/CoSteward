@@ -1,0 +1,1 @@
+function Invoke-TempGuardDemo { "demo" }
