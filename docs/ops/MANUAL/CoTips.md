@@ -261,3 +261,22 @@ Hardens DO blocks so they work the same every time.
 
 **Result**  
 Fewer paste/escaping issues, repeatable results.
+---
+## CoTip: Solo-seed CODEOWNERS & Branch Protection (Plain English) {#cotips-seed-mode}
+
+**When you’re the only contributor**  
+Keep the future guardrails, but don’t block yourself.
+
+**Do this now (seed mode)**  
+- Keep a CODEOWNERS file (you as owner) so handoff is ready later.  
+- Require **status checks** (CI, verifiers) but **do not require reviews** yet.  
+- Prefer **squash merge** to keep main clean.  
+- Auto-merge after checks pass if you like.
+
+**Flip later (team mode)**  
+- Turn on “Require review from Code Owners”.  
+- Set required approvals to 1–2.  
+- Add specific owners per folder.
+
+**Result**  
+You move fast today and avoid re-work tomorrow.
