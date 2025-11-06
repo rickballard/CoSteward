@@ -91,3 +91,5 @@ CoSync++ = multi-agent alignment trigger
 
 📌 *Repo Standard:* Canonical profile lives in [`docs/CoSteward.ProfileTemplate.md`](./CoSteward.ProfileTemplate.md), mirrored in CoCache at  
 [`advice/inbox/assets/CoSteward.ProfileTemplate.md`](https://github.com/rickballard/CoCache/blob/main/advice/inbox/assets/CoSteward.ProfileTemplate.md)
+
+- **Default shipping framework:** Megazip Waves (see docs/bpoe/MegazipWaves_Framework.md)
