@@ -48,17 +48,28 @@ function Upsert-Ruleset {
   if(!(Test-Path $up)){ throw "Missing helper: tools/Upsert-Ruleset.ps1" }
   & $up -RepoSlug $RepoSlug -TemplatePath $TemplatePath
 }
-
 function Backup-Rulesets {
-  [CmdletBinding()]
-  param(
-    [string]$RepoSlug = "rickballard/CoSteward",
-    [string]$OutDir
+  [CmdletBinding()] param(
+    [string]rickballard/CoSteward = "rickballard/CoSteward",
+    [string]C:\Users\Chris\docs\_reports
   )
-  $ErrorActionPreference='Stop'
-  $bk = Join-Path (Split-Path -Parent $PSCommandPath) 'Backup-Rulesets.ps1'
-  if(!(Test-Path $bk)){ throw "Missing helper: tools/Backup-Rulesets.ps1" }
-  if($OutDir){ & $bk -RepoSlug $RepoSlug -OutDir $OutDir } else { & $bk -RepoSlug $RepoSlug }
-}
-
-Export-ModuleMember -Function Invoke-InboxGuard,Invoke-VerifyCoTips,Get-Rulesets,Upsert-Ruleset,Backup-Rulesets
+  \Stop='Stop'
+  \ = Join-Path (Split-Path -Parent \) 'Backup-Rulesets.ps1'
+  if (Test-Path \) {
+    if (\C:\Users\Chris\docs\_reports) { & \ -RepoSlug \rickballard/CoSteward -OutDir \C:\Users\Chris\docs\_reports } else { & \ -RepoSlug \rickballard/CoSteward }
+    return
+  }
+  # Fallback: call GitHub REST via 'gh api' and save to snapshots
+  if ([string]::IsNullOrWhiteSpace(\C:\Users\Chris\docs\_reports)) { \C:\Users\Chris\docs\_reports = "docs/ops/policies/rulesets/_snapshots" }
+  if (-not (Test-Path \C:\Users\Chris\docs\_reports)) { New-Item -ItemType Directory -Force -Path \C:\Users\Chris\docs\_reports | Out-Null }
+  if (-not \ -and -not \) {
+    throw "GH_TOKEN/GITHUB_TOKEN not set; export one in the workflow step."
+  }
+  \20251106_033712Z = (Get-Date).ToUniversalTime().ToString('yyyyMMdd_HHmmssZ')
+  \ = Join-Path \C:\Users\Chris\docs\_reports ("rulesets_{0}.json" -f \20251106_033712Z)
+  # Use gh api (which ships on ubuntu runners); GH_TOKEN is picked up automatically
+  \ = gh api "repos/\rickballard/CoSteward/rulesets" 2>&1
+  if (\0 -ne 0) { throw "gh api failed: \" }
+  [IO.File]::WriteAllText(\, [string]\, [Text.UTF8Encoding]::new(\False))
+  Write-Host "[OK] Snapshot -> \" -ForegroundColor Green
+}Export-ModuleMember -Function Invoke-InboxGuard,Invoke-VerifyCoTips,Get-Rulesets,Upsert-Ruleset,Backup-Rulesets
