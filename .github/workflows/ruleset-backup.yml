@@ -1,0 +1,31 @@
+name: Ruleset Snapshot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * 1' # Mondays 03:23 UTC
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot rulesets (prefer CoOps; fallback to script)
+        shell: pwsh
+        run: |
+          \Stop='Stop'
+          if (Test-Path './tools/CoOps.psm1') {
+            Import-Module ./tools/CoOps.psm1
+            Backup-Rulesets -RepoSlug 'rickballard/CoSteward' -OutDir 'docs/ops/policies/rulesets/_snapshots'
+          }
+          elseif (Test-Path './tools/Backup-Rulesets.ps1') {
+            ./tools/Backup-Rulesets.ps1 -RepoSlug 'rickballard/CoSteward' -OutDir 'docs/ops/policies/rulesets/_snapshots'
+          }
+          else {
+            throw 'Missing tools/CoOps.psm1 and tools/Backup-Rulesets.ps1'
+          }
+      - name: Commit snapshot (if changed)
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/ops/policies/rulesets/_snapshots || true
+          git diff --cached --quiet || git commit -m 'chore(rulesets): snapshot'
+          git diff --cached --quiet || git push
