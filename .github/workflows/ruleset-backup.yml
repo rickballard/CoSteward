@@ -6,8 +6,9 @@ on:
     - cron: "23 3 * * 1"  # Mondays 03:23 UTC
 
 permissions:
-  contents: write      # allow committing snapshot
+  contents: write
   actions: read
+  metadata: read
 
 jobs:
   snapshot:
@@ -15,12 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup gh
-        uses: cli/gh-action@v2
-        with:
-          version: latest
-
-      - name: Snapshot rulesets (prefer CoOps; fallback to script)
+      - name: Snapshot rulesets (prefer CoOps; or built-in fallback)
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
@@ -29,12 +25,8 @@ jobs:
           if (Test-Path './tools/CoOps.psm1') {
             Import-Module ./tools/CoOps.psm1
             Backup-Rulesets -RepoSlug "rickballard/CoSteward" -OutDir "docs/ops/policies/rulesets/_snapshots"
-          }
-          elseif (Test-Path './tools/Backup-Rulesets.ps1') {
-            ./tools/Backup-Rulesets.ps1 -RepoSlug "rickballard/CoSteward" -OutDir "docs/ops/policies/rulesets/_snapshots"
-          }
-          else {
-            throw "Missing tools/CoOps.psm1 and tools/Backup-Rulesets.ps1"
+          } else {
+            throw "Missing tools/CoOps.psm1"
           }
 
       - name: Commit snapshot (if changed)
