@@ -67,3 +67,6 @@ GIBindex — Sets
 - CoContrib Microtasks: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_CONTRIB.md
 
 
+
+
+**Operations Manual**: [MegaWave Status & BPOE Heartbeat](docs/ops/OperationsManual.md)
