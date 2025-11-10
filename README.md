@@ -1,3 +1,5 @@
+## Rick’s Bio / Canonical CoSteward Profile
+[→ CoSteward Profile (Rick’s canonical bio)](docs/CoSteward.ProfileTemplate.md)
 # CoSteward — **Ops Manual · Vision · Dashboard**
 
 **Quick links:**  
