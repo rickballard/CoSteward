@@ -1,70 +1,32 @@
-# CoSteward — **Ops Manual · Vision · Dashboard**
+# CoPrime Handoff — Co1 → Co1b
+**UTC:** 20251112T182847Z
 
-**Quick links:**  
-- **Ops Manual:** `docs/ops/CoSteward.OpsManual.md`  
-- **Vision:** `docs/vision/CoSteward.Vision.md`  
-- **Profile Template (canonical):** `docs/CoSteward.ProfileTemplate.md`  
-- **CoSync Notes:** `docs/intent/advice/notes/` (latest first)  
-- **BPOE Index:** `docs/bpoe/`  
+This bundle is a self-contained, repo‑first handoff package. Land it with a short branch + PR in **CoSteward** (primary) and optionally add a CoSync note pointer in **CoCache**.
 
-> Repo = source of truth. Always leave a trail. Use PS7. Workflows are PR-first with squash-merge.
+## Landing (PowerShell)
+```powershell
+$ErrorActionPreference='Stop'
+$CS = Join-Path $HOME 'Documents\GitHub\CoSteward'
+$Tmp = Join-Path $env:TEMP 'handoff_tmp'
+$Zip = "$HOME\Downloads\AdviceBomb_Handoff_CoPrime_Co1_to_Co1b_20251112T182847Z.zip"
 
----## Active Ops
+if(-not (Test-Path $Zip)){ throw "Place the zip at: $Zip" }
+if(Test-Path $Tmp){ Remove-Item $Tmp -Recurse -Force }
+Expand-Archive -Path $Zip -DestinationPath $Tmp -Force
 
-- Live CoSync Feed → [docs/ops/LIVE.md](docs/ops/LIVE.md)
-- Current Session Plan → [docs/intent/advice/plan/LATEST.md](docs/intent/advice/plan/LATEST.md)
-- CoBus Status → [docs/ops/COBUS_STATUS.md](docs/ops/COBUS_STATUS.md)
+# 0) CoSync
+pushd $CS; git switch main *> $null; git pull --ff-only *> $null; popd
 
-## Crown Jewels
+# 1) Short branch + copy payload
+$Br = "docs/handoff_coprime_20251112_20251112T182847Z"
+pushd $CS; git switch -c $Br *> $null; popd
+Copy-Item -Recurse -Force (Join-Path $Tmp '*') $CS
 
-- Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
-- BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
-
-## Active Ops
-
-- Live CoSync Feed → [docs/ops/LIVE.md](docs/ops/LIVE.md)
-- Current Session Plan → [docs/intent/advice/plan/LATEST.md](docs/intent/advice/plan/LATEST.md)
-- CoBus Status → [docs/ops/COBUS_STATUS.md](docs/ops/COBUS_STATUS.md)
-
-## Crown Jewels
-
-- Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
-- BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
-
-> - Auto-CoSync (opt-in): set `docs/ops/COSYNC_POLICY.json` → `"enabled": true` and enable the local task `CoSteward-AutoCoSync`.
-
-## Active Ops
-
-- Live CoSync Feed → [docs/ops/LIVE.md](docs/ops/LIVE.md)
-- Current Session Plan → [docs/intent/advice/plan/LATEST.md](docs/intent/advice/plan/LATEST.md)
-- CoBus Status → [docs/ops/COBUS_STATUS.md](docs/ops/COBUS_STATUS.md)
-
-## Crown Jewels
-
-- Megascroll Hub → [docs/hp/MEGASCROLLS.md](docs/hp/MEGASCROLLS.md)
-- BPOE Quicklist → [docs/bpoe/INDEX.md](docs/bpoe/INDEX.md)
-
-
-
-
-> Quick setup? See **[Profiles Catalog](docs/bpoe/Profiles.Catalog.md)** and **[Violet Receipts](docs/ops/RECEIPTS.md)**.
-
-> VIOLET quick refs: **[Receipts](docs/ops/RECEIPTS.md)** · **[Handoffs](docs/ops/HANDOFFS.md)** · **[Companion](docs/bpoe/VIOLET.Companion.md)**.
-
-> Live status: **[Open Sessions →](docs/ops/SESSIONS.md#open-sessions)** · **[CoSync Handshakes →](docs/ops/COSYNC.md#entries)**
-
-> **GIBindex — Terms:** see [docs/intent/gibindex/TERMS.md](docs/intent/gibindex/TERMS.md)
-
-GIBindex — Sets
-
-> **GIBindex — Sets:** see [TERMS.md#set](docs/intent/gibindex/TERMS.md#set)
-
-
-> Re-emit helper: **scripts/reemit.ps1** (calls tools/ReEmit-SetVioletIfHeadChanged.ps1).
-
-## CoCache Dashboards
-- CoSteward Aggregate: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_STEWARD.md
-- CoContrib Microtasks: https://github.com/rickballard/CoCache/blob/main/advice/index/AGG_DASH_CO_CONTRIB.md
-
-
-
+# 2) Commit + push + PR
+pushd $CS
+git add -A
+git commit -m "docs(handoff): CoPrime Co1 → Co1b handoff + CoSync note + next‑intent"
+git push -u origin $Br
+gh pr create --title "CoPrime Handoff: Co1 → Co1b" --body "Adds handoff docs, CoSync note, and next‑intent checklist."
+popd
+```
