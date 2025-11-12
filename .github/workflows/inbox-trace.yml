@@ -1,0 +1,7 @@
+name: inbox-trace
+on: [pull_request]
+jobs:
+  trace:
+    uses: rickballard/CoCache/.github/workflows/inbox-trace-comment.yml@main
+    with:
+      clue: ""
