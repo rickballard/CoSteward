@@ -1,0 +1,8 @@
+name: inbox-trace
+on: [pull_request]
+jobs:
+  trace:
+    uses: rickballard/CoCache/.github/workflows/inbox-trace-comment.yml@main
+    permissions:
+      contents: read
+      pull-requests: write
