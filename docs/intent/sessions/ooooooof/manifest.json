@@ -1,0 +1,26 @@
+{
+  "session_id": "ooooooof",
+  "owner": "CoPrime",
+  "created_utc": "2025-11-11T20:54:45Z",
+  "status": "active",
+  "tier": "T2",
+  "summary": "test summary, not sure what to type here",
+  "touches": [
+    {
+      "repo": "CoSteward",
+      "paths": [
+        "docs/ops/*",
+        "README.md"
+      ]
+    }
+  ],
+  "bpoe_required": [
+    "BPOE.CoSync.v1",
+    "BPOE.Receipts.v1",
+    "BPOE.CoBloat.v1"
+  ],
+  "links": {
+    "branch": "ci/leg-rfe-note_20251111T200934Z",
+    "pr": "https://github.com/rickballard/CoSteward/pull/118"
+  }
+}
