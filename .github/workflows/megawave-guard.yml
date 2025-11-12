@@ -1,0 +1,6 @@
+name: MegaWave Guard (consumer)
+on: [pull_request]
+jobs:
+  check:
+    uses: rickballard/CoCache/.github/workflows/megawave-guard-reusable.yml@main
+    with: { require_receipt: true }
