@@ -1,0 +1,19 @@
+name: status-lint
+on:
+  push:
+    paths:
+      - 'docs/ops/status/**'
+      - 'docs/advice/costatus/**'
+      - '.github/workflows/status-lint.yml'
+      - 'tools/status/StatusLint.ps1'
+  workflow_dispatch: {}
+
+jobs:
+  lint:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint CoStatus JSONL
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/status/StatusLint.ps1
