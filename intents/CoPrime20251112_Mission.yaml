@@ -1,0 +1,36 @@
+id: CoPrime20251112_Mission
+owner_session: CoPrime20251112
+status: active
+
+mw_plan:   10
+mw_budget: 12
+mw_done: 6
+
+summary: >
+  CoPrime session to harden CoSyncBus, standardize CoPong line, and seed an
+  AI-facing concept+intent mirror for CoSuite.
+
+concepts:
+  - CoSyncBus
+  - CoPongLine
+
+goals:
+  - Canonize Write-CoPong.ps1 as the CoPong renderer for PS7 sessions.
+  - Extend CoSyncBus_BPOE.md with CoPong usage and operator guidance.
+  - Seed AI_Mirror_ConceptIntent.md as a BPOE note describing how AIs should
+    see concepts+intents as a compact mirror over the repos.
+  - Leave CoStatus evolution as advice for CoPrime-1 while still documenting
+    how CoPongLine complements CoStatus lines.
+
+checkpoints:
+  - mw3:
+      done:
+        - Write-CoPong.ps1 written to CoSteward/scripts.
+        - CoPong section appended to CoSyncBus_BPOE.md.
+        - CoPong megazip created with script + BPOE.
+  - mw4:
+      done:
+        - Concept cards for CoSyncBus + CoPongLine written.
+        - Mission intent card created for CoPrime20251112.
+        - AI_Mirror_ConceptIntent.md seeded as BPOE.
+
