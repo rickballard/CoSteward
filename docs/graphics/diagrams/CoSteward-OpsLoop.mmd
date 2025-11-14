@@ -1,0 +1,14 @@
+```mermaid
+graph LR
+  Intent["Session intent & plan"]
+  Work["MegaWaves & repo work"]
+  Sync["CoSync notes & handovers"]
+  BPOE["BPOE updates"]
+  Feedback["Human feedback & next session"]
+
+  Intent --> Work
+  Work --> Sync
+  Sync --> BPOE
+  BPOE --> Feedback
+  Feedback --> Intent
+```
