@@ -1,0 +1,13 @@
+name: costatus-advice-check
+on:
+  pull_request:
+    paths:
+      - "docs/ops/costatus/**"
+jobs:
+  advisory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show Co1 advice presence
+        run: |
+          test -f docs/ops/costatus/Co1.Advice.md && echo "Advice present."
