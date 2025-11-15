@@ -1,16 +1,23 @@
-# Email to Pam — Deloitte Proposal Review Request
-Date: Saturday, November 15, 2025
+# Email: Pam — Deloitte Proposal Draft for Comment
+_Date: Saturday, November 15, 2025_
 
-Subject: Quick review of a short Deloitte proposal draft?
+Subject: Draft Deloitte proposal for review
 
 Hi Pam,
 
-I’ve attached a 3–4 page proposal draft aimed at Deloitte (and similar). It’s designed to be a compact, executive‑readable brief. Would you be willing to mark it up or reply with comments? I’ll fold any suggested improvements into a “base” version we can reuse for future InSeed solicitations.
+Per our discussion, I’ve assembled a concise Deloitte‑oriented proposal that frames the value for a first engagement and a follow‑on expansion path. I’d love your edits/comments before we send it via your channel. I’ve also included a light website refresh note so our public pages match the pitch.
 
-**Attachment**  
-- `attachments/InSeed_Deloitte_Proposal_v1.md`
+**Included**
+- Draft Deloitte proposal (Markdown) — focused, 3–4 pages equivalent
+- Costing ranges and resourcing assumptions (in‑body section)
+- Optional website refresh checklist (tiny)
 
-Note: We plan to refresh the InSeed website to match this narrative; if it’s better to time outreach post‑refresh, I’m happy to sequence accordingly.
+If this looks about right, I’ll convert to PDF and prepare an Executive forward. Thanks in advance for the redlines.
 
-Thanks as always,  
+Best,  
 Rick
+
+---
+## Attachment
+- `attachments/Deloitte_Proposal.md`
+- `attachments/Web_Refresh_Checklist.md`
