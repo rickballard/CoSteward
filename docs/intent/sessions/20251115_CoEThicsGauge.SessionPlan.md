@@ -28,9 +28,9 @@
 
 | Wave | Name                                              | Goal                                                           | Repos              | Status  |
 |------|---------------------------------------------------|----------------------------------------------------------------|--------------------|---------|
-| 1    | Session Plan + CoEThicsGauge CoSync               | Create/land this session plan + clarify MW/BPOE expectations   | CoSteward          | ACTIVE  |
-| 2    | CoEthicsGauge v0 — structure + toolchain review   | Align branches/PRs (waves 1–6) into a coherent CoEthicsGauge v0| CoCivium           | PLANNED |
-| 3    | Academia Shock linkage + dashboard story          | Tie Academia Shock paper/dashboard to CoEthicsGauge logging    | CoCivium           | PLANNED |
+| 1    | Session Plan + CoEThicsGauge CoSync               | Create/land this session plan + clarify MW/BPOE expectations   | CoSteward          | DONE    |
+| 2    | CoEthicsGauge v0 — structure + toolchain review   | Align branches/PRs (waves 1–6) into a coherent CoEthicsGauge v0| CoCivium           | ACTIVE  |
+| 3    | Academia Shock linkage + dashboard story          | Tie Academia Shock paper/dashboard to CoEthicsGauge logging    | CoCivium           | DONE(v0)|
 | 4    | BPOE updates — MegaWave patterns + error habits   | Capture workflow/wisdom into CoSteward BPOE docs               | CoSteward, CoCache | PLANNED |
 | 5    | Session drain + Co1/HP handoff                    | Drain wisdom → repo and outline HP/Co1 follow-ups              | CoSteward, CoCache | PLANNED |
 
@@ -109,3 +109,27 @@ Before ending this “CoEThicsGauge” session:
   - Waves completed,
   - Receipts (branches, PRs, zips, dashboards),
   - Pointers to this Session Plan and any BPOE docs touched.
+
+---
+## 6. Receipts so far (2025-11-16 snapshot)
+
+- **MW1 (CoSteward):**
+  - Session plan created: `docs/intent/sessions/20251115_CoEThicsGauge.SessionPlan.md`
+  - Branch: `docs/session-plan-CoEThicsGauge-20251116T051220Z` (PR to be opened).
+
+- **MW2 (CoCivium — CoEthicsGauge v0 layout):**
+  - Current kit on `main`:
+    - `docs/CoEthicsGauge/CoEthicsLog/ENTRY_AUTHORING_v0.md`
+    - `docs/CoEthicsGauge/CoEthicsLog/ENTRY_FORMAT_v0.md`
+    - `docs/CoEthicsGauge/CoEthicsLog/ENTRY_SCHEMA_v0.json`
+    - `docs/CoEthicsGauge/CoEthicsLog/ENTRY_TEMPLATE_v0.json`
+    - `docs/CoEthicsGauge/CoEthicsLog/entries/US-federal/demo-brand__CoEthicsLens.DemocracyFirst.US2025__20251115.json`
+    - `docs/CoEthicsGauge/DASHBOARD_SNAPSHOT_v0.md`
+    - `tools/CoEthicsGauge/*` (entry creation, validation, dashboard snapshot).
+
+- **MW3 (CoCivium — Academia Shock linkage stub):**
+  - Branch: `docs/academia-shock-CoEthicsGauge-link-20251116T064844Z`
+  - Linkage doc: `docs/academia-shock/CoEthicsGauge_Linkage_v0.md`
+    - Maps key branches (Academia Shock + CoEthicsGauge).
+    - Explains how CoEthicsGauge entries can back Academia Shock dashboards.
+
