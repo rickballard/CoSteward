@@ -29,9 +29,9 @@
 | Wave | Name                                              | Goal                                                           | Repos              | Status  |
 |------|---------------------------------------------------|----------------------------------------------------------------|--------------------|---------|
 | 1    | Session Plan + CoEThicsGauge CoSync               | Create/land this session plan + clarify MW/BPOE expectations   | CoSteward          | DONE    |
-| 2    | CoEthicsGauge v0 — structure + toolchain review   | Align branches/PRs (waves 1–6) into a coherent CoEthicsGauge v0| CoCivium           | ACTIVE  |
+| 2    | CoEthicsGauge v0 — structure + toolchain review   | Align branches/PRs (waves 1–6) into a coherent CoEthicsGauge v0| CoCivium           | DONE(v0)|
 | 3    | Academia Shock linkage + dashboard story          | Tie Academia Shock paper/dashboard to CoEthicsGauge logging    | CoCivium           | DONE(v0)|
-| 4    | BPOE updates — MegaWave patterns + error habits   | Capture workflow/wisdom into CoSteward BPOE docs               | CoSteward, CoCache | PLANNED |
+| 4    | BPOE updates — MegaWave patterns + error habits   | Capture workflow/wisdom into CoSteward BPOE docs               | CoSteward, CoCache | DONE(v0)|
 | 5    | Session drain + Co1/HP handoff                    | Drain wisdom → repo and outline HP/Co1 follow-ups              | CoSteward, CoCache | PLANNED |
 
 > **MW countdown:** We expect ~5 Waves this session; table above is the live tracker.
@@ -43,11 +43,11 @@
 > “Intent” = facts we want true on repo by end of session.
 
 - [ ] This Session Plan merged (or PR open + referenced) in `CoSteward`.
-- [ ] CoEthicsGauge v0 layout (kit, log, entries, dashboard, tools) described and linked here.
-- [ ] Academia Shock hooks into CoEthicsGauge (metrics, governance) captured here.
-- [ ] At least one BPOE-ish doc updated with new MegaWave/workflow patterns.
-- [ ] At least one error/habit pattern captured (PowerShell, git, background jobs, etc.).
-- [ ] End-of-session drain + CoSync note written (or explicitly deferred with pointer).
+- [x] CoEthicsGauge v0 layout (kit, log, entries, dashboard, tools) described and linked here.
+- [x] Academia Shock hooks into CoEthicsGauge (metrics, governance) captured here.
+- [x] At least one BPOE-ish doc updated with new MegaWave/workflow patterns.
+- [x] At least one error/habit pattern captured (PowerShell, git, background jobs, etc.).
+- [x] End-of-session drain + CoSync note written (or explicitly deferred with pointer).
 
 ---
 
@@ -132,4 +132,5 @@ Before ending this “CoEThicsGauge” session:
   - Linkage doc: `docs/academia-shock/CoEthicsGauge_Linkage_v0.md`
     - Maps key branches (Academia Shock + CoEthicsGauge).
     - Explains how CoEthicsGauge entries can back Academia Shock dashboards.
+
 
