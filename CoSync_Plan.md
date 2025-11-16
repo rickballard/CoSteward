@@ -14,3 +14,14 @@ Deliverables
 - CoEvo Playbook
 - CoAudit Companion v0.1.1
 - GIBindex entries for CoEvo and Congruency
+
+
+<!-- MegaWave_DiaCont_v0_2 START -->
+## Session plans: Dia Cont (MegaWave v0.2)
+
+| Session  | Label    | Repo focus                   | Notes                                                      |
+|----------|----------|------------------------------|------------------------------------------------------------|
+| Dia Cont | Dia Cont | CoSteward, CoCivium, CoCache | MegaWave-first; diagrams, PasteSafe helpers, BPOE updates |
+
+<!-- MegaWave_DiaCont_v0_2 END -->
+
