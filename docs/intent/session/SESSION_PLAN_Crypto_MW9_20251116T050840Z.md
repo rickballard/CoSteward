@@ -15,7 +15,7 @@
 | MW9.1 — BPOE AI supplement seed | Done / landed on feature branch | Minimal BPOE i_prompt_supplement + CoSync note + _mega.manifest.json | feat/mw9.1_crypto-bpoe-seed_20251114T220415Z | (TBD) | Minimal seed; see CoCache BPOE/ai_prompt_supplement and CoSync note. |
 | MW9.2 — BPOE AI supplement v0.1 | PR open | Full poe/ai_prompt_supplement tree + metrics/evolution/experiments/Co1 note | feat/mw9.2_bpoe-ai-supplement_20251115T011625Z | #439 | Seeds default supplement + evolution plan; links to Co1. |
 | MW9.3 — CoCore crypto strawman + modeling plan | PR open | CoCore/insights crypto pair; generic strawman modeling plan; Insights/* → CoCore/insights migration | feat/mw9.3_cocore-crypto-strawman_20251115T032802Z | #441 | Establishes crypto domain spine + generic modeling pattern. |
-| MW9.4 — Crypto donation rails + governance guards (Phase 0) | Planned | Map donation rails patterns into CoCore + BPOE; define Phase-0 guardrails for crypto usage in CoSuite | feat/mw9.4_crypto-rails-phase0_<STAMP> | (later) | Should remain policy-light but structure-ready. |
+| MW9.4 — Crypto donation rails + governance guards (Phase 0) | Planning wave (branch + manifest + CoSync, PR open) | Plan structure + guardrail expectations; no live rails | feat/mw9.4_crypto-rails-phase0_20251116T072319Z | #444 | Planning-only hook for Co1/future waves; see CoCache CoSync + manifest. |
 | MW9.5 — Metrics wiring + Co1 integration | Planned | Wire MW9.2 metrics & MW9.3 outputs into CoCache metrics/index + hooks for Co1 HP | feat/mw9.5_crypto-metrics-co1_<STAMP> | (later) | Ensure Co1 can megascroll this track. |
 | MW9.6 — HP + site surfacing (stretch) | Stretch | HP/intent checklist integration + basic surface ideas for CoCivium/CoAgent/CoArena | feat/mw9.6_crypto-hp-surface_<STAMP> | (maybe) | Good target for handoff if this session ends early. |
 
@@ -47,3 +47,4 @@
 - Start by checking this file and the latest CoSync notes under CoCache/docs/intent/advice/notes/.
 - Continue the MW9 track (most likely MW9.4+).
 - Keep the MegaWave countdown updated here and in session chat.
+
