@@ -42,7 +42,7 @@
 
 > “Intent” = facts we want true on repo by end of session.
 
-- [ ] This Session Plan merged (or PR open + referenced) in `CoSteward`.
+- [x] This Session Plan merged (or PR open + referenced) in `CoSteward` (see PR #186).
 - [x] CoEthicsGauge v0 layout (kit, log, entries, dashboard, tools) described and linked here.
 - [x] Academia Shock hooks into CoEthicsGauge (metrics, governance) captured here.
 - [x] At least one BPOE-ish doc updated with new MegaWave/workflow patterns.
@@ -132,5 +132,6 @@ Before ending this “CoEThicsGauge” session:
   - Linkage doc: `docs/academia-shock/CoEthicsGauge_Linkage_v0.md`
     - Maps key branches (Academia Shock + CoEthicsGauge).
     - Explains how CoEthicsGauge entries can back Academia Shock dashboards.
+
 
 
