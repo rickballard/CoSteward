@@ -1,5 +1,5 @@
 
-# BPOE Drift — Risk & Mitigations
+# BPOE Drift  -  Risk & Mitigations
 
 **Problem**: sessions lose BPOE alignment.
 
@@ -15,3 +15,4 @@
 **v2 Next**
 - `co-status-verify` job that fails PR without canonical line
 - Auth guide for PAT with `workflow` scope or SSH
+

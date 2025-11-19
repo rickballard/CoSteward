@@ -1,4 +1,4 @@
-# CoPrime20251112 — Mission snapshot (seed-stage v0)
+# CoPrime20251112  -  Mission snapshot (seed-stage v0)
 
 Status: ACTIVE / SEED
 Line: Co1 (UNBOUNDED)
@@ -131,3 +131,4 @@ If this mission is closed or handed off:
   - Decide whether to:
     - Extend this mission, or
     - Close it and start a fresh mission for the next arc of Co1.
+

@@ -1,4 +1,4 @@
-# CoPrime Handoff — Co1 → Co1b
+# CoPrime Handoff  -  Co1 → Co1b
 **UTC:** 20251112T182847Z
 
 This bundle is a self-contained, repo‑first handoff package. Land it with a short branch + PR in **CoSteward** (primary) and optionally add a CoSync note pointer in **CoCache**.
@@ -30,3 +30,4 @@ git push -u origin $Br
 gh pr create --title "CoPrime Handoff: Co1 → Co1b" --body "Adds handoff docs, CoSync note, and next‑intent checklist."
 popd
 ```
+

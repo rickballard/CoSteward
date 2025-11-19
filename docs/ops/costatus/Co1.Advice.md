@@ -1,4 +1,4 @@
-# CoStatus line — scope, spec, and guardrails (for Co1)
+# CoStatus line  -  scope, spec, and guardrails (for Co1)
 
 Owner: Co1
 
@@ -11,3 +11,4 @@ Regex:
 Inputs: `docs/intent/sessions/<current>/plan.json` with waves_total, waves_done, start_utc, cadence_minutes, deadline_utc, branch, pr.
 
 Policy, visuals, and drift logic: Co1 owns. Seed-stage CI is advisory; tighten post-seed.
+

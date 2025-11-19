@@ -1,4 +1,4 @@
-# CoPrime_IntentCloud2025 — Intent Sources Snapshot (20251115T032443Z)
+# CoPrime_IntentCloud2025  -  Intent Sources Snapshot (20251115T032443Z)
 
 This file is a **read-only survey** of where intent / plan / manifest-like
 files currently live across selected CoSuite repos on this machine.
@@ -434,3 +434,4 @@ files currently live across selected CoSuite repos on this machine.
 | CoSteward | docs\ops\IntentCloud\IntentCloud_RawIntentScan.md | 2025-11-14T23:46:12Z | 380122 |
 | CoSteward | docs\ops\IntentCloud\IntentCloud_RawIntentScan.md | 2025-11-14T23:46:12Z | 380122 |
 | CoSteward | docs\ops\IntentCloud\IntentCloud_RawIntentScan.md | 2025-11-14T23:46:12Z | 380122 |
+

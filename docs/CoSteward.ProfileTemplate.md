@@ -70,7 +70,7 @@ CoSync++ = multi-agent alignment trigger
 ## 🗂️ SESSION.UPDATE
 - Canonical template file: docs/CoSteward.ProfileTemplate.md
 - Archive old profiles to: docs/profile-archive/YYYY-MM-CoSteward.Profile.md
-- Only merge to main — Rick ignores branches
+- Only merge to main  -  Rick ignores branches
 
 
 ---
@@ -91,3 +91,4 @@ CoSync++ = multi-agent alignment trigger
 
 📌 *Repo Standard:* Canonical profile lives in [`docs/CoSteward.ProfileTemplate.md`](./CoSteward.ProfileTemplate.md), mirrored in CoCache at  
 [`advice/inbox/assets/CoSteward.ProfileTemplate.md`](https://github.com/rickballard/CoCache/blob/main/advice/inbox/assets/CoSteward.ProfileTemplate.md)
+

@@ -1,4 +1,4 @@
-# CoPrime Handoff — Co1 → Co1b (Seed-stage)
+# CoPrime Handoff  -  Co1 → Co1b (Seed-stage)
 **Date (local):** 2025-11-12T18:28:47
 **UTC stamp:** 20251112T182847Z
 
@@ -7,8 +7,8 @@
 - All active workstreams have open PRs. New session should **CoSync → triage PRs → ship quick merges**.
 
 ## CoBloat heartbeat
-- CU: SOFT — long cycles under load
-- PU: HARD — MW cycles ~60 min; automation gaps
+- CU: SOFT  -  long cycles under load
+- PU: HARD  -  MW cycles ~60 min; automation gaps
 - HU: SOFT with spikes
 - WT: SOFT
 Rotate threshold ≤4 days; session ≈5 days → **rotate**.
@@ -17,7 +17,7 @@ Rotate threshold ≤4 days; session ≈5 days → **rotate**.
 CoCache: #392, #391, #390, #389, #387
 CoSteward: #133, #131, #129, #128, #127
 
-## BPOE drift — key findings
+## BPOE drift  -  key findings
 - Missing/unstable **CoStatus** line; reduced situational awareness
 - **CoSync** cadence slipped; plan/checklist lagged
 - Enforcement split leaves holes
@@ -36,3 +36,4 @@ MW‑3: Borrow & Ingest v3 wiring (tracer → ingest → INBOX_LOG appenders)
 - Status line visible
 - PAT/SSH confirmed
 - CoSync note present
+

@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "lastUpdatedUtc": "2025-11-19T02:22:08.828315Z"
+  },
+  "epochs": [
+    {
+      "id": 0,
+      "name": "CoSeed",
+      "score": 0.7
+    },
+    {
+      "id": 1,
+      "name": "CoScendence",
+      "score": 0.35
+    },
+    {
+      "id": 2,
+      "name": "CoCiviumGate",
+      "score": 0.15
+    },
+    {
+      "id": 3,
+      "name": "CoWinism",
+      "score": 0.0
+    },
+    {
+      "id": 4,
+      "name": "CoRainbow",
+      "score": 0.0
+    },
+    {
+      "id": 5,
+      "name": "CoGalactia",
+      "score": 0.0
+    },
+    {
+      "id": 6,
+      "name": "CoReality",
+      "score": 0.0
+    }
+  ],
+  "comind": [
+    {
+      "id": "CM0",
+      "name": "CoSprout"
+    },
+    {
+      "id": "CM1",
+      "name": "CoChord"
+    },
+    {
+      "id": "CM2",
+      "name": "CoChoir"
+    },
+    {
+      "id": "CM3",
+      "name": "CoField"
+    }
+  ]
+}

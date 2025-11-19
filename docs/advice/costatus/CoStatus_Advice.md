@@ -1,4 +1,4 @@
-# CoStatus — contract, gates, and enforcement (render-agnostic)
+# CoStatus  -  contract, gates, and enforcement (render-agnostic)
 
 **This doc is the session-agnostic contract.** Co1 owns the render; this defines stable fields & gate logic for all sessions.
 
@@ -10,7 +10,7 @@
 ## Machine line (append JSONL)
 Example:
 \\\json
-{"ts":"2025-11-13T00:00:00Z","health":"OK","cu":"OK","pu":"OK","hu":"OK","wt":"OK","drift_pct":-6,"gate":"none","pr_ref":"","ci":"green","repos":4,"queue":0,"hint":"—"}
+{"ts":"2025-11-13T00:00:00Z","health":"OK","cu":"OK","pu":"OK","hu":"OK","wt":"OK","drift_pct":-6,"gate":"none","pr_ref":"","ci":"green","repos":4,"queue":0,"hint":" - "}
 \\\
 
 ## Enforceability
@@ -22,3 +22,4 @@ Example:
 
 ## Interop
 - Field names & gate order are **immutable**; render is free.
+

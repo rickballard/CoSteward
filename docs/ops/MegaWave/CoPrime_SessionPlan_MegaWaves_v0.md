@@ -1,11 +1,11 @@
-# CoPrime Session Plan — MegaWave-First Extension (v0)
+# CoPrime Session Plan  -  MegaWave-First Extension (v0)
 
 > Single source of truth for this session’s **MegaWaves**, intents, and receipts.  
 > Lives in `CoSteward` and is updated at the **start and end of every MegaWave cycle**.
 
 ## 1. Session Identity
 
-- **Session label:** `CoCivia` (example — replace per session)
+- **Session label:** `CoCivia` (example  -  replace per session)
 - **Session class:** CoPrime / CoArena / CoAudit / Other
 - **Primary steward:** Rick Ballard
 - **Start UTC:** <!-- fill -->
@@ -29,10 +29,10 @@ Example table:
 
 | MW ID                          | Tier    | Scope summary                                      | Target repos                       | Status    | Deps |
 |--------------------------------|---------|----------------------------------------------------|------------------------------------|----------|------|
-| MW_SessionPlan_MegaWaves_v0    | Core    | Add session-plan MegaWave extension + docs         | CoSteward                          | Landed   | —    |
-| MW_CoStatusAdapters_v1         | Core    | CoStatus adapter rollout across core repos         | CoSteward, CoAgent, CoCache, CCG   | Stub     | —    |
-| MW_ScriptWavePatterns_v0       | Core    | ScriptWave/FixWave patterns + receipts             | CoSteward                          | Landed   | —    |
-| MW_AllSessions_DrainWisdom_v0  | FixWave | Ensure all prior sessions drained fully to repos   | CoSteward (+ others via Co1)       | Planned  | —    |
+| MW_SessionPlan_MegaWaves_v0    | Core    | Add session-plan MegaWave extension + docs         | CoSteward                          | Landed   |  -     |
+| MW_CoStatusAdapters_v1         | Core    | CoStatus adapter rollout across core repos         | CoSteward, CoAgent, CoCache, CCG   | Stub     |  -     |
+| MW_ScriptWavePatterns_v0       | Core    | ScriptWave/FixWave patterns + receipts             | CoSteward                          | Landed   |  -     |
+| MW_AllSessions_DrainWisdom_v0  | FixWave | Ensure all prior sessions drained fully to repos   | CoSteward (+ others via Co1)       | Planned  |  -     |
 
 Keep this table tightly groomed; obsolete items should either be **Dropped** with a note or moved into a historical section.
 
@@ -189,3 +189,4 @@ When handing off:
 
 If this doc diverges from reality, **reality must win**:
 - fix this file *before* trusting any session‑level summary.
+

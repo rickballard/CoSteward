@@ -1,4 +1,4 @@
-# Intent Checklist — CoPrime (Next Lead)
+# Intent Checklist  -  CoPrime (Next Lead)
 
 ## Always-on rails
 - [ ] CoStatus visible (shell + PR)
@@ -16,3 +16,4 @@
 - [ ] Mini-handbooks for Status & Watchdog
 
 UTC seed: 20251112T182847Z
+

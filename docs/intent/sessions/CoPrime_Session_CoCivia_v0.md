@@ -1,4 +1,4 @@
-# CoPrime Session — CoCivia (v0)
+# CoPrime Session  -  CoCivia (v0)
 
 > **Session label:** "CoCivia"  
 > **Wave hub:** MW_CoCivia_SessionChecklistIntentDrain_v0  
@@ -19,7 +19,7 @@ It is deliberately lightweight and checklisted so that:
 CoCivia is the **everywoman AI-entry archetype** for CoSuite:
 
 * a soft, welcoming **front door** for humans who don't yet speak "CoCivium".
-* an "almost not there" presence in visuals — blurred, shifting identity, many-lived.
+* an "almost not there" presence in visuals  -  blurred, shifting identity, many-lived.
 * a narrative glue between: CoAgent, CoArena, CoCivium.org, RickPublic, CoPolitic.
 
 This session focuses on:
@@ -63,7 +63,7 @@ Use the IntentDrain doc (sibling to this file) to **log which learnings landed**
 
 ## 3. Intent Checklist (per-wave)
 
-This is intentionally redundant with the table above — it is tuned for **checkbox UX** in GitHub.
+This is intentionally redundant with the table above  -  it is tuned for **checkbox UX** in GitHub.
 
 ### 3.1 MW_CoCivia_SessionPlan_v0  ✅ (landed)
 
@@ -140,4 +140,5 @@ These paths are **relative to CoSteward repo**:
 
 For non-CoSteward assets (branding, CoCivia home, etc.), prefer to track them in the  
 **AssetIndex** wave once created.
+
 

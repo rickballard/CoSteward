@@ -1,4 +1,4 @@
-# Advice for Co1 — Writing GitHub Actions YAML from PowerShell safely
+# Advice for Co1  -  Writing GitHub Actions YAML from PowerShell safely
 
 Context: PowerShell treats $ + '{' as expansion; literal GitHub Actions expressions must avoid PS parsing.
 
@@ -9,3 +9,4 @@ Recommendations (BPOE additions; no protocol changes):
 3) If templating, assemble as parts: 
    '$' + '{{ ' + 'github.event_name == "pull_request"' + ' }}'
 4) CI smoke: echo the YAML and grep for the sequence to confirm it stayed literal.
+

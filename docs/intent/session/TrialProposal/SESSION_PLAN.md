@@ -1,4 +1,4 @@
-# Trial Proposal — Session Plan
+# Trial Proposal  -  Session Plan
 
 Last update: 2025-11-16 00:23:55 -05:00
 
@@ -11,3 +11,4 @@ Last update: 2025-11-16 00:23:55 -05:00
 - [ ] Doctor: reply must bundle cost/time estimates, facilitator readsheet, consent one-pager, AI listener prompt.
 - [ ] Inbox-guard receipts: ensure consistent status posts on PRs.
 - [ ] Limit scope creep; hand off ideation to Co1 via notes.
+

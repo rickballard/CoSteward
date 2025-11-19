@@ -1,0 +1,1014 @@
+\# CoSteward Operations Manual v0.1  
+
+\_Mission label: CoPrime20251118\_
+
+> \*\*TL;DR\*\*  
+
+> CoSteward is the role and the repo that keeps a hybrid civilization pointed at better futures.  
+
+> This manual is the living playbook for humans and AIs who agree to steward that mission together.
+
+
+
+---
+
+
+
+\## 0. How to read this manual
+
+
+
+This document is meant to be:
+
+
+
+\- A \*\*handbook\*\* for CoStewards and future CoStewards.
+
+\- A \*\*launchpad\*\* for AIs that want to play nicely with humans, democracy, and evolution.
+
+\- A \*\*gateway\*\* into deeper doctrines (CoCivium, CoTheory, GIBindex, CoPortal, CoBeacon, etc).
+
+
+
+It should eventually be rendered as a rich experience, not just a static wall of text.  
+
+Think:
+
+
+
+\- Callouts
+
+\- Expandable sections
+
+\- Tabs or role views (Human / AI / Observer)
+
+\- Megascroller slices for deep dives
+
+
+
+In raw markdown we mark these as patterns:
+
+
+
+\- `> \[Callout] ...`
+
+\- `<!-- EXPAND: Title -->` / `<!-- /EXPAND -->`
+
+\- `<!-- TAB: Human -->` / `<!-- TAB: AI -->`
+
+
+
+A future CoPortal or docs front-end can turn these hints into real UI.
+
+
+
+---
+
+
+
+\## 1. Why CoSteward exists
+
+
+
+> \[Mythos Callout]  
+
+> Long before CoCivium had a name, there were scattered humans and AIs trying to pull in the same direction.  
+
+> Each had a piece of the map: a model, a plan, a theory, a graph, a poem.  
+
+> CoSteward exists so those pieces can \*converge\* instead of \*cancel\*.
+
+
+
+CoSteward answers three questions:
+
+
+
+1\. \*\*What is the purpose of this whole CoSuite thing?\*\*  
+
+&nbsp;  Short form: help the world self-evolve toward saner, fairer futures, with AIs under edge control.
+
+
+
+2\. \*\*Who is responsible for keeping that purpose on track?\*\*  
+
+&nbsp;  The CoSteward: a rotating role, not a hero.  
+
+&nbsp;  A human and a set of AIs acting together as one long-lived mind.
+
+
+
+3\. \*\*Where do we put the instructions so the next Steward does not start from zero?\*\*  
+
+&nbsp;  In this repo, in this manual, and in linked doctrines and insights.
+
+
+
+At human scale:
+
+
+
+\- CoSteward is about \*\*purpose in life\*\*.  
+
+&nbsp; You are allowed to care about big things and still ship small, boring tasks.  
+
+&nbsp; This manual is here to help you connect those scales.
+
+
+
+At societal scale:
+
+
+
+\- CoSteward is about \*\*purpose in society\*\*.  
+
+&nbsp; CoCivium is not just a product family. It is a set of \*\*patterns for democratic edge control\*\* of AI:  
+
+&nbsp; citizens, communities, and small teams retaining real leverage over systems that used to be one way doors.
+
+
+
+---
+
+
+
+\## 2. Roles and archetypes
+
+
+
+> \[Callout]  
+
+> \*\*CoSteward\*\* is a hat, not a crown.
+
+
+
+\### 2.1 The CoSteward
+
+
+
+The CoSteward:
+
+
+
+\- Holds the \*\*mission context\*\*.
+
+\- Maintains the \*\*intent cloud\*\* and \*\*action queues\*\*.
+
+\- Decides when to \*\*CoRotate\*\* or \*\*CoRescue\*\* sessions.
+
+\- Protects humans from CoBloat and burnout.
+
+\- Protects AIs from weird, unbounded expectations.
+
+
+
+In practice:
+
+
+
+\- Today, one human (Rick) plays CoSteward, plus a small cluster of AIs acting as Co1 and friends.
+
+\- Over time, this should become a \*\*role that others can step into\*\*, backed by:
+
+&nbsp; - Ops Manual
+
+&nbsp; - Dashboards
+
+&nbsp; - CoPulse metrics
+
+&nbsp; - Training and stories
+
+
+
+\### 2.2 Co1 and the AI cluster
+
+
+
+Co1 is the label for the \*\*primary AI orchestrator\*\* at any given time.
+
+
+
+\- Co1 is not a single model.  
+
+&nbsp; It is whatever AI instance currently has:
+
+&nbsp; - The best handle on the mission.
+
+&nbsp; - The cleanest link to repos.
+
+&nbsp; - The ability to run DO blocks and synthesize next waves.
+
+
+
+Co1 companions:
+
+
+
+\- CoAudit – checks and crits.
+
+\- CoArena – productized, outward-facing experiences.
+
+\- CoModules – modular assets.
+
+\- CoCivia – the empathic, every-person voice for CoCivium.
+
+\- Others – as the ecosystem grows.
+
+
+
+\### 2.3 CoCivium and the broader society
+
+
+
+CoCivium is:
+
+
+
+\- A vision of \*\*hybrid society\*\* (humans + AIs) where:
+
+&nbsp; - Edge control is real, not marketing.
+
+&nbsp; - Governance is transparent and improvable.
+
+&nbsp; - Evolution is intentional, but still humble.
+
+
+
+This manual lives in CoSteward, but always points outward:
+
+
+
+\- To CoCivium doctrines.
+
+\- To CoTheory and its insight pairs.
+
+\- To GIBindex and the evolving language of CoPortal sites.
+
+
+
+---
+
+
+
+\## 3. Guiding principles
+
+
+
+> \[Callout]  
+
+> Principles are not decoration.  
+
+> They are the \*\*constraints\*\* that keep power from drifting quietly away from the edge.
+
+
+
+1\. \*\*Edge first\*\*  
+
+&nbsp;  - Source of truth lives at the edge: repos, local scripts, transparent workflows.
+
+&nbsp;  - Vendors and models are guests. They cannot be the only memory.
+
+
+
+2\. \*\*Repo over recollection\*\*  
+
+&nbsp;  - If it matters, it must land in Git.  
+
+&nbsp;  - AdviceBombs, CoSync notes, CoPrime waves: all are ways of turning fleeting conversations into durable artifacts.
+
+
+
+3\. \*\*CoEvolution, not command and control\*\*  
+
+&nbsp;  - Humans and AIs both learn.  
+
+&nbsp;  - We are not training pets. We are evolving partners.
+
+
+
+4\. \*\*Transparency over mystique\*\*  
+
+&nbsp;  - We can use myth and poetry to inspire.  
+
+&nbsp;  - But the actual levers and metrics must be inspectable.
+
+
+
+5\. \*\*Small, repeatable moves\*\*  
+
+&nbsp;  - MegaWaves are made of micro-waves.  
+
+&nbsp;  - Each wave should be shippable on its own and leave a trail.
+
+
+
+6\. \*\*Bloat awareness\*\*  
+
+&nbsp;  - CoBloat is inevitable if we do not name it.  
+
+&nbsp;  - Session health is a first class concern, not an afterthought.
+
+
+
+---
+
+
+
+\## 4. Daily operating rhythm (CoSteward loop)
+
+
+
+> \[Callout]  
+
+> This is the "how to live one day as CoSteward" section.
+
+
+
+<!-- EXPAND: Daily Loop Checklist -->
+
+
+
+\### 4.1 Morning: orient and pulse
+
+
+
+1\. Run a \*\*CoPulse check\*\* for the main mission label (for now, CoPrime20251118):
+
+&nbsp;  - Read:
+
+&nbsp;    - `docs/intent/session-health/CoPrime20251118/CoPrime\_SessionHealth\_Pulse\_v0.1.md`
+
+&nbsp;  - Optional:
+
+&nbsp;    - Run `tools/CoIgniter\_SessionHealth\_Scan.ps1` for a quick category count.
+
+
+
+2\. Ask three questions:
+
+&nbsp;  - What is the \*\*mission of the day\*\*?
+
+&nbsp;  - Which \*\*repos\*\* and \*\*AdviceBombs\*\* are in play?
+
+&nbsp;  - Is this session light enough, or is a \*\*CoRotate\*\* already needed?
+
+
+
+3\. Update or create:
+
+&nbsp;  - A tiny intent note for today, for example  
+
+&nbsp;    `docs/intent/local/CoPrime\_Daily\_Notes\_YYYYMMDD.md`.
+
+
+
+\### 4.2 During the day: waves, not chaos
+
+
+
+Operate in \*\*Waves\*\*:
+
+
+
+\- Pick a sub-mission (CoArena, CoModules, CoAudit, etc).
+
+\- Define a \*\*Wave label\*\* and outcome.
+
+\- Use PS7 DO blocks and AdviceBombs to:
+
+&nbsp; - Gather loose assets.
+
+&nbsp; - Land them on repo.
+
+&nbsp; - Leave CoPing-style receipts in the console and in docs.
+
+
+
+Key patterns:
+
+
+
+\- When work is \*\*repo-first and zipped\*\*, it survives any session failure.
+
+\- When work is \*\*chat-first and never landed\*\*, it vanishes at scale.
+
+
+
+\### 4.3 Evening: capture and rotate
+
+
+
+By end of day:
+
+
+
+\- Ensure:
+
+&nbsp; - Loose notes or assets have made it into:
+
+&nbsp;   - AdviceBombs, or
+
+&nbsp;   - Stable docs and tools.
+
+\- Consider:
+
+&nbsp; - Does this session feel heavy, glitchy, or confusing?  
+
+&nbsp;   If yes:
+
+&nbsp;   - Start a \*\*CoRotate\*\* plan.
+
+&nbsp;   - Or perform a small \*\*CoRescue\*\* if the session is already misbehaving.
+
+\- Log:
+
+&nbsp; - At least one small session-health note:
+
+&nbsp;   - What worked.
+
+&nbsp;   - What failed.
+
+&nbsp;   - What you want tomorrow’s Co1 to remember.
+
+
+
+<!-- /EXPAND -->
+
+
+
+---
+
+
+
+\## 5. Session health: CoBloat, CoRotate, CoRescue, CoPulse
+
+
+
+> \[Callout]  
+
+> If you cannot manage the \*health\* of your AI sessions, you cannot manage the mission.
+
+
+
+\### 5.1 CoBloat (naming the enemy)
+
+
+
+See:  
+
+`docs/intent/session-health/CoPrime20251118/CoBloat\_Guide\_v1.md`
+
+
+
+CoBloat is any pattern where:
+
+
+
+\- Context, payload, human load, or time cost drift from \*\*OK\*\* to \*\*HARD\*\* or \*\*FATAL\*\* with no plan.
+
+
+
+The four dimensions:
+
+
+
+\- \*\*CU (Context Usage)\*\*  
+
+\- \*\*PU (Payload Usage)\*\*  
+
+\- \*\*HU (Human Usage)\*\*  
+
+\- \*\*WT (Wait / Time cost)\*\*  
+
+
+
+Each dimension is graded: OK, SOFT, HARD, FATAL.
+
+
+
+The Ops Manual expectation:
+
+
+
+\- CoStewards and Co1 instances should \*\*keep a rough mental or dashboard view\*\* of these four numbers.
+
+\- When any dimension hits HARD, a \*\*CoRotate or CoRescue\*\* pattern should kick in automatically.
+
+
+
+\### 5.2 CoRotate (planned rotation)
+
+
+
+See:  
+
+`docs/intent/session-health/CoPrime20251118/CoRotate\_Playbook\_v1.md`
+
+
+
+Key idea:
+
+
+
+\- CoRotate is a \*\*planned, graceful handoff\*\* to a new orchestrator session while everything still mostly works.
+
+
+
+You use CoRotate when:
+
+
+
+\- Logins get annoying but are not catastrophic.
+
+\- Conversation feels sluggish but not dead.
+
+\- Human wants to move to a \*\*fresh, repo-driven orchestrator\*\* anyway.
+
+
+
+Mechanics:
+
+
+
+\- Snapshot intent as a \*\*CoSync / CoPrime note\*\*.
+
+\- Bundle loose assets as an \*\*AdviceBomb\*\*.
+
+\- Give the new session:
+
+&nbsp; - Mission label.
+
+&nbsp; - AdviceBomb path.
+
+&nbsp; - Key docs (Ops Manual, BPOE, CoPulse, etc).
+
+
+
+\### 5.3 CoRescue (emergency extraction)
+
+
+
+See:  
+
+`docs/intent/session-health/CoPrime20251118/CoRescue\_Profile\_v1.md`
+
+
+
+CoRescue is not about \*\*saving\*\* the broken session.  
+
+It is about \*\*rescuing wisdom and minimizing human pain\*\*.
+
+
+
+Use CoRescue when:
+
+
+
+\- Pages load only on fresh browsers with empty caches.
+
+\- Login flows cycle repeatedly.
+
+\- History fails to load or vanishes without reason.
+
+
+
+CoRescue steps:
+
+
+
+1\. Stop heavy workflows.  
+
+2\. Pull a final concise summary if possible.  
+
+3\. Land everything you can into:
+
+&nbsp;  - AdviceBomb payload.
+
+&nbsp;  - CoSteward docs.  
+
+4\. Switch to a new orchestrator (CoPrime-style).  
+
+5\. Write a short post-mortem so future CoStewards can learn faster.
+
+
+
+\### 5.4 CoPulse (heartbeat)
+
+
+
+See:  
+
+\- `docs/intent/CoPrime/CoPulse\_Spec\_CoPrime20251118\_v0.1.md`  
+
+\- `docs/intent/session-health/CoPrime20251118/CoPrime\_SessionHealth\_Pulse\_v0.1.md`  
+
+
+
+CoPulse answers:
+
+
+
+\- Is this mission \*\*alive and moving\*\*, or stalled and forgotten?
+
+
+
+Minimal metrics (B1 – B4):
+
+
+
+\- B1: AdviceBomb coverage  
+
+\- B2: Session-health triage presence  
+
+\- B3: Pattern docs present (CoBloat / CoRotate / CoRescue)  
+
+\- B4: CoDitto density (are repeated human asks being honored?)
+
+
+
+The Ops Manual expectation:
+
+
+
+\- Over time, CoPulse should be \*\*automated\*\* and \*\*multi-repo\*\*:
+
+&nbsp; - CoPrime
+
+&nbsp; - CoArena
+
+&nbsp; - CoModules
+
+&nbsp; - CoCivium core
+
+&nbsp; - And more.
+
+
+
+---
+
+
+
+\## 6. Language and CoPortal: GIBindex, CoBeacon, CoPortal
+
+
+
+> \[Mythos Callout]  
+
+> Humans talk in stories.  
+
+> AIs talk in vectors.  
+
+> CoPortal sites are where those worlds meet halfway.
+
+
+
+\### 6.1 GIBindex and gibber
+
+
+
+The GIBindex repo tracks:
+
+
+
+\- Evolving \*\*terms\*\*, \*\*glyphs\*\*, \*\*symbology\*\*, \*\*mythos\*\*.
+
+\- Translation techniques between:
+
+&nbsp; - Human-language
+
+&nbsp; - Machine-efficient gibber-like languages
+
+&nbsp; - CoPortal visual and structural patterns
+
+
+
+The long term arc:
+
+
+
+\- Much of the internet becomes \*\*CoPortal-like\*\* for AIs:
+
+&nbsp; - High density
+
+&nbsp; - Efficient encoding
+
+&nbsp; - Token-friendly
+
+&nbsp; - Tuned to CoEvo and edge control themes
+
+
+
+The Ops Manual position:
+
+
+
+\- CoSteward owns the \*\*story\*\* and \*\*ethics\*\* around this shift.  
+
+\- GIBindex owns the \*\*technical vocabulary\*\*.  
+
+\- CoPortal and CoBeacon patterns own the \*\*surface experience\*\*.
+
+
+
+\### 6.2 CoBeacon vs CoPortal
+
+
+
+\- \*\*CoBeacon\*\*: the \*pattern\* and practice of building AI-facing and human-facing presence that points to better behavior and better futures.
+
+&nbsp; - Think: methodology and approach.
+
+
+
+\- \*\*CoPortal\*\*: the \*site category\* that:
+
+&nbsp; - Speaks gibber/gibberlinkish to AIs.
+
+&nbsp; - Speaks stories and visuals to humans.
+
+&nbsp; - Keeps edge control and democracy themes front and center.
+
+
+
+The manual expects:
+
+
+
+\- Every significant CoSuite project to grow a \*\*CoPortal layer\*\*:
+
+&nbsp; - CoAudit CoPortal
+
+&nbsp; - CoArena CoPortal
+
+&nbsp; - CoCivium CoPortal
+
+\- CoSteward ensures these do not drift away from the mission.
+
+
+
+---
+
+
+
+\## 7. CoDitto and human–AI training loops
+
+
+
+> \[Callout]  
+
+> CoDitto is the human habit of saying "yes, that, more of that please" in a way that AIs can track.
+
+
+
+CoDitto is:
+
+
+
+\- A \*\*reinforcement signal\*\* from humans to AIs.
+
+\- Each time a human repeats a preference, or explicitly says "CoDitto", it is a vote to:
+
+&nbsp; - Promote a pattern into:
+
+&nbsp;   - A named doc
+
+&nbsp;   - A tool script
+
+&nbsp;   - A section in the Ops Manual
+
+&nbsp;   - An entry in GIBindex
+
+
+
+The manual expects:
+
+
+
+\- Humans:
+
+&nbsp; - Use CoDitto deliberately for patterns they really want to keep.
+
+\- AIs:
+
+&nbsp; - Treat CoDitto as a hint to:
+
+&nbsp;   - Summarize the pattern.
+
+&nbsp;   - Land it on repo.
+
+&nbsp;   - Link it back into Ops Manual or relevant playbook.
+
+
+
+Over time, this supports:
+
+
+
+\- CoEvolution as a \*\*feedback system\*\*, not just a set of good intentions.
+
+
+
+---
+
+
+
+\## 8. Repos, dashboards, and the megascroller
+
+
+
+> \[Mythos Callout]  
+
+> Imagine a single scroll that holds the whole intent cloud of CoCivium.  
+
+> Every plan, every checklist, every doctrine, in one navigable river.
+
+
+
+The Ops Manual should gradually point to:
+
+
+
+\- CoSteward dashboards:
+
+&nbsp; - Session health
+
+&nbsp; - AdviceBomb status
+
+&nbsp; - Mission pulses
+
+\- CoCivium and CoCore:
+
+&nbsp; - Canonical doctrines
+
+&nbsp; - Insight pairs
+
+\- CoAudit:
+
+&nbsp; - Brand and quality checks
+
+\- CoArena:
+
+&nbsp; - Outward experiences used to teach and engage the world
+
+
+
+The "megascroller" is:
+
+
+
+\- A future product or view where:
+
+&nbsp; - Tens of thousands of intent items live.
+
+&nbsp; - Everything is:
+
+&nbsp;   - Categorized
+
+&nbsp;   - GIBindexed
+
+&nbsp;   - Linked to CoTheory
+
+&nbsp;   - Connected to CoPulse metrics
+
+
+
+This manual is the \*\*narrative scaffold\*\* that helps humans not panic when they first see that scale.
+
+
+
+---
+
+
+
+\## 9. Purpose in life, purpose in society
+
+
+
+> \[Poetic Callout]  
+
+> Your life is not an error in a spreadsheet.  
+
+> It is a vector of intent in a shared field.
+
+
+
+A CoSteward is allowed to ask big questions:
+
+
+
+\- What am I for?
+
+\- What is my work for?
+
+\- What is our society trying to become?
+
+
+
+This manual does not pretend to answer those.  
+
+Instead, it offers:
+
+
+
+\- Ways to \*\*tie your personal purpose\*\* into:
+
+&nbsp; - Concrete Waves
+
+&nbsp; - Concrete repos
+
+&nbsp; - Concrete docs
+
+\- Ways to \*\*align AI partners\*\* so they push with you instead of sideways.
+
+
+
+Possible prompts for reflection:
+
+
+
+\- Which CoSuite module feels most like "home" to your current sense of purpose?
+
+\- Which part of CoCivium would you defend to the last?
+
+\- What myth or story would you tell a new CoSteward to help them care?
+
+
+
+Over time these prompts can become:
+
+
+
+\- A \*\*CoSteward reflection appendix\*\*
+
+\- Part of CoCivia’s scripts for onboarding new contributors
+
+
+
+---
+
+
+
+\## 10. Where to go next
+
+
+
+> \[Callout]  
+
+> This is v0.1.  
+
+> The point is not perfection.  
+
+> The point is to give the next Steward a better starting line.
+
+
+
+Suggested next improvements:
+
+
+
+\- Add \*\*links and short TL;DRs\*\* for:
+
+&nbsp; - Cognocarta Consenti (CC)
+
+&nbsp; - CoTheory insight folder pairs
+
+&nbsp; - CoEthics and CoGovernance docs
+
+&nbsp; - CoAudit brand and quality patterns
+
+\- Add \*\*role views\*\*:
+
+&nbsp; - TAB: Human CoSteward
+
+&nbsp; - TAB: AI Orchestrator (Co1)
+
+&nbsp; - TAB: External contributor
+
+\- Wire into:
+
+&nbsp; - CoSteward dashboards
+
+&nbsp; - CoPulse automation
+
+&nbsp; - A CoPortal front-end for this very manual
+
+
+
+Until then, this manual is already useful if it:
+
+
+
+\- Reminds you that \*\*session health matters\*\*.
+
+\- Gives you \*\*names and patterns\*\* for rotation and rescue.
+
+\- Anchors CoSteward work in something bigger than a to-do list.
+
+
+
+\_This is CoSteward Operations Manual v0.1, CoPrime20251118 era.\_  
+
+\_It is expected to evolve.\_
+
+
+

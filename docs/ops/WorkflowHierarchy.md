@@ -40,10 +40,10 @@ Co1 is explicitly unbounded.
 
 ## 2. Optional finer-grain terms (descriptive only)
 
-- Cycle — loose grouping of MegaWaves in a mission
+- Cycle  -  loose grouping of MegaWaves in a mission
   (for example, “scaffolding cycle”, “cleanup cycle”).
-- Set — group of related DO blocks inside one MW.
-- Run — one actual PS7 execution of a DO block.
+- Set  -  group of related DO blocks inside one MW.
+- Run  -  one actual PS7 execution of a DO block.
 
 Automation schemas should stay stable around Line / Mission / MegaWave.
 Cycle / Set / Run stay in prose and notes.
@@ -77,3 +77,4 @@ Other sessions use plain CoPing.
     - Line-level facts (Co1 unbounded, seed-phase, backlog scale).
     - Active missions and their MW triples.
   - Must never reinterpret a mission MW triple as “percent done for Co1”.
+

@@ -1,0 +1,46 @@
+{
+  "SavedAtUtc": "2025-11-15T05:32:50.7591746Z",
+  "Pwd": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward",
+  "Repos": [
+    {
+      "Name": "CoSteward",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward",
+      "Branch": "docs/intent/CoPrime_IntentCloud2025_BedtimeSnapshot_20251115"
+    },
+    {
+      "Name": "CoCache",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoCache",
+      "Branch": "docs/outreach_20251115T043711Z"
+    },
+    {
+      "Name": "CoAgent",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoAgent",
+      "Branch": "main"
+    },
+    {
+      "Name": "CoArena",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoArena",
+      "Branch": "main"
+    },
+    {
+      "Name": "CoCore",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoCore",
+      "Branch": "main"
+    },
+    {
+      "Name": "CoContrib",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoContrib",
+      "Branch": "main"
+    },
+    {
+      "Name": "CoPolitic",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoPolitic",
+      "Branch": "main"
+    },
+    {
+      "Name": "CoRef",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoRef",
+      "Branch": "main"
+    }
+  ]
+}

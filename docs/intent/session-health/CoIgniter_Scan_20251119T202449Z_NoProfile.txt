@@ -1,0 +1,11 @@
+
+[32;1mKind[0m[32;1m Name                [0m[32;1m Detail[0m
+[32;1m----[0m [32;1m----                [0m [32;1m------[0m
+info session-health-notes Total notes: 7
+info latest-note          CoIgniter_CoSync_20251119T200320Z.md (LastWrite: 2025-11-19T15:03:22)
+info recent-window        Last 2 day(s), cutoff 2025-11-17T15:24:49
+info recent-notes-count   7 note(s) updated in window
+info CoSync-notes         2 note(s) with CoSync in name
+info CoCrossCreep-notes   5 note(s) mentioning CoCrossCreep
+ok   coverage             Session-health notes exist and at least one is recent.
+

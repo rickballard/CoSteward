@@ -1,0 +1,29 @@
+param(
+  [string]$UtcNow = (Get-Date).ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss 'UTC'")
+)
+
+Clear-Host
+Write-Host "== CoSteward Panel — Crypto / MW9 ==" -ForegroundColor Cyan
+Write-Host "UTC now: $UtcNow" -ForegroundColor DarkGray
+Write-Host ""
+
+$waves = @(
+  [pscustomobject]@{Wave='MW9.1'; Track='BPOE AI supplement seed';           Status='Done (feature branch landed)';   Branch='feat/mw9.1_crypto-bpoe-seed_20251114T220415Z'; PR='(TBD/archived)'},
+  [pscustomobject]@{Wave='MW9.2'; Track='BPOE AI supplement v0.1';           Status='PR open';                         Branch='feat/mw9.2_bpoe-ai-supplement_20251115T011625Z'; PR='#439'},
+  [pscustomobject]@{Wave='MW9.3'; Track='CoCore crypto strawman + model';    Status='PR open';                         Branch='feat/mw9.3_cocore-crypto-strawman_20251115T032802Z'; PR='#441'},
+  [pscustomobject]@{Wave='MW9.4'; Track='Crypto rails + guards (Phase 0)';   Status='Planned';                         Branch='feat/mw9.4_crypto-rails-phase0_<STAMP>'; PR='(later)'},
+  [pscustomobject]@{Wave='MW9.5'; Track='Metrics wiring + Co1 integration';  Status='Planned';                         Branch='feat/mw9.5_crypto-metrics-co1_<STAMP>'; PR='(later)'},
+  [pscustomobject]@{Wave='MW9.6'; Track='HP + surfacing (stretch)';          Status='Stretch';                         Branch='feat/mw9.6_crypto-hp-surface_<STAMP>'; PR='(maybe)'}
+)
+
+$remaining = ($waves | Where-Object { $_.Status -notmatch 'Done' }).Count
+Write-Host ("MegaWave countdown: {0} waves remaining (non-Done)" -f $remaining) -ForegroundColor Yellow
+Write-Host ""
+
+$waves | Format-Table Wave,Status,Track,Branch,PR -AutoSize
+
+Write-Host ""
+Write-Host "Next obvious actions:" -ForegroundColor Green
+Write-Host "  1) Review/merge CoCache PRs #439 and #441 when ready."
+Write-Host "  2) Clarify scope + branch for MW9.4 (rails/guards Phase 0)."
+Write-Host "  3) Keep SESSION_PLAN_Crypto_MW9_* as the truth, update after each wave."

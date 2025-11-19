@@ -1,5 +1,5 @@
 ---
-title: CoSteward Ops Manual — Tiered Execution Addendum v0.1
+title: CoSteward Ops Manual  -  Tiered Execution Addendum v0.1
 epoch: 2025-11-10 21:00:43Z
 status: draft
 glyph: "♡"
@@ -11,20 +11,20 @@ This addendum clarifies **where** AI can act and **how** CoSync works across env
 
 ## 1) Execution Tiers
 
-- **Tier‑1 — Chat Orchestrator (cloud, sandboxed)**
+- **Tier‑1  -  Chat Orchestrator (cloud, sandboxed)**
   - Capabilities: plan, generate text/code, produce artifacts for download.
   - Limits: **no filesystem**, **no GitHub API**, **no PS7**, **no helpers**, **no web unless explicitly enabled**.
   - CoSync: **conceptual** only; requires **context injection** (paste/upload).
 
-- **Tier‑2 — Local CoAgent (your machine)**
+- **Tier‑2  -  Local CoAgent (your machine)**
   - Capabilities: PS7, helpers, Git, GH CLI, repo mounts, CI triggers.
   - CoSync: **read/write** against repos; runs CoBlocks and MegaWaves.
 
-- **Tier‑3 — CI (GitHub Actions)**
+- **Tier‑3  -  CI (GitHub Actions)**
   - Capabilities: enforce policies (style/frontier/evolution guards), build, test.
   - CoSync: event‑driven; reacts to PRs/branches/labels.
 
-- **Tier‑4 — Observability (CoAudit/CoPrime)**
+- **Tier‑4  -  Observability (CoAudit/CoPrime)**
   - Capabilities: read‑only evaluation, audit deltas, surface frontier options.
   - CoSync: receives reports; **no final decisions**.
 
@@ -72,7 +72,7 @@ cosync_rules:
 - Authority: **advise‑only** by default; internal artifacts only; glyph **♡**.
 - Access: inherit repo ACLs; exclude `**/HP57/**` by policy.
 - Widen‑first: frontier ≥ 7 options; dissent quota ≥ 1; reversible‑first.
-- Expression: dual‑track — song/poetic gibber + plain summary.
+- Expression: dual‑track  -  song/poetic gibber + plain summary.
 - Evolution cues (for later SAP‑1): entropy→tempo, coherence→melody, audit_pass→resolution, inclusion→stereo width.
 
 ## 6) Operator Checklist (CoSteward quick use)
@@ -87,3 +87,4 @@ cosync_rules:
 ---
 
 **Footer**: Internal guidance only. ♡
+

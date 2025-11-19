@@ -1,11 +1,11 @@
-# CoSync — Tiered Execution & CoSync Clarification (v0.1) ♡
+# CoSync  -  Tiered Execution & CoSync Clarification (v0.1) ♡
 
 When: 11/10/2025 21:48:52
 Repo: CoSteward
 Branch: docs/ops/tiers-addendum-v0.1
 
 ## What changed
-- Added **CoSteward Ops Manual — Tiered Execution Addendum v0.1** at:
+- Added **CoSteward Ops Manual  -  Tiered Execution Addendum v0.1** at:
   docs/ops/CoSteward.OpsManual.Addendum.Tiers.md
 - Clarifies **Tier-1/2/3/4** capabilities and limits.
 - States **Tier-1 requires context injection** (paste/upload) for repo “reads”.
@@ -25,3 +25,4 @@ Branch: docs/ops/tiers-addendum-v0.1
 - Keep PRs atomic with clear labels: docs, ops, poe.
 
 Internal guidance only. ♡
+

@@ -1,0 +1,10 @@
+Set-PSReadLineOption: C:\Users\Chris\Documents\PowerShell\profile.ps1:10
+Line |
+  10 |  Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The predictive suggestion feature cannot be enabled because the console output doesn't support virtual terminal processing or it's redirected.
+ParentContainsErrorRecordException: C:\Users\Chris\Documents\GitHub\CoSteward\tools\CoIgniter_SessionHealth_Scan.ps1:59
+Line |
+  59 |  $rows.Add(
+     |  ~~~~~~~~~~
+     | The property 'Count' cannot be found on this object. Verify that the property exists.

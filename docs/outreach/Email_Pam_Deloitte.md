@@ -1,4 +1,4 @@
-# Email to Pam — Deloitte Proposal Review Request
+# Email to Pam  -  Deloitte Proposal Review Request
 Date: Saturday, November 15, 2025
 
 Subject: Quick review of a short Deloitte proposal draft?
@@ -14,3 +14,4 @@ Note: We plan to refresh the InSeed website to match this narrative; if it’s b
 
 Thanks as always,  
 Rick
+

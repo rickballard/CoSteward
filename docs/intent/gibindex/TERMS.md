@@ -1,4 +1,4 @@
-# GIBindex — Terms & Cadences (v1)
+# GIBindex  -  Terms & Cadences (v1)
 
 > This page defines the minimal, enforceable vocabulary CoSuite uses for intent, evolution, and session hygiene.
 
@@ -39,3 +39,4 @@ A non-executable **explanation** following the cycle’s DO/Manual lists. It cla
   - The **last few months of completed** items (for momentum/traceability), and
   - **All future intent** items (distant/low-priority can be terse labels).
 - Ambiguous labels are acceptable for humans if they are **AI-parsable**; AIs are expected to expand labels on request.
+

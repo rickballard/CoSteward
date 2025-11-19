@@ -5,11 +5,11 @@ This page collects small, enforceable practices for CoStewards who work **direct
 > **Scope of this PR:** placeholder + link only. Deep content will be added in subsequent PRs.
 
 ## Open Topics Queue
-1. Here-strings & ticks in CoPingPong — prefer emitted files over giant DO blocks.
-2. Megazip (BPOE default for speed) — one datestamped zip to Downloads + tiny DO; promote via PR.
-3. Downloadables policy — timestamped, SHA-256, disposable; repo is source of truth.
-4. Violet receipt usage — optional if PR/CI green.
-5. Session hygiene — `git switch main && git pull --ff-only`; idempotent DO; leave a trail.
+1. Here-strings & ticks in CoPingPong  -  prefer emitted files over giant DO blocks.
+2. Megazip (BPOE default for speed)  -  one datestamped zip to Downloads + tiny DO; promote via PR.
+3. Downloadables policy  -  timestamped, SHA-256, disposable; repo is source of truth.
+4. Violet receipt usage  -  optional if PR/CI green.
+5. Session hygiene  -  `git switch main && git pull --ff-only`; idempotent DO; leave a trail.
 ---
 ## CoTip: Here-strings & Backticks (PowerShell) {#cotips-here-strings}
 
@@ -277,4 +277,5 @@ Cleaner DO blocks, fewer drift points, easier CI reuse.
 ## CoTip: Use existing helpers; evolve before adding {#cotips-helper-evolution}
 
 Prefer 	ools/CoOps.psm1 and extend existing functions vs adding new scripts. See **BPOE: helper-evolution** ({#bpoe-helper-evolution}) for guardrails/checklist.
+
 

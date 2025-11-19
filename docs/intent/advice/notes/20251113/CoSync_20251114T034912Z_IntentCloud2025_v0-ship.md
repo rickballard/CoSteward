@@ -1,4 +1,4 @@
-# CoSync — CoPrime_IntentCloud2025 v0 ship receipt
+# CoSync  -  CoPrime_IntentCloud2025 v0 ship receipt
 
 - Session label: CoPrime20251112
 - Mission id: CoPrime_IntentCloud2025_Mission
@@ -57,4 +57,5 @@ Inventory / Surfaces / Buckets / Seeds / MissionGuide bundle that landed on main
 This mission is considered v0 complete once this note exists and
 CoSteward main reflects PR #149 (IntentCloud v0 seed). Further evolution
 should be handled by future IntentCloud missions rather than extending v0.
+
 

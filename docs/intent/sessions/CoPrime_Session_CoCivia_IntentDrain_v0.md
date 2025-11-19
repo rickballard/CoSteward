@@ -1,4 +1,4 @@
-# CoPrime Session — CoCivia IntentDrain (v0)
+# CoPrime Session  -  CoCivia IntentDrain (v0)
 
 > **Companion to:** `CoPrime_Session_CoCivia_v0.md`  
 > **Wave hub:** MW_CoCivia_SessionChecklistIntentDrain_v0  
@@ -32,7 +32,7 @@ Each entry should roughly look like:
 - specific files or repos, if known
 ```
 
-Feel free to be pragmatic — partial info is better than silence.
+Feel free to be pragmatic  -  partial info is better than silence.
 
 ---
 
@@ -117,4 +117,5 @@ When ready to close the CoCivia session for this cycle:
    `docs/intent/advice/notes/YYYYMMDD/` referencing this session and key waves.
 
 Until then, treat this file as your **safety net** for CoCivia-related insight.
+
 

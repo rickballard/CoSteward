@@ -1,4 +1,4 @@
-# Session Plan — MegaWave-Enabled (Template)
+# Session Plan  -  MegaWave-Enabled (Template)
 
 > Use this file as a template. Copy to a new file per-session, adjust title + metadata, then track MegaWaves and intent checklists here.
 
@@ -56,3 +56,4 @@ Use these checklists to make sure wisdom is drained from session memory to repos
 - How to pick up this track.
 - Known sharp edges.
 - Pointers to PRs, branches, and MegaWave zips.
+

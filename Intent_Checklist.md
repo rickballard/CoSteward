@@ -1,4 +1,4 @@
-# Intent Checklist — v0.4
+# Intent Checklist  -  v0.4
 
 CoCivium
 - [x] policy/cocivia.mind.yaml present
@@ -38,4 +38,5 @@ Auto-merge: CoAudit PR #18 set to --auto; merges on policy pass.
 - [ ] Log debt if any receipts missing
 
 <!-- MegaWave_DiaCont_v0_2 CHECKLIST END -->
+
 

@@ -1,4 +1,4 @@
-# MegaWave — Standard (rails)
+# MegaWave  -  Standard (rails)
 Updated: 20251115T184804Z
 
 **Purpose:** Structure work into three predictable waves with receipts and guardrails.
@@ -15,3 +15,4 @@ Updated: 20251115T184804Z
 
 ## Countdown
 Use \Invoke-MegaWaveCountdown\ (below) between waves to print a live tick.
+
