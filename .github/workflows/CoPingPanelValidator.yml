@@ -1,0 +1,36 @@
+name: CoPing Panel Validator
+
+on:
+  push:
+    branches:
+      - main
+      - comodules-*
+    paths:
+      - "tools/Test-CoPingPanel.ps1"
+      - "tools/Invoke-CoPingPanelValidator.ps1"
+      - "schemas/EdgeControl.json"
+      - "docs/internal/CoModulesStatus.md"
+      - "docs/specs/CoPing_HealthSignals.md"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "tools/Test-CoPingPanel.ps1"
+      - "tools/Invoke-CoPingPanelValidator.ps1"
+      - "schemas/EdgeControl.json"
+      - "docs/internal/CoModulesStatus.md"
+      - "docs/specs/CoPing_HealthSignals.md"
+
+jobs:
+  validate-coping-panel:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PowerShell
+        uses: PowerShell/PowerShell-For-GitHub-Actions@v2
+
+      - name: Run CoPing panel validator
+        run: pwsh -File tools/Invoke-CoPingPanelValidator.ps1 -RepoRoot .
