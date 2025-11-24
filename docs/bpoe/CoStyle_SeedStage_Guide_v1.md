@@ -22,3 +22,26 @@ This guide captures baseline style expectations for early CoSuite assets.
 
 Future waves will evolve and expand this style guide, and any terms related and via GIBindex repo updates, as CoPermanence and CoStatus mature.
 
+
+
+
+CoBlock format
+
+For PS7-friendly blocks used in CoPingPong, prefer this basic shape:
+
+  # [NN] ███ DO BlockName_v1
+  Write-Host ""
+  Write-Host ""
+  Write-Host ""
+
+  $ErrorActionPreference = "Stop"
+  Set-StrictMode -Version Latest
+
+  # body
+
+  # /DO
+
+This keeps copy/paste safe, avoids stray prompts in blocks,
+and matches the CoStyle expectations for seed-stage assets.
+
+
