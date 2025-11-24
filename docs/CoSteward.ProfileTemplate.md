@@ -91,3 +91,25 @@ CoSync++ = multi-agent alignment trigger
 
 📌 *Repo Standard:* Canonical profile lives in [`docs/CoSteward.ProfileTemplate.md`](./CoSteward.ProfileTemplate.md), mirrored in CoCache at  
 [`advice/inbox/assets/CoSteward.ProfileTemplate.md`](https://github.com/rickballard/CoCache/blob/main/advice/inbox/assets/CoSteward.ProfileTemplate.md)
+
+## Core CoSuite rails (seed)
+
+These documents define the first layer of standard rails for CoSuite work:
+
+- CoStyle seed stage guide  
+  - docs/bpoe/CoStyle_SeedStage_Guide_v1.md
+
+- CoPermanence doctrine (what must land in remote repos)  
+  - docs/ops/CoPermanence_Doctrine_v0.1.md
+
+- CoPingPong tutorial notes (Rick)  
+  - docs/ops/CoPingPong_Tutorial_Notes_Rick_v0.1.md
+
+- CoSurfing workflow lexicon (cycles, CoSets, CoWaves, MegaWaves)  
+  - docs/ops/CoSurfing_Workflow_Lexicon_v0.1.md
+
+- CoRegen protocol (how to refresh sandbox artifacts between waves)  
+  - docs/ops/CoRegen_Protocol_v0.1.md
+
+Sessions that announce CoSync should treat these as default rails for how waves and blocks behave.
+
