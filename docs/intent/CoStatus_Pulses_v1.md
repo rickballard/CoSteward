@@ -43,3 +43,13 @@ Next:
 - Bake CoIndex helpers to treat CoCacheLocal as primary object-store for
   AdviceBombs, MegaZips, and HP57 payloads.
 - Design CoCacheGlobal (distributed) using this layout as the initial template.
+## Pulse 20251129T130746Z
+
+Session: Products20251128
+LagFeel: SOFT
+StallRisk: LOW
+RotateHint: Continue via CoPrime and future Products waves
+Notes: Seeded CoModules M01-M10 and Products ramp W1; rails now live in PR 203.
+
+---
+
