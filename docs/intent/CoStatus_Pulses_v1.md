@@ -53,3 +53,13 @@ Notes: Seeded CoModules M01-M10 and Products ramp W1; rails now live in PR 203.
 
 ---
 
+## Pulse 20251130T003516Z
+
+Session: Products20251128
+LagFeel: SOFT
+StallRisk: LOW
+RotateHint: W3 rails drafted; next focus is per-product overlays and civic pilots
+Notes: Added W3 products rails docs (evolution plan + safety guardrails) into CoSteward.
+
+---
+
