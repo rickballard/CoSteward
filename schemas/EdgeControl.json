@@ -1,0 +1,18 @@
+{
+  "mode": "edge-safe",
+  "description": "Canonical EdgeControl seed for CoSuite. This file is expected to be read by CoPulse and other modules.",
+  "version": "0.1.0",
+  "modules": [
+    {
+      "name": "CoPingPanel",
+      "enabled": true,
+      "validators": [
+        {
+          "id": "CoSteward-CoPingPanel-Core",
+          "script": "tools/Test-CoPingPanel.ps1",
+          "critical": true
+        }
+      ]
+    }
+  ]
+}
