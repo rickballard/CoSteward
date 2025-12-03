@@ -30,3 +30,9 @@ git push -u origin $Br
 gh pr create --title "CoPrime Handoff: Co1 → Co1b" --body "Adds handoff docs, CoSync note, and next‑intent checklist."
 popd
 ```
+
+## Highlighted assets (steward map)
+
+For a steward-facing map of the most important CoSuite and CoCivium artefacts, see:
+
+- docs/highlights/CoSteward_HighlightedAssets_v1.md
