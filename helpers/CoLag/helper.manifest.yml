@@ -1,0 +1,35 @@
+helper_id: CoLag
+kind: helper
+version: 0.1.0
+home_repo: CoSteward
+category: local-oe-audit
+summary: Diagnose and classify lag in CoSessions (chat-age vs OE vs network/platform).
+entry_points:
+  - path: helpers/CoLag/CoLag_Run_v1.ps1
+    type: powershell
+triggers:
+  - type: manual
+    via: "user reports lag or slow session"
+  - type: human-guided
+    via: "Co1 suggests running CoLag when lag is suspected"
+inputs:
+  - name: SessionId
+    required: false
+outputs:
+  - name: advisory_md
+    type: markdown
+  - name: classification
+    type: string
+transparency_footer:
+  intent:
+    - "Reduce perceived lag for CoStewards and contributors"
+    - "Make lag diagnosable rather than mysterious"
+  ambitions:
+    - "Separate chat-age bloat from OE and network issues"
+    - "Inform BPOE defaults for browsers, profiles, and tab discipline"
+  evolution_vectors:
+    - "more automation of remediation steps"
+    - "aggregation of CoLag logs into CoAudit / CoIndex for pattern analysis"
+    - "expose repeated lag patterns as CoNag prompts (see GIBindex CoNag) so stewards can evolve CoLag and OE BPOEs"
+status: seed
+
