@@ -36,3 +36,14 @@ See helpers/CoLag/CoLag_Run_v1.ps1 for the current implementation.
   - Propose BPOE rules for preferred browsers / profiles / extensions.
 - Integrate CoLag classifications into CoAudit and CoIndex so patterns are visible across time.
 - Extend from manual invocation to semi-automatic watcher-based hints, while keeping local control and transparency.
+
+
+### CoNag hook
+
+When CoLag advisories for a given SessionId or host cross a frequency or severity threshold,
+CoLag is encouraged to emit a **CoNag** signal (see GIBindex term "CoNag") asking stewards to:
+
+- review CoLag thresholds, heuristics, and BPOE guidance
+- consider upgrading CoLag and related OE/browser/tab policies
+- surface a short human-facing summary of repeated lag causes in CoStatus / CoAudit / CoIndex views
+
