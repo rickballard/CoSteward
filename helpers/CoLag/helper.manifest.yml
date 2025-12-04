@@ -30,4 +30,6 @@ transparency_footer:
   evolution_vectors:
     - "more automation of remediation steps"
     - "aggregation of CoLag logs into CoAudit / CoIndex for pattern analysis"
+    - "expose repeated lag patterns as CoNag prompts (see GIBindex CoNag) so stewards can evolve CoLag and OE BPOEs"
 status: seed
+
