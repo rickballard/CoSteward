@@ -1,0 +1,98 @@
+[
+  {
+    "Repo": "CoSteward",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 4,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "CoIndex",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 4,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "CoCache",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "CoAudit",
+    "Exists": true,
+    "LicenseFile": "CoAudit\\LICENSE",
+    "CoProtectHits": 1,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "Existing LICENSE file detected – review alignment."
+  },
+  {
+    "Repo": "CoAgent",
+    "Exists": true,
+    "LicenseFile": "CoAgent\\LICENSE",
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "Existing LICENSE file detected – review alignment."
+  },
+  {
+    "Repo": "CoArena",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "CoContrib",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "CoPolitic",
+    "Exists": true,
+    "LicenseFile": "CoPolitic\\LICENSE",
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Public_Harden",
+    "Notes": "Existing LICENSE file detected – review alignment."
+  },
+  {
+    "Repo": "CoCivium",
+    "Exists": true,
+    "LicenseFile": "CoCivium\\LICENSE",
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Public_Harden",
+    "Notes": "Existing LICENSE file detected – review alignment."
+  },
+  {
+    "Repo": "InSeed",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "GroupBuild",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 0,
+    "SuggestedBucket": "Private_RepoOnly",
+    "Notes": "No LICENSE file detected."
+  },
+  {
+    "Repo": "RickPublic",
+    "Exists": true,
+    "LicenseFile": null,
+    "CoProtectHits": 1,
+    "SuggestedBucket": "Public_OK",
+    "Notes": "No LICENSE file detected."
+  }
+]
