@@ -1,6 +1,6 @@
 # CoSteward CoScendence Rubric (v1)
 
-Seeded: 20251206T145705Z
+Seeded: 20251206T170553Z
 
 This file extracts the rubric from the practice guide for easier reuse in tools and dashboards.
 
