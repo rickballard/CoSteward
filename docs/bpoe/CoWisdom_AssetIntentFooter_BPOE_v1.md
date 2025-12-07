@@ -38,6 +38,10 @@ At the bottom of a wisdom-bearing Markdown file, add:
 ```yaml
 ---
 CoAsset_IntentCloud_v1:
+  CoProtect:
+    level: 'Unknown_NeedsReview'
+    rationale: 'Initial stub added by CoProtect_TagStub_v1. Needs human steward review.'
+    owner_session: 'CoPrime20251203'
   intent:
     short: "<one-line purpose of this asset>"
     ambition: "<what this wants to become over time>"

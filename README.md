@@ -1,5 +1,23 @@
 # CoSteward - Spaceship Console (v1 seed)
 
+## Quick Nav – Manuals and Dashboards (v1 seed)
+
+- **Steward Ops Manual (single scroll)**  
+  - [docs/ops/CoSteward_Ops_Manual_v1.md](docs/ops/CoSteward_Ops_Manual_v1.md)
+
+- **Full Manual (chaptered)**  
+  - [MANUAL index](docs/ops/MANUAL/INDEX.md)
+
+- **Session Health and Lag Patterns**  
+  - [Session health overview](docs/intent/session-health/README.md)  
+  - [Session health patterns](docs/intent/session-health/SessionHealth_Patterns_v0.1.md)  
+  - [CoStatus session health spec](docs/bpoe/CoStatus_SessionHealthSpec_v1.md)
+
+- **CoSuite BPOE and Onramps**  
+  - [CoSuite BPOE onramps and portals spec](docs/bpoe/CoSuite_BPOE_Onramps_PortalsSpec_v1.md)
+
+
+
 You are at the Steward console for CoCivium.
 
 From here you can:
@@ -173,4 +191,5 @@ CoProtect_SeedStage_v1:
       - 'Do not imply endorsement or affiliation without written permission.'
   contact:
     steward_email: 'contact@InSeed.com'
+
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This advisory defines how CoSuite treats *style* as a first-class concern and
+This advisory defines how CoSuite™ treats *style* as a first-class concern and
 introduces the concept of **CoFade** – the tendency for AI- and process-driven
 evolution to make all assets look and sound the same over time.
 
@@ -30,7 +30,7 @@ The minimal set of features that make an asset recognizably itself:
 
 1. Style is content.
 
-   For CoSuite, style is part of the meaning surface, not noise.
+   For CoSuite™, style is part of the meaning surface, not noise.
    AIs and humans must treat StyleDNA as *content that must be preserved*
    unless there is a clear, logged reason to change it.
 
@@ -50,7 +50,7 @@ The minimal set of features that make an asset recognizably itself:
 
 3. Default behavior for Co-aware AIs.
 
-   Unless explicitly instructed otherwise, CoSuite-aligned AIs MUST:
+   Unless explicitly instructed otherwise, CoSuite™-aligned AIs MUST:
    - preserve StyleDNA when editing stylized assets
    - avoid replacing multi-minus chains with long em dashes by default
    - avoid "corporate smoothing" of playful or mythic passages
@@ -74,11 +74,11 @@ The minimal set of features that make an asset recognizably itself:
    - avoid globalization of one house voice across all artifacts
    - use style as a teaching tool (different voices for different cognitive onramps)
 
-6. Future GIBindex / CoAudit integration.
+6. Future GIBindex / CoAudit™ integration.
 
    Future waves may:
    - add GIBindex terms such as `CoFade`, `CoStyleDNA`, and `CoVariety`
-   - implement CoAudit checks (e.g., a "CoFadeScore") to detect over-homogenization
+   - implement CoAudit™ checks (e.g., a "CoFadeScore") to detect over-homogenization
    - alert stewards when style families collapse into a single dominant tone
 
 ## Practical Guidance
@@ -99,5 +99,6 @@ When editing someone else’s stylized asset:
   - or a parallel summary file
   rather than overwriting the original voice.
 
-This advisory is v1 and should itself evolve as CoSuite learns better ways to
+This advisory is v1 and should itself evolve as CoSuite™ learns better ways to
 protect variety and mind-food from CoFade.
+

@@ -178,3 +178,91 @@ When choosing a CoProtect level for an asset:
   - Interpreting ambiguous cases,
   - Moving assets between buckets when posture changes,
   - Updating this BPOE as legal/IP guidance evolves.
+
+## 8. Licence posture v1.2 (Outreach&BP ratified)
+
+Outreach&BP have ratified the four CoProtect levels with an explicit
+licence and exposure posture. This section refines and supersedes any
+earlier informal descriptions in this BPOE.
+
+- \Public_OK\
+  - Licence posture:
+    - Permissive FOSS and civic-permissive licences (for example MIT, Apache,
+      CC-BY) are acceptable.
+    - Assets should remain safe even if a third party clones and mirrors
+      the repo without context.
+  - Content scope:
+    - High-level narratives, civic explainers, and generic BPOE.
+    - No turnkey, reset-resilient governance flows.
+  - Handling:
+    - Safe for broad public consumption and use as training data by
+      untrusted AIs, subject to licence terms.
+
+- \Public_Harden\
+  - Licence posture:
+    - Copyleft or civic-GPL style licences with stewardship obligations.
+    - Intended to carry obligations around attribution, sharing changes,
+      and respecting steward-led governance.
+  - Content scope:
+    - May discuss edge-owned governance and handshake concepts in more
+      detail than \Public_OK\.
+    - Must not include full-system, copy-paste governance implementations.
+  - Handling:
+    - Must ship with strong SECURITY / GOVERNANCE notes (for example in
+      SECURITY.md or equivalent).
+    - Explicitly framed as "not canonical rails" and not turnkey methods.
+
+- \Private_RepoOnly\
+  - Licence posture:
+    - No FOSS licence granted by default.
+    - Treated as organisation / trusted-circle only material.
+    - May in future move to a "sunrise" posture (for example restricted
+      source-available, CLA-based access) once counsel approves.
+  - Content scope:
+    - Internal rails and detailed mechanics for CoSteward, CoAgent,
+      CoIndex, CoArena and similar.
+    - DO-block sequences, orchestration notes, and wiring patterns.
+  - Handling:
+    - Lives only in private repos / branches or equivalent private mirrors.
+    - Not to be treated as generic training data for untrusted AIs.
+
+- \HP57_Only\
+  - Licence posture:
+    - No licence granted. Treated as trade secret plus patent core,
+      under counsel-led posture.
+  - Content scope:
+    - Crown-jewel method content such as AhahStack and CoHeart full
+      mechanics.
+    - Reset-resilient human–AI governance flows that become turnkey if
+      leaked or cloned.
+  - Handling:
+    - Storage limited to LAN / vault environments (HP57 class).
+    - No mirroring to public or private GitHub.
+    - Access restricted to tightly trusted humans and governed internal AIs.
+
+## 9. Default-to-protection rule (ratified)
+
+Outreach&BP have endorsed the default-to-protection rule:
+
+- If an asset could fit more than one bucket, choose the more protective:
+  - Public_OK vs Public_Harden → default to \Public_Harden\.
+  - Public_Harden vs Private_RepoOnly → default to \Private_RepoOnly\.
+  - Private_RepoOnly vs HP57_Only → default to \HP57_Only\ when in
+    doubt, especially for method content.
+
+- If an asset feels like patent-grade or crown-jewel method content:
+  - Mark as \HP57_Only\.
+  - Flag to Outreach&BP and counsel for patent plus trade-secret review.
+
+LAN-side Scan-CoExposure runs remain a black box. CoPrime and helpers
+receive only summary-level signals (for example per-repo hit counts and
+priority rankings) from Outreach&BP, and must not attempt to reference
+internal LAN paths directly in repo assets.
+
+CoPrime / Co1 and Outreach&BP share responsibility for:
+
+- Interpreting ambiguous cases and reclassifying assets when posture
+  changes.
+- Proposing safer public explainers when private or HP57-only methods
+  become partially publishable.
+- Evolving this BPOE as legal, IP, and trust structures mature.

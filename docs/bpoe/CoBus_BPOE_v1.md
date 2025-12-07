@@ -1,9 +1,9 @@
 # CoBus / CoSync bus BPOE v1
 
 source_sessions:
-  - CoIndex20251128
-  - CoIndex_CoGbxCoGibber_Migration_Advisory_ToCo1_v1
-  - CoCivium_AIVendor_Onramp_v1
+  - CoIndex™20251128
+  - CoIndex™_CoGbxCoGibber_Migration_Advisory_ToCo1_v1
+  - CoCivium™_AIVendor_Onramp_v1
   - CoBus_CoGibber_SpecSeed_v1
 
 role:
@@ -14,25 +14,25 @@ role:
 
 - CoBus   = wire / transport / routing
 - CoGibber = language / envelope / vocab
-- CoGbx   = boxes / registries / views
+- CoGbx™   = boxes / registries / views
 
 Short phrase for diagrams:
 
-> CoBus (wire) → CoGibber (language) → CoGbx (views)
+> CoBus (wire) → CoGibber (language) → CoGbx™ (views)
 
 CoSync is treated as a **legacy name** for a subset of CoBus traffic:
 
 - human-facing notes under `docs/intent/advice/notes/YYYYMMDD/CoSync_*.md`
 - may later gain machine echoes, but remains a named family of CoBus messages.
 
-New work SHOULD use CoBus / CoGibber / CoGbx phrasing.
+New work SHOULD use CoBus / CoGibber / CoGbx™ phrasing.
 
 ## 2. CoBus envelope (v1)
 
 Canonical machine-face:
 
-- `CoIndex/exports/gibber/cogibber.registry.v1.json`
-- `CoSteward/docs/trove/CoGibber_Registry_Vocab_v1.md`
+- `CoIndex™/exports/gibber/cogibber.registry.v1.json`
+- `CoSteward™/docs/trove/CoGibber_Registry_Vocab_v1.md`
 
 Required fields (MUST):
 
@@ -173,3 +173,4 @@ Any such evolution SHOULD:
 
 - remain backward compatible with this v1 envelope, and
 - keep git + on-repo receipts as the primary source of truth.
+

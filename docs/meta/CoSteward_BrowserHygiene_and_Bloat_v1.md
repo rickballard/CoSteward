@@ -1,6 +1,6 @@
 # CoSteward Browser Hygiene & Bloat Meter (v1)
 
-Generated: 20251205T213139Z
+Generated: 20251206T022100Z
 
 ## Intent
 
