@@ -16,19 +16,19 @@ function Write-Line {
 
 Write-Line "# CoSteward Local OE Inventory"
 Write-Line ""
-Write-Line "GeneratedUTS: {0}" -f ((Get-Date).ToUniversalTime().ToString('yyyyMMddTHHmmssZ'))
+Write-Line ("GeneratedUTS: {0}" -f ((Get-Date).ToUniversalTime().ToString('yyyyMMddTHHmmssZ')))
 Write-Line ""
 
 # OS info
 Write-Line "## OS"
-Write-Line "MachineName: {0}" -f $env:COMPUTERNAME
-Write-Line "OSVersion:   {0}" -f [System.Environment]::OSVersion.VersionString
+Write-Line ("MachineName: {0}" -f $env:COMPUTERNAME)
+Write-Line ("OSVersion:   {0}" -f [System.Environment]::OSVersion.VersionString)
 Write-Line ""
 
 # PowerShell info
 Write-Line "## PowerShell"
-Write-Line "PSVersion:   {0}" -f $PSVersionTable.PSVersion
-Write-Line "Edition:     {0}" -f $PSVersionTable.PSEdition
+Write-Line ("PSVersion:   {0}" -f $PSVersionTable.PSVersion)
+Write-Line ("Edition:     {0}" -f $PSVersionTable.PSEdition)
 Write-Line ""
 
 # Git info
@@ -36,12 +36,12 @@ Write-Line "## Git"
 try {
     $gitVersion = git --version 2>$null
     if ($gitVersion) {
-        Write-Line "Git:         {0}" -f $gitVersion
+        Write-Line ("Git:         {0}" -f $gitVersion)
     } else {
         Write-Line "Git:         not found or not on PATH"
     }
 } catch {
-    Write-Line "Git:         error while checking: {0}" -f $_.Exception.Message
+    Write-Line ("Git:         error while checking: {0}" -f $_.Exception.Message)
 }
 Write-Line ""
 
@@ -50,12 +50,12 @@ Write-Line "## winget"
 try {
     $wingetVersion = winget --version 2>$null
     if ($wingetVersion) {
-        Write-Line "winget:      {0}" -f $wingetVersion
+        Write-Line ("winget:      {0}" -f $wingetVersion)
     } else {
         Write-Line "winget:      not found"
     }
 } catch {
-    Write-Line "winget:      error while checking: {0}" -f $_.Exception.Message
+    Write-Line ("winget:      error while checking: {0}" -f $_.Exception.Message)
 }
 Write-Line ""
 
@@ -63,15 +63,15 @@ Write-Line ""
 Write-Line "## PowerToys"
 $powerToysPath = Join-Path $env:LOCALAPPDATA 'Microsoft\PowerToys'
 if (Test-Path $powerToysPath) {
-    Write-Line "PowerToys:   installed at $powerToysPath"
+    Write-Line ("PowerToys:   installed at {0}" -f $powerToysPath)
     try {
         $exe = Get-ChildItem -Path $powerToysPath -Recurse -Filter 'PowerToys.exe' -ErrorAction SilentlyContinue | Select-Object -First 1
         if ($exe) {
             $v = (Get-Item $exe.FullName).VersionInfo.ProductVersion
-            Write-Line "Version:     $v"
+            Write-Line ("Version:     {0}" -f $v)
         }
     } catch {
-        Write-Line "Version:     error while checking: {0}" -f $_.Exception.Message
+        Write-Line ("Version:     error while checking: {0}" -f $_.Exception.Message)
     }
 } else {
     Write-Line "PowerToys:   not detected"
