@@ -1,0 +1,12 @@
+{
+  "TimestampUTC": "20251208T072256Z",
+  "RepoRoot": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward",
+  "Branch": "main",
+  "GitStatus": [
+    "?? docs/intent/attachments/",
+    "?? tools/CoReload/",
+    "?? tools/CoSteward_SessionPurgePrep_v1.ps1"
+  ],
+  "AttachmentCount": 0,
+  "Attachments": []
+}
