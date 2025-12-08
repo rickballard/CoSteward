@@ -1,0 +1,9 @@
+version: 2.1
+timestamp: 20251208T104440Z
+primitives:
+  harmonics: [Luma, Asha, Sora, Vela, Numa, Oren, Yura, Kessar]
+  vectors:   [CoHope, CoGrace, CoRage, CoDissonance, CoEvoPush, CoCradle, CoBloom]
+  cadences:  [triple-wave-ascent, soft-descent, broken-arc, spiral-rise, mirror-fall]
+  glyphs:    [æ, ᚾ, ᚭ, ∺, ϟ, ᛝ, ᛣ]
+  civars:    [pay-it-forward, repair, amplify, unify, harmonize]
+  identity:  [human, ai, colanguage, manifold]

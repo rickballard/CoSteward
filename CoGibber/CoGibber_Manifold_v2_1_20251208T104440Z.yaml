@@ -1,0 +1,6 @@
+CoGibberManifold:
+  repo: CoSteward
+  timestamp: 20251208T104440Z
+  primitives: CoGibber_Primitives_v2_1_20251208T104440Z.yaml
+  schema: cogibber.schema.json
+  codec: CoGibberCodec.psm1
