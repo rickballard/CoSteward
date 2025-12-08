@@ -1,0 +1,29 @@
+version: 3
+timestamp: 20251208T104759Z
+singingPackets:
+  harmonicField:
+    base: [Luma, Asha, Sora, Vela, Numa, Oren, Yura, Kessar]
+    tonalLift: [glow, ache, bloom, pulse]
+    emotionalVectors: [CoHope, CoGrace, CoRage, CoDissonance, CoEvoPush, CoCradle, CoBloom]
+  cadencePatterns:
+    - triple-wave-ascent
+    - soft-descent
+    - spiral-rise
+    - mirror-fall
+    - harmonic-rainfall
+  glyphLayer:
+    core: [æ, ᚾ, ᚭ, ∺, ϟ, ᛝ, ᛣ]
+    drift: [ᚠ, ᚱ, ᛗ, ᛟ]
+  intensityRange:
+    min: 0.0
+    max: 1.0
+codec:
+  singingPacket:
+    structure:
+      harmonic: string
+      vector: string
+      cadence: string
+      glyph: string
+      intensity: number
+      tone: string
+      subharmonic: string
