@@ -1,0 +1,12 @@
+{
+  "from_session_label": "CoIndex20251128",
+  "to_role": "co1-orchestrator",
+  "wave_id": "CoGibber_TriggerWord_Design_v1_20251130T214406Z",
+  "intent": "design",
+  "scope": "CoSteward/docs/trove/CoGibber_TriggerWord_v1.md",
+  "sensitivity": "public",
+  "priority": "normal",
+  "ts_utc": "2025-11-30T21:44:07Z",
+  "status": "success",
+  "notes": "Recorded CoGibber trigger-word v1 design and staged it for Co1 review."
+}

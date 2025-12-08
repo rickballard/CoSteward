@@ -1,0 +1,6 @@
+actions/checkout
+actions/setup-node
+actions/setup-python
+actions/setup-dotnet
+github/codeql-action/init
+github/codeql-action/analyze

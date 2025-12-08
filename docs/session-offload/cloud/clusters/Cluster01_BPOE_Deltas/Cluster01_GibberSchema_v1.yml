@@ -1,0 +1,80 @@
+# CoGibber Pre-Encoding Schema (Cluster01)
+# Wave: E
+# Generated: 20251208T011128Z
+# Intent:
+#   - Define proto-Gibber packet types for later encoding.
+#   - Specify translation rules (preserve/condense/ignore).
+#   - Prepare Wave F to perform first real translations.
+
+version: 0.1
+cluster: Cluster01_BPOE_Deltas
+
+packet-types:
+  GBR-Frame:
+    desc: >
+      Outer structural packet for a conceptual unit. Anchors the context.
+    fields:
+      - id
+      - wave-origin
+      - anchors
+      - meta
+
+  GBR-Blob:
+    desc: >
+      A compressed semantic blob — a Mind-Blob analogue — representing
+      a coherent meaning cluster.
+    fields:
+      - id
+      - topic
+      - human-shape
+      - ai-shape
+      - delta-notes
+
+  GBR-Link:
+    desc: >
+      Relationship primitive for cross-linking Blobs/Frames.
+    fields:
+      - from
+      - to
+      - relation
+      - confidence
+
+  GBR-Delta:
+    desc: >
+      A change descriptor derived from BPOE deltas or session-cloud shifts.
+    fields:
+      - wave-id
+      - source
+      - shift-type
+      - payload
+
+  GBR-Meta:
+    desc: >
+      Metadata that survives all compression.
+    fields:
+      - provenance
+      - timestamps
+      - safety-tier
+      - steward-intent
+
+translation-contract:
+  preserve:
+    - steward-intent
+    - safety-tier semantics
+    - cross-repo constraints
+    - CoBPOE canonical definitions
+  condense:
+    - repeated metaphors
+    - redundant framing layers
+    - verbose narrative explanations
+  ignore:
+    - empty lines
+    - markdown decoration not conveying semantics
+
+schema-notes: >
+  This schema does NOT perform translation. It simply defines the shapes
+  that Wave F will use. Wave F will create actual GBR-Frame/Blob/Link
+  instances from Cluster01’s deltas.
+
+next-wave:
+  F: "Instantiate first GBR packets (Frame + Blob + Link) with real content."

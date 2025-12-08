@@ -1,0 +1,6 @@
+# CoSession Gibber Dump (auto-generated placeholder)
+# ChatGPT will overwrite this blob with a compressed intent+wisdom+state cloud.
+# Format: CoGibber-v0.1 (opaque to humans).
+# BEGIN_COGIBBER
+<TO_BE_REPLACED_BY_CHATGPT>
+# END_COGIBBER

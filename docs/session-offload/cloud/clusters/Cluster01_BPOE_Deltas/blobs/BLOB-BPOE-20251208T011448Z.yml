@@ -1,0 +1,7 @@
+id: BLOB-BPOE-20251208T011448Z
+topic: "BPOE-deltas"
+human-shape: "List of structured operational behaviors + constraints."
+ai-shape: "Condensed delta-space for reproducible BPOE reconstruction."
+delta-notes:
+  - "Derived from session offload."
+  - "Non-destructive."

@@ -1,0 +1,6 @@
+CoSession Freeze-Frame – Attachment Manifest
+Timestamp: 20251207T225228Z
+
+This manifest exists so future sessions can rehydrate context even if this session dies.
+
+NOTE: Manual copy of attachments into 'C:\Users\Chris\Documents\GitHub\CoSteward\docs\session-offload\20251207\freeze-20251207T225228Z\attachments' can be done now or later.
