@@ -11,14 +11,20 @@ function UTS {
   (Get-Date).ToUniversalTime().ToString('yyyyMMddTHHmmssZ')
 }
 
-# Resolve repo root from script location (works when run as a script)
-$repoRoot = Split-Path -Parent $PSScriptRoot
+# Resolve repo root
+if ($PSScriptRoot) {
+  # Normal case: running as a script file
+  $repoRoot = Split-Path -Parent $PSScriptRoot
+} else {
+  # Fallback: running interactively, assume standard CoSteward location
+  $repoRoot = Join-Path $HOME 'Documents\GitHub\CoSteward'
+}
 
-if (-not $DestRoot) {
+if (-not $DestRoot -or [string]::IsNullOrWhiteSpace($DestRoot)) {
   $DestRoot = Join-Path $repoRoot 'docs\session-offload\rescued'
 }
 
-Write-Host "[INFO] Session rescue helper v2" -ForegroundColor Cyan
+Write-Host "[INFO] Session rescue helper v2.3" -ForegroundColor Cyan
 Write-Host "[INFO] Root source    : $Root" -ForegroundColor Cyan
 Write-Host "[INFO] Destination    : $DestRoot" -ForegroundColor Cyan
 Write-Host ""
@@ -29,40 +35,49 @@ if (-not (Test-Path $Root)) {
   return
 }
 
-# Candidate files: text + zips (seed set)
-$candidates = Get-ChildItem -Path $Root -Recurse -File -ErrorAction SilentlyContinue |
-  Where-Object { $_.Extension -in '.md', '.txt', '.zip', '.json' }
+# Collect candidate files (text + zip + json). Force array so .Count is safe.
+$candidates = @(Get-ChildItem -Path $Root -Recurse -File -ErrorAction SilentlyContinue |
+  Where-Object { $_.Extension -in '.md', '.txt', '.zip', '.json' })
 
-if (-not $candidates -or $candidates.Count -eq 0) {
-  Write-Host "[INFO] No candidate files found under '$Root'." -ForegroundColor Yellow
+if (-not $candidates -or @($candidates).Count -eq 0) {
+  Write-Host "[INFO] No files found to rescue from '$Root'." -ForegroundColor Yellow
   "CoBloat: CU=OK • PU=OK • HU=OK • WT=OK"
   return
 }
 
-$stamp   = UTS
-$destDir = Join-Path $DestRoot $stamp
-New-Item -ItemType Directory -Force -Path $destDir *> $null
+$ts = UTS
+$targetRoot = Join-Path $DestRoot $ts
 
-Write-Host "[INFO] Found $($candidates.Count) file(s) to rescue." -ForegroundColor Green
-Write-Host "[INFO] Target wave dir: $destDir" -ForegroundColor Green
-Write-Host ""
+if (-not $DryRun) {
+  New-Item -ItemType Directory -Path $targetRoot -Force | Out-Null
+}
+
+Write-Host "[INFO] Found $(@($candidates).Count) file(s) to rescue." -ForegroundColor Green
+if ($DryRun) {
+  Write-Host "[INFO] Dry-run mode: no files will be written." -ForegroundColor Yellow
+}
 
 foreach ($f in $candidates) {
-  $target = Join-Path $destDir $f.Name
+  # Relative path under the root
+  $rel = $f.FullName.Substring($Root.Length).TrimStart('\','/')
+  $destPath = Join-Path $targetRoot $rel
+
   if ($DryRun) {
-    Write-Host "[DRY-RUN] Would copy: $($f.FullName) -> $target"
-  } else {
-    Copy-Item -Path $f.FullName -Destination $target -Force
-    Write-Host "[COPIED] $($f.FullName) -> $target"
+    Write-Host "[DRY]  $rel"
+    continue
   }
+
+  $destDir = Split-Path -Parent $destPath
+  if (-not (Test-Path $destDir)) {
+    New-Item -ItemType Directory -Path $destDir -Force | Out-Null
+  }
+
+  Copy-Item -LiteralPath $f.FullName -Destination $destPath -Force
+  Write-Host "[RESCUED] $rel"
 }
 
 if ($DryRun) {
-  Write-Host ""
-  Write-Host "[INFO] Dry-run only; no files were actually copied." -ForegroundColor Yellow
-} else {
-  Write-Host ""
-  Write-Host "[INFO] Rescue wave complete -> $destDir" -ForegroundColor Green
+  Write-Host "[INFO] Dry-run completed. Re-run without -DryRun to apply." -ForegroundColor Yellow
 }
 
 "CoBloat: CU=OK • PU=OK • HU=OK • WT=OK"
