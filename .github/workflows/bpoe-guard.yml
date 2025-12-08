@@ -10,4 +10,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run BPOE workflow guard
         shell: pwsh
-        run: pwsh -File tools/ps7/BPOE_Check_Workflows.ps1
+        run: pwsh -File tools/ps7/BPOE_Check_Workflows.ps1 -Root "${{ github.workspace }}"
