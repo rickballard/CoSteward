@@ -1,0 +1,20 @@
+name: bpoe-selftest
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  scan-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run history leak scan (red-list)
+        shell: pwsh
+        run: |
+          $patterns = @('GLUKEY','business plan','valuation')
+          pwsh -File tools/ps7/Lockdown/DO_W3C_History_Leak_Scan_v2.ps1 -RepoPath "${{ github.workspace }}" -Out "${{ runner.temp }}/triage" -Patterns $patterns
+      - name: Upload triage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bpoe-triage
+          path: ${{ runner.temp }}/triage
