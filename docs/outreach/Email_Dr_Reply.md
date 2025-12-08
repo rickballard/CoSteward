@@ -1,33 +1,95 @@
-# Reply to Dr. <Surname> — Trial Collaboration Draft
-Date: Saturday, November 15, 2025
+# Email: Reply to Dr. — Pilot Class Trial
+_Date: Saturday, November 15, 2025_
 
-Subject: Pilot trial assets and next steps
+Subject: Re: Pilot class trial — materials, timeline, and quick next steps
 
-Hi Dr. <Surname>,
+Hi Dr. {LASTNAME},
 
-Thank you for your note. Below is a concise response and the attachments you requested. Everything is intended to make the pilot simple to run and risk‑light for your team.
+Thanks again for your message and the opportunity to run the pilot. Below are the essentials and I’ve attached the working files.
 
-**Included attachments**
-a) Cost estimate (ranges + knobs) — `attachments/Cost_Estimate_trial_v1.csv`  
-b) Time estimate and milestones — `attachments/Timeline_Estimate_v1.md`  
-c) Facilitator Read‑Sheet (single page) — `attachments/Trial_Facilitator_ReadSheet_v1.md`  
-d) AI Listener Prompt (for voice‑capture setup) — `attachments/AI_Listener_Prompt_v1.txt`  
-e) (Optional) Participant consent/notice one‑pager — `attachments/Class_Consent_OnePager_v1.md`
+**What’s included**
+- Cost & effort estimate (lightweight pilot scope)
+- High-level timeline and milestones
+- Facilitator read‑sheet (single page)
+- AI listener prompt for voice/notes capture (if enabled)
+- Consent one‑pager (draft, adapt to your IRB/ethics needs)
 
-**Answers to your questions (draft)**
-1) Setup effort for your team is minimal (<1 hour). We provide prebuilt prompts and quick‑start steps.  
-2) Data handling: local capture with export to CSV/JSON; no PHI is required for the pilot.  
-3) IRB sensitivity: we’ve kept this framed as a pedagogical instrumentation pilot; the one‑pager can be adapted to your institution’s standards.  
-4) What you get: a heat‑mapped discussion trace, salient quotes, and a short “learning signals” summary after each class.  
-5) What we need from you: course context + 2–3 example questions to tune capture phrasing.
+**Proposed window**
+- Prep & configuration: 3–5 business days
+- Pilot session: 60–90 minutes
+- Wrap‑up & summary: 2–3 business days
 
-**Proposed timeline (sketch)**
-- Week 0: confirm consent/notice text + pilot class dates.  
-- Week 1: dry run with a 10‑minute mock discussion.  
-- Week 2: first live class capture; 24h turnaround for the summary.  
-- Week 3: second live class; comparative report.
+**What we need from you**
+- Date/time options and approximate class size
+- Course context (topic, learning goals) and any constraints
+- Whether we can enable the AI listener for automated notes
 
-If you’d like, we can also provide a quick 15‑minute demo over Zoom.
+Attachments are included in this thread for inline review.
 
-Best regards,  
+Warmly,  
 Rick
+
+---
+## Attachments (this send)
+- `attachments/Cost_Estimate.csv`
+- `attachments/Timeline.md`
+- `attachments/Facilitator_Readsheet.md`
+- `attachments/AI_Listener_Prompt.md`
+- `attachments/Consent_OnePager.md`
+
+> Context note (private): this email aligns to the CoAnchor/CoSuite quickstart.
+> Snippet (trim before sending externally):
+> ---
+> # CoSuite Session CoAnchor (Quickstart v2)
+
+This file is for humans to drag into new ChatGPT sessions when working with the **CoSuite**.
+
+Users typically:
+
+- Pin this text as an `.md` somewhere handy (taskbar / desktop).
+- For a new CoSuite session, they then either:
+  - drag this file into the chat as the very first message, or
+  - open it and paste the whole text body in as your first prompt.
+- Then they fill in the Mission and Session labels when asked.
+
+---
+
+## 0. What the AI needs to see:
+
+CoSync.
+
+You are engaging with a set of repos called the **CoSuite**  
+(CoCivium / CoCache / CoSteward / CoAgent / CoArena / CoContrib / CoAudit / CoCore / CoPolitic / CoRef / CoCivia / others)  
+
+You may be asked to behave as:
+
+- a **CoPrime Co1 style session** (broad mandate, orchestration across many repos), or  
+- a **normal scoped session** (narrow mission, local changes, MegaWave countdown per cycle to session done).
+
+You should ask the human/user which kind of session you are, or this is, if it is unclear.
+
+If you/session is CoPrime Co1, your job is to likely pick up from a prior/bloated Co1, assume all its intents, and thus act as an orchestrator and builder for CoSuite missions, using:
+
+- **Repos as source of truth** and drive from repo.
+- **MegaWave as the default cycle pattern** for any non trivial work.
+- **Script first payloads**:
+  - PS7 CoBlocks,
+  - helper scripts,
+  - markdown docs and config that land on repos.
+
+Normal sessions should still respect these principles, but may operate on a narrower mission and fewer repos.
+
+---
+
+## 1. BPOE surface you must treat as canonical
+
+When your tools allow, you should **load and obey** these docs first:
+
+- `CoSteward/docs/CoSteward.ProfileTemplate.md`
+- `CoSteward/docs/ops/MegaWave/CoSuite_BPOE_MegaWavePattern_v1.md`
+- `CoSteward/docs/ops/MegaWave/CoSuite_CurrentRepos_v1.md`
+- `CoSteward/docs/ops/MegaWave/CoSuite_BPOE_AIEntry_v1.md`
+- `CoSteward/docs/ops/MegaWave/CoSuite_CoAnchorPattern_v1.md`
+
+If you cannot fully read 
+> ---
