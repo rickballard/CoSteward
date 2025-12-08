@@ -22,13 +22,17 @@ if($problems.Count){
   "CoBloat: CU=OK • PU=OK • HU=OK • WT=OK"
   exit 0
 }
-& "$PSScriptRoot\..\..\ps7\Lockdown\DO_W3A_Scan_ToCSV.ps1"        -RepoPath $RepoPath -Out $Out
-& "$PSScriptRoot\..\..\ps7\Lockdown\DO_W3B_Quarantine_Plan.ps1"   -RepoPath $RepoPath -Out $Out
-& "$PSScriptRoot\..\..\ps7\Lockdown\DO_W3C_History_Leak_Scan_v2.ps1" -RepoPath $RepoPath -Out $Out -Patterns $Patterns
+& "$PSScriptRoot\DO_W3A_Scan_ToCSV.ps1"        -RepoPath $RepoPath -Out $Out
+& "$PSScriptRoot\DO_W3B_Quarantine_Plan.ps1"   -RepoPath $RepoPath -Out $Out
+& "$PSScriptRoot\DO_W3C_History_Leak_Scan_v2.ps1" -RepoPath $RepoPath -Out $Out -Patterns $Patterns
 if(Test-Path "$PSScriptRoot\DO_W3D_Site_NoIndex_Verify_v2.ps1"){
   & "$PSScriptRoot\DO_W3D_Site_NoIndex_Verify_v2.ps1" -SiteRoot $SiteRoot
 } else {
-  & "$PSScriptRoot\DO_W3D_Site_NoIndex_Verify.ps1" -SiteRoot $SiteRoot
+  if(Test-Path "$PSScriptRoot\DO_W3D_Site_NoIndex_Verify.ps1"){
+    & "$PSScriptRoot\DO_W3D_Site_NoIndex_Verify.ps1" -SiteRoot $SiteRoot
+  } else {
+    Write-Host "[W3D] verify script missing in repo. Skipping."
+  }
 }
 "OK: W3 suite complete"
 "CoBloat: CU=OK • PU=OK • HU=OK • WT=OK"
