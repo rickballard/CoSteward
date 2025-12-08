@@ -5,12 +5,12 @@
 
 ## 1. Why GIBindex terms should show up in everyday sessions
 
-GIBindex is not just a glossary; it is the **concept backbone** for CoCivium.
+GIBindex is not just a glossary; it is the **concept backbone** for CoCivium™.
 
 To make it real:
 
 - CoCivites should see **Co\* terms** (CoPortal, CoBrowser, CoEdgeControl, CoEvo, CoRoots,
-  CoTree, CoScendence, CoWave, CoAudit, etc.) flowing naturally through:
+  CoTree, CoScendence, CoWave, CoAudit™, etc.) flowing naturally through:
   - repo docs,
   - session transcripts,
   - whitepapers and CoPortals,
@@ -34,8 +34,8 @@ Some high-leverage terms that deserve visible, repeated use:
 - **CoEvo / CoEvolution** – auto-evolution loops (code, doctrine, social contracts, roles).  
 - **CoRoots / CoTree** – dual diagrams for qualifications and concept mastery.  
 - **CoScendence** – personal / organisational “levelling up” moment via AI partnership.  
-- **CoSteward** – steward role and practices, especially for hybrid society governance.  
-- **CoAudit** – trust-sourcing / guardrail auditing patterns, not just a single repo.  
+- **CoSteward™** – steward role and practices, especially for hybrid society governance.  
+- **CoAudit™** – trust-sourcing / guardrail auditing patterns, not just a single repo.  
 - **CoWave / MegaWave** – packaged change wave, with zips, PRs, receipts, CoSync notes.
 
 BPOE suggestion:
@@ -65,12 +65,13 @@ For any AI assisting a CoCivite:
 ## 4. Next steps
 
 - This note is meant as **feedstock**:
-  - Co1 / CoAnchor can:
-    - extract pieces into CoStyle, CoPermanence, and the CoSteward Ops Manual,
+  - Co1 / CoAnchor™ can:
+    - extract pieces into CoStyle, CoPermanence, and the CoSteward™ Ops Manual,
     - or keep this as a standalone BPOE appendix.
 
 - It should also inform:
-  - CoPortal designs (e.g. InSeed.com, CoCivium.org),
-  - CoAgent / CoBrowser UI copy,
-  - contributor onboarding (CoContrib / CoMap).
+  - CoPortal designs (e.g. InSeed.com, CoCivium™.org),
+  - CoAgent™ / CoBrowser UI copy,
+  - contributor onboarding (CoContrib™ / CoMap).
+
 
