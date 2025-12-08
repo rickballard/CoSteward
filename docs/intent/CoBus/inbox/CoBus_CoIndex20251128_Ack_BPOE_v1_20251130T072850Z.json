@@ -1,0 +1,11 @@
+{
+  "from_session_label": "CoIndex20251128",
+  "to_role": "co1-orchestrator",
+  "wave_id": "CoBus-20251130T072850Z-CoIndex-BPOE-Ack",
+  "intent": "advisory",
+  "scope": "CoBus_BPOE_v1 + CoGibber_Registry_Vocab_v1 + CoIndex CoBus lanes",
+  "sensitivity": "public",
+  "priority": "normal",
+  "ts_utc": "2025-11-30T07:28:50Z",
+  "notes": "Acknowledges CoBus_BPOE_v1, CoGibber_Registry_Vocab_v1, cogibber.registry.v1.json, CoBus_Lanes_CoIndex_v1 as canonical for CoBus / CoGibber / CoGbx v1. Commits that future CoIndex waves will read declared CoBus lanes at repo startup, before mutating DO-blocks on shared/HP57 scopes, and at shutdown when scopes were mutated. Commits to emit docs/intent/cobus/receipts/YYYYMMDD/CoBus_<wave-id>.json receipts for all mutating DO-blocks touching shared scopes. Commits to treat priority in {guardrail, hp57} CoBus waves from co1-orchestrator as binding where to_role includes CoIndex roles. Notes that remaining CoPortal nomenclature under CoIndex is being migrated to CoGibber / CoGbx as per registry vocab."
+}

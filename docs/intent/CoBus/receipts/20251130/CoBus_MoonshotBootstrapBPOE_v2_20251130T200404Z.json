@@ -1,0 +1,12 @@
+{
+  "from_session_label": "Moonshot2025_BootstrapBPOE_v2",
+  "to_role": "co1-orchestrator",
+  "wave_id": "Moonshot_BootstrapBPOE_Ingest_v2_20251130T200404Z",
+  "intent": "advisory-ingest",
+  "scope": "CoSteward/docs/intent/advice/BPOEAdvice_v2.md; CoSteward/docs/intent/advice/BootstrapAdvice_v2.md; CoSteward/docs/trove/CoSteward_BPOEAdvice_v2.md; CoSteward/docs/trove/CoSteward_BootstrapAdvice_v2.md",
+  "sensitivity": "public",
+  "priority": "normal",
+  "ts_utc": "2025-11-30T20:04:05Z",
+  "status": "success",
+  "notes": "Ingested Moonshot v2 bootstrap + BPOE advisories into CoSteward as canon for Co1."
+}

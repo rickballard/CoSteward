@@ -2,7 +2,7 @@
 
 ```pwsh
 # Prefer repo helpers; graceful fallback
-$CC = Join-Path $HOME 'Documents\GitHub\CoCache'
+$CC = Join-Path $HOME 'Documents\GitHub\CoCache™'
 $Adapter = Join-Path $CC 'tools/heartbeat/CoStatus.Adapter.psm1'
 if (Test-Path $Adapter) { Import-Module $Adapter -Force -ErrorAction SilentlyContinue }
 

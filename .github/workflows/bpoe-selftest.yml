@@ -1,0 +1,26 @@
+name: bpoe-selftest
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  scan-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run history leak scan (red-list)
+        shell: pwsh
+        run: |
+          $patterns = @('GLUKEY','business plan','valuation')
+          $out = "${{ runner.temp }}/triage"
+          pwsh -File tools/ps7/Lockdown/DO_W3C_History_Leak_Scan_v2.ps1 -RepoPath "${{ github.workspace }}" -Out $out -Patterns $patterns
+          $triage = Get-ChildItem -Directory -Path $out | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          if(-not $triage){ Write-Error "triage dir missing"; exit 2 }
+          $hits = Get-ChildItem -Path $triage.FullName -File -Filter 'history_hits_*.txt' | Where-Object { (Get-Item $_.FullName).Length -gt 0 }
+          if($hits){ Write-Error "[bpoe-selftest] red-list hits found:`n$($hits | % FullName -join "`n")"; exit 2 }
+          'OK: no red-list hits'
+      - name: Upload triage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bpoe-triage
+          path: ${{ runner.temp }}/triage

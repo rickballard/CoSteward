@@ -1,0 +1,28 @@
+# CoSteward Local OE Inventory
+
+GeneratedUTS: 20251207T222342Z
+
+## OS
+MachineName: X1
+OSVersion:   Microsoft Windows NT 10.0.26220.0
+
+## PowerShell
+PSVersion:   7.5.4
+Edition:     Core
+
+## Git
+Git:         git version 2.51.0.windows.1
+
+## winget
+winget:      v1.12.420
+
+## PowerToys
+PowerToys:   installed at C:\Users\Chris\AppData\Local\Microsoft\PowerToys
+
+## OpenAI
+OPENAI_API_KEY: not set
+
+## Notes
+- This report is intended for Co1 and CoSteward BPOE alignment.
+- Do not commit any secrets or full keys.
+

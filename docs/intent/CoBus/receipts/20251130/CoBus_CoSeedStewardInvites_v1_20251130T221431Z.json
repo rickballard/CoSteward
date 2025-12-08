@@ -1,0 +1,12 @@
+{
+  "from_session_label": "CoIndex20251128",
+  "to_role": "co1-orchestrator",
+  "wave_id": "CoSeed_StewardInvites_Design_v1_20251130T221431Z",
+  "intent": "design",
+  "scope": "CoSteward/docs/trove/CoSeed_StewardInvites_v1.md",
+  "sensitivity": "public",
+  "priority": "normal",
+  "ts_utc": "2025-11-30T22:14:32Z",
+  "status": "success",
+  "notes": "Recorded Seed Steward Circle intent + archetypes for future Co1 outreach."
+}

@@ -1,3 +1,36 @@
+# CoSteward - Spaceship Console (v1 seed)
+
+## Quick Nav – Manuals and Dashboards (v1 seed)
+
+- **Steward Ops Manual (single scroll)**  
+  - [docs/ops/CoSteward_Ops_Manual_v1.md](docs/ops/CoSteward_Ops_Manual_v1.md)
+
+- **Full Manual (chaptered)**  
+  - [MANUAL index](docs/ops/MANUAL/INDEX.md)
+
+- **Session Health and Lag Patterns**  
+  - [Session health overview](docs/intent/session-health/README.md)  
+  - [Session health patterns](docs/intent/session-health/SessionHealth_Patterns_v0.1.md)  
+  - [CoStatus session health spec](docs/bpoe/CoStatus_SessionHealthSpec_v1.md)
+
+- **CoSuite BPOE and Onramps**  
+  - [CoSuite BPOE onramps and portals spec](docs/bpoe/CoSuite_BPOE_Onramps_PortalsSpec_v1.md)
+
+
+
+You are at the Steward console for CoCivium.
+
+From here you can:
+
+- Scan CoSuite health
+- Navigate to any major repo
+- Run helper tools and repairs
+- Review session plans and intent notes
+- Launch evolution waves
+
+The details live in docs/ui and docs/meta. This README is only the
+front panel. The real work is done by scripts and manifests.
+
 # CoSteward – Steward Dashboard (W10 seed)
 
 CoSteward is the **steward home repo** for the CoSuite / CoCivium ecosystem.
@@ -141,4 +174,22 @@ popd
 For a steward-facing map of the most important CoSuite and CoCivium artefacts, see:
 
 - docs/highlights/CoSteward_HighlightedAssets_v1.md
+
+---
+CoProtect_SeedStage_v1:
+  license: 'CSPL-1.0 (CoCivium Seed-Stage Protective License)'
+  bucket: 'Private_RepoOnly'
+  rationale: 'Seed-stage protection of CoCivium / CoSuite rails, helpers, and governance patterns.'
+  openness_intent:
+    summary: 'Protect now, open later when safe and governed.'
+    notes:
+      - 'Planned evolution toward more open licensing as legal and safety structures mature.'
+  trademarks_notice:
+    summary: 'CoCivium and related names are claimed as trademarks or pending trademarks.'
+    usage:
+      - 'Use nominatively only.'
+      - 'Do not imply endorsement or affiliation without written permission.'
+  contact:
+    steward_email: 'contact@InSeed.com'
+
 

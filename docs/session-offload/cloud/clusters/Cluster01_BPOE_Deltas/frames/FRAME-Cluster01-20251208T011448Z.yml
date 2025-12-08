@@ -1,0 +1,11 @@
+# GBR-Frame packet
+id: FRAME-Cluster01-20251208T011448Z
+wave-origin: F
+generated: 20251208T011448Z
+anchors:
+  - "Cluster01.BPOE.Deltas"
+  - "SessionCloud.Offload"
+meta:
+  steward-intent: "Preserve session cloud meaning-shape across waves."
+  safety-tier: "BPOE-default"
+  provenance: "WaveF/CoSteward"

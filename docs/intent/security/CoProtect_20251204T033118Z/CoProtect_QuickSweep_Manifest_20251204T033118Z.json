@@ -1,0 +1,58 @@
+[
+  {
+    "Repo": "CoSteward",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward",
+    "Secrets": 0,
+    "HP57": 30,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoSteward-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoIndex",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoIndex",
+    "Secrets": 0,
+    "HP57": 74,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoIndex-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoAgent",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoAgent",
+    "Secrets": 0,
+    "HP57": 0,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoAgent-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoArena",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoArena",
+    "Secrets": 0,
+    "HP57": 21,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoArena-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoCache",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoCache",
+    "Secrets": 0,
+    "HP57": 51,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoCache-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoContrib",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoContrib",
+    "Secrets": 0,
+    "HP57": 2,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoContrib-CoProtect_Report_20251204T033118Z.md"
+  },
+  {
+    "Repo": "CoPolitic",
+    "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoPolitic",
+    "Secrets": 0,
+    "HP57": 0,
+    "HasTags": false,
+    "ReportFile": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\docs\\intent\\security\\CoProtect_20251204T033118Z\\CoPolitic-CoProtect_Report_20251204T033118Z.md"
+  }
+]

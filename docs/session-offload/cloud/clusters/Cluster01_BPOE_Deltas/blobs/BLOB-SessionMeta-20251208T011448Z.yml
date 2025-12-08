@@ -1,0 +1,6 @@
+id: BLOB-SessionMeta-20251208T011448Z
+topic: "Session-cloud-meta"
+human-shape: "Offload container describing why/what/how the cluster stores."
+ai-shape: "Canonically compressed meta-layer for replay/merge."
+delta-notes:
+  - "Always safe to regenerate."
