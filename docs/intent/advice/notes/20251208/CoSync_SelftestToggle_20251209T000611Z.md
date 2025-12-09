@@ -1,0 +1,4 @@
+# CoSync — selftest toggle
+UTC: 20251209T000611Z
+Var: BPOE_SELFTEST_STRICT=0
+CoBloat: CU=OK • PU=OK • HU=OK • WT=OK
