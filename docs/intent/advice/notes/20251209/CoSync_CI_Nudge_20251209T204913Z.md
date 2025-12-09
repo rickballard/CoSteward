@@ -1,3 +1,0 @@
-# CoSync — CI nudge
-UTC: 20251209T204913Z
-CoBloat: CU=OK • PU=OK • HU=OK • WT=OK

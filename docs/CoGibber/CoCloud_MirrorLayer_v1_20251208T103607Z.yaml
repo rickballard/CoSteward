@@ -1,7 +1,0 @@
-mirrorLayer:
-  timestamp: 20251208T103607Z
-  sources:
-    - CoSteward
-    - GIBindex
-    - CoCache
-  inferredRole: CoGbx-like internal layer for language, indices, schemas, CLIs
