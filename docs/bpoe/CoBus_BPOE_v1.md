@@ -1,175 +1,131 @@
-# CoBus / CoSync bus BPOE v1
+# CoBus BPOE v1
 
-source_sessions:
-  - CoIndex20251128
-  - CoIndex_CoGbxCoGibber_Migration_Advisory_ToCo1_v1
-  - CoCivium_AIVendor_Onramp_v1
-  - CoBus_CoGibber_SpecSeed_v1
+This doc defines how seed stage CoCivium uses CoBus notices to move
+intent, context and guardrails between sessions and roles (Co1, CoPre,
+CoPrime, Outreaches, DrB and others).
 
-role:
-  - define minimal, enforceable BPOE for CoBus / CoSync usage
-  - pair with cogibber.registry.v1.json + CoGibber_Registry_Vocab_v1.md
+CoBus notices are lightweight, trail friendly memos that:
 
-## 1. Naming stack and legacy terms
+- Point at packs, branches and vault paths.
+- Describe what changed and what is being asked.
+- Remind sessions about guardrails and sensitivity.
+- Never carry crown jewel or GLUKEY level detail themselves.
 
-- CoBus   = wire / transport / routing
-- CoGibber = language / envelope / vocab
-- CoGbx   = boxes / registries / views
+They pair with:
 
-Short phrase for diagrams:
+- CoGuardRails_BPOE_v1.md
+- CoVaultHydration_BPOE_v1.md
+- CoTick, CoAxioms and CoEvoCascade insights couplets.
 
-> CoBus (wire) → CoGibber (language) → CoGbx (views)
+## 1. When to use CoBus
 
-CoSync is treated as a **legacy name** for a subset of CoBus traffic:
+Use a CoBus notice when:
 
-- human-facing notes under `docs/intent/advice/notes/YYYYMMDD/CoSync_*.md`
-- may later gain machine echoes, but remains a named family of CoBus messages.
+- A session is handing off due to CoBloat, lag or tenure limits.
+- One role (for example CoPre) needs to brief another role (for example Co1 or DrB).
+- A sensitive pattern needs to be echoed across sessions without
+  copying vault details.
+- A new insights couplet or rails pattern needs to be flagged as
+  important for other sessions.
 
-New work SHOULD use CoBus / CoGibber / CoGbx phrasing.
+Do not use CoBus for:
 
-## 2. CoBus envelope (v1)
+- Raw design work.
+- Full transcripts.
+- Secrets or sharp mechanics (GLUKEY, HP57 internals, detailed deal maths).
 
-Canonical machine-face:
+Those live in vaults and private packs. CoBus only points at them.
 
-- `CoIndex/exports/gibber/cogibber.registry.v1.json`
-- `CoSteward/docs/trove/CoGibber_Registry_Vocab_v1.md`
+## 2. CoBus notice structure
 
-Required fields (MUST):
+Default sections:
 
-- `from_session_label`
-- `to_role`
-- `wave_id`
-- `intent`
-- `scope`
-- `sensitivity`
-- `ts_utc`
+1. Title and scope.
+2. Context.
+3. What you are receiving.
+4. What is likely inside.
+5. Immediate asks.
+6. Sensitivity and exposure reminders.
+7. Role reminder.
 
-Optional fields (SHOULD where helpful):
+See docs/intent/CoBus_Notice_Template_v1.md for the canonical layout.
 
-- `to_session_label`
-- `not_before_utc`, `required_before_utc`
-- `priority`
-- `hp57_tier`
-- `notes`
+## 3. Sensitivity rules
 
-Roles, priorities, and sensitivity enums follow the Trove doc.
+CoBus notices MUST:
 
-## 3. CoBus lanes per repo
+- Avoid spelling out GLUKEY mechanics, HP57 details or full business
+  model spreadsheets.
+- Refer to such items only as crown jewel material, GLUKEY aligned
+  assets, HP57 vault content or Thursday packs.
+- Treat chat and repo as pointers, not as secret stores.
 
-Unless otherwise specified, each repo SHOULD treat these as canonical v1 lanes:
+If a draft CoBus notice starts to carry sharp details:
 
-- `docs/intent/cobus/inbox/`
-  - incoming CoBus messages for that repo (JSON/JSONL)
-- `docs/intent/cobus/receipts/YYYYMMDD/`
-  - CoBus receipts emitted by waves that mutated that repo
-- `docs/intent/advice/notes/YYYYMMDD/CoSync_*.md`
-  - human-facing CoSync notes (CoBus subset)
+- Move those details into the LAN vault (for example CoCiviumAdmin).
+- Replace them in the notice with a vault path reference or a
+  qualitative label only.
 
-Additional lanes (e.g. `metrics`, `alerts`) MAY be added as long as they do not conflict with the base layout.
+## 4. Trails and CoAxioms
 
-## 4. BPOE: when to read the bus
+Important CoBus notices SHOULD:
 
-MUST:
+- Live as markdown in a repo (usually CoSteward or CoCache) or be
+  summarised there.
+- Link or refer to relevant CoAxioms, for example:
+  - CoAxiom1 – Coevolutionary reliance.
+  - CoAxiom2 – Trails over tales.
+  - CoAxiom7 – Hydrated history promise.
 
-- At **session startup**, for each repo the session expects to touch:
-  - read `docs/intent/cobus/inbox/` if present
-  - scan recent `docs/intent/advice/notes/*/CoSync_*.md` for that repo
+Optional metadata:
 
-- Before any DO-block that **mutates**:
-  - a public repo, or
-  - an HP57-adjacent or HP57-private scope.
+```yaml
+CoBus:
+  from: CoPre
+  to: Co1
+  uts: 20251210T180000Z
+  relates_to:
+    - CoCrux
+    - CoEvoMetaHandles
+    - Thursday_DarrenPack
+  CoAxioms:
+    - CoAxiom1
+    - CoAxiom2
+    - CoAxiom7
+This enables CoIndex and future tools to discover and cluster CoBus notices.
 
-- At **session shutdown**, if the session:
-  - mutated shared scopes, or
-  - emitted CoBus receipts or locks.
+5. CoTicks on CoBus patterns
 
-SHOULD:
+Individual CoBus notices are usually not canonical, but CoBus
+patterns or templates that prove reliable over multiple handoffs may
+earn a CoTick.
 
-- For long waves, re-read relevant CoBus lanes periodically
-  (for example every few DO-blocks or every ~10–15 minutes of active work).
+When a CoBus template deserves a CoTick:
 
-MAY:
+Add CoTick metadata where the template lives.
 
-- Ignore lanes clearly unrelated to the session's declared repos and roles.
+Note which CoAxioms it embodies (for example CoAxiom2, CoAxiom6, CoAxiom7).
 
-## 5. BPOE: what to write back (receipts)
+6. Behaviour for sessions and agents
 
-Any DO-block that mutates shared scopes MUST emit a CoBus receipt:
+Seed stage sessions SHOULD:
 
-- location:
-  - `docs/intent/cobus/receipts/YYYYMMDD/CoBus_<wave-id>.json`
-- minimal payload:
-  - `from_session_label`
-  - `to_role`
-  - `wave_id`
-  - `scope` (short description and/or list of paths)
-  - `sensitivity`
-  - `ts_utc`
-  - `status` ∈ { `success`, `soft-fail`, `hard-fail` }
-- optional:
-  - `priority`, `hp57_tier`, `notes`, and any repo-specific fields
+Use CoBus notices instead of ad hoc paragraphs when:
 
-Receipts are the **primary audit trail** for orchestration. Locks are layered on later waves.
+Handing off to a new CoPrime or Co1 session.
 
-## 6. Roles and yield rules
+Briefing other roles (including DrB) about sensitive work.
 
-Roles (per Trove):
+Check existing CoBus examples via CoRetro before inventing new formats.
 
-- `co1-orchestrator`
-- `guardrail-session`
-- `product-session`
-- `support-session`
-- `advice-session`
-- `vendor-session`
+Keep CoBus texts short, structural and free of vault level secrets.
 
-Yield rules (v1):
+CoStart and CoRescue flows MAY:
 
-- Any wave tagged with `priority = guardrail` or `priority = hp57`
-  and addressed to a repo/scope SHOULD be treated as higher priority than
-  product or experiment waves on the same scope.
-- Co1 MAY emit CoBus messages that other sessions MUST obey when:
-  - `to_role = product-session` or `guardrail-session`, and
-  - `priority ∈ { guardrail, hp57 }`.
+Suggest creating a CoBus notice as part of session wind down.
 
-Product sessions:
+Point at this BPOE doc when a session is about to cross bloat or
+tenure limits.
 
-- MUST follow the read/receipt rules for their primary repo(s).
-- SHOULD leave CoSync notes for major structural changes and new rails.
-
-Guardrail sessions:
-
-- MUST tag messages appropriately and MAY declare soft locks or vetoes
-  for unsafe waves (future spec).
-
-## 7. Collision policy (v1)
-
-Locking model for v1:
-
-- No hard locks enforced by default.
-- Preferred pattern:
-  - distinct branches / lanes for different waves,
-  - convergence via PRs instead of direct multi-writer traffic on `main`.
-
-Collision stance:
-
-- Receipts + git history form the canonical record of who touched what, when.
-- When collisions occur:
-  - `priority = hp57` or `guardrail` waves take precedence,
-  - Co1 adjudicates when needed.
-
-Lock files under `docs/intent/cobus/locks/` are allowed but considered v1.1+.
-This BPOE does not require them yet.
-
-## 8. Evolution hooks
-
-This BPOE is v1 and intentionally light:
-
-- Future waves MAY:
-  - add `cogibber.cobus` vocab files,
-  - add per-repo CoBus adapters,
-  - formalize lock file schemas and enforcement.
-
-Any such evolution SHOULD:
-
-- remain backward compatible with this v1 envelope, and
-- keep git + on-repo receipts as the primary source of truth.
+This BPOE is v1 and SHOULD evolve as CoBus patterns stabilise and
+CoIndex and CoCTA begin to automate discovery and routing.
