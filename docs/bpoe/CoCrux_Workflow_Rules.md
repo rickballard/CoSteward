@@ -174,3 +174,27 @@ If CoBus is unavailable or broken:
 - a follow-up task must be created to repair the CoBus path and
   backfill any missing notes as soon as practical.
 
+## 10. CoRetro Creative Extension
+
+10.1 CoRetro is creative by default.
+At each retro or wrap wave, sessions should actively look for ways to extend,
+expand, or reroute the discovery journey, even if constrained to session
+history and logs.
+
+10.2 Use available traces.
+When deep repo mining is out of scope, CoRetro can still:
+- scan recent CoSync / CoBus notes;
+- re-explore this session's history and transcripts;
+- propose new questions, forks, or experiments.
+
+10.3 Respect rails and load.
+Creative detours must:
+- stay inside BPOE guardrails;
+- honour CoBloat heartbeat limits;
+- get logged as explicit "CoRetro explorations" in notes.
+
+10.4 From detours to rails.
+When a creative CoRetro path proves useful, it should:
+- graduate into an explicit rule, pattern, or checklist;
+- be added to CoCrux, CoSession playbooks, or insights couplets.
+
