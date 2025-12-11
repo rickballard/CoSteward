@@ -271,4 +271,26 @@ waves should:
 Designs that hide intent and progress only in prose are non BPOE.
 The CoVibe checklist is the minimal visible contract for scope
 and progress for any significant wave.
+12.6 Visual style and icons.
+Where possible, CoVibe blocks SHOULD use a compact icon legend to make
+scope state obvious at a glance, for example:
+
+> ### Original scope checklist
+>
+> **Status legend**
+> - ✅ = locked / fully delivered this wave
+> - 🟡 = in progress
+> - ⏳ = deferred to later wave
+> - 🧪 = experiment / exploratory
+> - 🧊 = explicitly parked / on ice
+> - 🧹 = cleanup / hygiene
+>
+> **Scope items**
+> - 🟡 Example item one
+> - ✅ Example item two
+> - ⏳ Example item three
+
+Sessions MAY adapt icons, but SHOULD keep:
+- a clear legend near the checklist, and
+- consistent icon use within a wave or session.
 
