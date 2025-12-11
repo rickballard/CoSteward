@@ -1,3 +1,23 @@
+## 0. Automation-First Principle
+
+0.1 Always, always do all you can programmatically.  
+For any recurring or non-trivial task, the preferred order is:
+- script it (PS7 DO-blocks, CoBlocks, CI jobs);
+- then document it briefly;
+- then use it manually.
+
+0.2 Manual work is a stopgap, not the goal.  
+If something is worth doing more than once, it is worth:
+- capturing in a script or tool;
+- putting under version control;
+- wiring into CoCrux / BPOE rails where relevant.
+
+0.3 Verification should be code-first.  
+Where possible, use automation to:
+- check that actions landed (smoke tests, self-tests);
+- prove that they landed (logs, CI, git history);
+- make it easy for future sessions to re-run the same checks.
+
 # CoCrux Workflow Rules (DrB / Thesis & Beyond)
 
 Purpose: keep critical wisdom, workflows, and decisions out of fragile sessions
@@ -109,3 +129,48 @@ If a session closes without proof-of-done for a critical action, future
 sessions must assume the action did not land and either:
 - re-run the action with proper verification; or
 - explicitly mark it as abandoned or superseded in notes.
+
+## 8. CoLoading and Overlapping Waves
+
+8.1 Waves may overlap on purpose.
+CoLoading means that while one wave is being rendered (for example, current
+deliverables finalising), the next wave is already being prepared in parallel
+(scripts, scaffolds, outlines). This keeps throughput high and reduces idle time.
+
+8.2 Repo state first, not memory.
+CoLoaded waves must always treat repos as source of truth. Any work-in-progress
+plans for the next wave should be:
+- captured as files or TODO lists in repo (for example under 99_waves);
+- referenced from CoSync or CoBus notes.
+
+8.3 Clear wave identifiers.
+Each wave gets:
+- a stable wave id (for example W001_CoLoadingBoot);
+- a scoped folder or section in repo;
+- at least one note file describing focus, decisions, and carry-over.
+
+8.4 BPOE expectation for sessions.
+Sessions should:
+- avoid waiting on human confirmation when safe rails exist;
+- prepare the next wave while current proofs-of-done are still landing;
+- always prefer automation for creating new wave scaffolds and indices.
+
+## 9. CoBus, not humans, for cross-session relay
+
+9.1 No paste-relay monkeys by default.
+Cross-session messages between key agents (for example Co1, CoPrime,
+CoSteward) must travel via CoBus notes and repos, not manual copy and
+paste by humans, except in emergencies.
+
+9.2 CoBus as the default transport.
+When a session needs to update another session or agent it should:
+- write a small CoBus note under
+  CoSteward/docs/intent/advice/notes/YYYYMMDD/...; and
+- reference that note from wave logs, CoSync notes, or tickets.
+
+9.3 Emergencies and fallbacks.
+If CoBus is unavailable or broken:
+- a human may relay content manually once; and
+- a follow-up task must be created to repair the CoBus path and
+  backfill any missing notes as soon as practical.
+
