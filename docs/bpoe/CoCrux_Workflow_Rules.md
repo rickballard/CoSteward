@@ -198,3 +198,28 @@ When a creative CoRetro path proves useful, it should:
 - graduate into an explicit rule, pattern, or checklist;
 - be added to CoCrux, CoSession playbooks, or insights couplets.
 
+## 11. CoBus First Notices
+
+11.1 Users are not paste relay monkeys.
+System to system notices, especially to Co1, must travel via CoBus notes
+and automation when at all possible. Manual copy paste is reserved for
+clear emergencies.
+
+11.2 CoBus or equivalent first.
+When a session discovers something that Co1 or other core sessions
+must know, it should:
+- prefer writing a CoBus notice markdown under docs/intent/advice/notes;
+- use a DO or CoBlock script to generate and name the file;
+- include clear paths, UTS timestamps, and wave ids.
+
+11.3 Emergency fallback.
+If constrained interfaces force manual paste:
+- treat it as an explicit temporary exception;
+- log in the next CoBus note that manual relay was used;
+- add a TODO to replace it with an automated path later.
+
+11.4 Thesis and CoSuite default.
+DrB and all CoCivium products treat "CoBus first" as the default for
+cross session notices. Any design that relies on humans relaying text
+between sessions is considered provisional and non BPOE.
+
