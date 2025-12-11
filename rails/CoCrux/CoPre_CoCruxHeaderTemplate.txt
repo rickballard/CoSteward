@@ -1,0 +1,27 @@
+[CoPre v0.4] ⟦c⟧
+
+CoCruxDeck: CoCruxDeck.v0.1
+Mode: minimal, slice cycle
+
+# Example minimal header for one wave
+# Assume that CoPre has looked up the current slice from CoCruxDeck.json.
+# Here the active slice is CoSlice.Core.
+
+CoCruxWave: CoSlice.Core
+↯Ω := ⟦rf|anl|af|zr⟧
+
+# Example slightly richer header
+
+[CoPre v0.4] ⟦c⟧
+CoCruxWave: CoSlice.Control
+↯Ω := ⟦cs|cp|eb⟧
+
+Bias: repo-first, auto-first, zip-ready, evidence-before-action.
+Guard: GLUKEY guard, stealth by default.
+Style: CoSprint, ASCII mode.
+Health: CoBloatBeat active.
+
+# CoPre is expected to:
+# - keep the human header thin,
+# - use the active slice and GIB tokens to enforce rails,
+# - and rotate slices each wave according to CoCruxDeck.json.

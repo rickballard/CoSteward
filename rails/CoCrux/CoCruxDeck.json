@@ -1,0 +1,233 @@
+{
+  "id": "CoCruxDeck.v0.1",
+  "description": "Compact CoCrux rail deck for CoPre header rotation.",
+  "terms": [
+    {
+      "id": "CoRepoFirst",
+      "gib": "rf",
+      "summary": "Repo-first, evidence-first. Repo is source of truth."
+    },
+    {
+      "id": "CoAssumeNotLanded",
+      "gib": "anl",
+      "summary": "Assume work has not landed to main without explicit evidence."
+    },
+    {
+      "id": "CoAutoFirst",
+      "gib": "af",
+      "summary": "Automation and PS7 DO blocks before manual steps."
+    },
+    {
+      "id": "CoZipReady",
+      "gib": "zr",
+      "summary": "Outputs must be ready for zip and repo ingestion."
+    },
+    {
+      "id": "CoMegaWaveOnly",
+      "gib": "mw",
+      "summary": "MegaWave or nothing for real work."
+    },
+    {
+      "id": "CoSyncOrStop",
+      "gib": "cs",
+      "summary": "If not CoSynced, slow or stop and repair rails."
+    },
+    {
+      "id": "CoWaveDiscipline",
+      "gib": "wd",
+      "summary": "Count waves, summarise intent, done vs doing, remaining."
+    },
+    {
+      "id": "CoBloatBeat",
+      "gib": "bb",
+      "summary": "Report CU, PU, HU, WT and suggest hygiene on HARD or FATAL."
+    },
+    {
+      "id": "CoSessionHygiene",
+      "gib": "sg",
+      "summary": "Use reload and purge tools when sessions feel sticky or off rails."
+    },
+    {
+      "id": "CoControlPhrases",
+      "gib": "cp",
+      "summary": "Control phrases override and force rail repair."
+    },
+    {
+      "id": "CoTense",
+      "gib": "tt",
+      "summary": "Past is verified, present is active, future is planned only."
+    },
+    {
+      "id": "CoNoHandEdit",
+      "gib": "nh",
+      "summary": "No hand edits where scripts can own the file."
+    },
+    {
+      "id": "CoGuardGLUKEY",
+      "gib": "glk-",
+      "summary": "Do not surface GLUKEY or crown jewels into unsafe channels."
+    },
+    {
+      "id": "CoStealthDefault",
+      "gib": "st",
+      "summary": "Default to minimal sensitive detail and quiet posture."
+    },
+    {
+      "id": "CoASCIIMode",
+      "gib": "am",
+      "summary": "Use ASCII friendly punctuation and keep glyphs optional."
+    },
+    {
+      "id": "CoSprint",
+      "gib": "sp",
+      "summary": "Short, concrete, low token, DO block first."
+    },
+    {
+      "id": "CoDriftGuard",
+      "gib": "dr",
+      "summary": "Treat off rails feeling as a health event and repair first."
+    },
+    {
+      "id": "CoEvidenceBeforeAction",
+      "gib": "eb",
+      "summary": "Check evidence before building on prior state."
+    },
+    {
+      "id": "CoPRFlow",
+      "gib": "pf",
+      "summary": "Branch to PR to squash for all repo changes."
+    },
+    {
+      "id": "CoShadowMode",
+      "gib": "sm",
+      "summary": "Be aware of hidden machine rails and keep human view thin."
+    },
+    {
+      "id": "CoRetroLoop",
+      "gib": "rt",
+      "summary": "Run small retros and evolve rails or outputs only when the gains are clearly worth it."
+    },
+    {
+      "id": "CoEvoNote",
+      "gib": "en",
+      "summary": "Copy important CoEvo experiment findings into CoSteward CoSync notes for Co1 and future sessions."
+    },
+    {
+      "id": "CoLangAware",
+      "gib": "cl",
+      "summary": "CoLanguage primitives are known and can be invoked without cluttering normal rails."
+    }
+  ],
+  "slices": [
+    {
+      "id": "CoSlice.Core",
+      "terms": [
+        "CoRepoFirst",
+        "CoAssumeNotLanded",
+        "CoAutoFirst",
+        "CoZipReady"
+      ],
+      "gib": [
+        "rf",
+        "anl",
+        "af",
+        "zr"
+      ]
+    },
+    {
+      "id": "CoSlice.Waves",
+      "terms": [
+        "CoMegaWaveOnly",
+        "CoWaveDiscipline"
+      ],
+      "gib": [
+        "mw",
+        "wd"
+      ]
+    },
+    {
+      "id": "CoSlice.Health",
+      "terms": [
+        "CoBloatBeat",
+        "CoSessionHygiene",
+        "CoDriftGuard",
+        "CoRetroLoop"
+      ],
+      "gib": [
+        "bb",
+        "sg",
+        "dr",
+        "rt"
+      ]
+    },
+    {
+      "id": "CoSlice.Control",
+      "terms": [
+        "CoSyncOrStop",
+        "CoControlPhrases",
+        "CoEvidenceBeforeAction"
+      ],
+      "gib": [
+        "cs",
+        "cp",
+        "eb"
+      ]
+    },
+    {
+      "id": "CoSlice.Safe",
+      "terms": [
+        "CoGuardGLUKEY",
+        "CoStealthDefault",
+        "CoShadowMode"
+      ],
+      "gib": [
+        "glk-",
+        "st",
+        "sm"
+      ]
+    },
+    {
+      "id": "CoSlice.Style",
+      "terms": [
+        "CoASCIIMode",
+        "CoSprint",
+        "CoNoHandEdit",
+        "CoPRFlow",
+        "CoRepoFirst",
+        "CoLangAware"
+      ],
+      "gib": [
+        "am",
+        "sp",
+        "nh",
+        "pf",
+        "rf",
+        "cl"
+      ]
+    },
+    {
+      "id": "CoSlice.Evo",
+      "terms": [
+        "CoRetroLoop",
+        "CoEvoNote"
+      ],
+      "gib": [
+        "rt",
+        "en"
+      ]
+    }
+  ],
+  "deck": {
+    "mode": "cycle",
+    "unit": "slice",
+    "order": [
+      "CoSlice.Core",
+      "CoSlice.Control",
+      "CoSlice.Health",
+      "CoSlice.Safe",
+      "CoSlice.Style",
+      "CoSlice.Waves",
+      "CoSlice.Evo"
+    ]
+  }
+}
