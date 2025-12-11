@@ -294,3 +294,52 @@ Sessions MAY adapt icons, but SHOULD keep:
 - a clear legend near the checklist, and
 - consistent icon use within a wave or session.
 
+## 12. CoVibe Intent Checklists
+
+12.1 CoVibe checklists are session intent surfaces.
+Every active wave or session document that carries plan or scope
+must expose a short CoVibe checklist so humans and AIs can see:
+
+- what is done,
+- what is in progress,
+- what is planned next.
+
+12.2 Standard CoVibe block.
+The default markdown block is:
+
+\\\markdown
+## CoVibe - Scope checklist
+
+### DONE
+- [ ]
+
+### DOING
+- [ ]
+
+### PLANNED
+- [ ]
+\\\
+
+Sessions may extend this with extra headings such as RISKS or
+OPEN QUESTIONS, but the three core buckets must remain.
+
+12.3 Placement.
+CoVibe checklists should appear:
+
+- near the end of wave notes or session docs,
+- or near any "scope" or "plan" section,
+- and should be updated as part of every CoRetro or wrap wave.
+
+12.4 CoPre and CoBus.
+CoPre style prompts and CoBus notices that describe sessions or
+waves should:
+
+- reference the CoVibe checklist when summarising progress;
+- nudge sessions to keep the checklist up to date;
+- treat missing or stale CoVibe blocks as a hygiene defect.
+
+12.5 BPOE expectation.
+Designs that hide intent and progress only in prose are non BPOE.
+The CoVibe checklist is the minimal visible contract for scope
+and progress for any significant wave.
+
