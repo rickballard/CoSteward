@@ -1,0 +1,26 @@
+# CoCrux.gib v0.1  (CoGibber Compact Seed)
+# Atomic rail set for CoPre and CoCrux orchestration.
+# Tokens are expanded via GIBindex; this file stays compact and stable.
+
+Ω := ⟦
+    rf      |   # repo-first, evidence-first          (CoRepoFirst)
+    anl     |   # assume-not-landed                   (CoAssumeNotLanded)
+    af      |   # auto-first, PS7 DO Blocks only      (CoAutoFirst)
+    zr      |   # zip-ready outputs                   (CoZipReady)
+    mw      |   # MegaWave-or-nothing                 (CoMegaWaveOnly)
+    cs      |   # CoSync-or-stop                      (CoSyncOrStop)
+    wd      |   # wave-discipline                     (CoWaveDiscipline)
+    bb      |   # CoBloat heartbeat                   (CoBloatBeat)
+    sg      |   # session-hygiene                     (CoSessionHygiene)
+    cp      |   # control phrase override             (CoControlPhrases)
+    tt      |   # time and tense, past=verified       (CoTense)
+    nh      |   # no-hand-edit, updater owns files    (CoNoHandEdit)
+    glk-    |   # GLUKEY guard                        (CoGuardGLUKEY)
+    st      |   # stealth-by-default                  (CoStealthDefault)
+    am      |   # ASCII minimal mode                  (CoASCIIMode)
+    sp      |   # CoSprint style                      (CoSprint)
+    dr      |   # drift-guard                         (CoDriftGuard)
+    eb      |   # evidence-before-action              (CoEvidenceBeforeAction)
+    pf      |   # PR flow, branch to PR to squash     (CoPRFlow)
+    sm      |   # shadow-mode awareness               (CoShadowMode)
+⟧
