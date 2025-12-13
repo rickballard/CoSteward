@@ -1,3 +1,4 @@
 2025-12-02 14:57:11  DrCoward_Handoff_W1_v2_20251202T185848Z.zip  sha256:72df0a1b25ffb4d5fedd47304025058ec2c455c487bfe9a9fe77d71955c6481d
 2025-12-02 14:58:05  DrCoward_Handoff_W1_v2_20251202T185848Z.zip  sha256:72df0a1b25ffb4d5fedd47304025058ec2c455c487bfe9a9fe77d71955c6481d
 | 20251213T150706Z | AdviceBomb_Co1_SymbolPrimitives_20251213T150706Z.zip | sha256:129cbd7313872b643519a3aad7a7384e6cc7d26b5f24ae1bfbf0ad73534d4eb0 | Co1 advisory: CoGibber symbolic primitives |
+| 20251213T151854Z | AdviceBomb_Co1_CoDoneCoTense_StateMachine_20251213T151854Z.zip | sha256:74eafd3be6917df269d5d2e82743ac49584482e8863f0648373d48d78539583d | CoBus advisory: CoDone+CoTense state machine |
